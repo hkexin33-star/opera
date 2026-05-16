@@ -3804,6 +3804,11 @@ def build_argparser() -> argparse.ArgumentParser:
         help="Reorganize each play into layered folders (01_meta..06_narrative) from structured.json",
     )
     p.add_argument(
+        "--cleanup-legacy",
+        action="store_true",
+        help="Remove r4 flat CSV/audit duplicates when layered 01_meta..06_narrative copies exist",
+    )
+    p.add_argument(
         "--status-only",
         action="store_true",
         help="Compare input PDFs vs existing outputs; do not call MinerU",
@@ -3881,6 +3886,41 @@ def resolve_play_documents_csv(play_dir: Path) -> Path | None:
         return layered
     flat = play_dir / "documents.csv"
     return flat if flat.exists() else None
+
+
+# r4 扁平输出 → r6 分层路径；仅当分层文件已存在时才删除根目录副本
+LEGACY_FLAT_TO_LAYERED: tuple[tuple[str, str], ...] = (
+    ("documents.csv", "01_meta/documents.csv"),
+    ("roles.csv", "02_cast/roles.csv"),
+    ("scenes.csv", "03_script/scenes.csv"),
+    ("dialogues.csv", "03_script/dialogues.csv"),
+    ("performances.csv", "03_script/performances.csv"),
+    ("relations.csv", "04_graph/relations.csv"),
+    ("relations_aggregated.csv", "04_graph/relations_aggregated.csv"),
+    ("network_metrics.csv", "04_graph/network_metrics.csv"),
+    ("entity_aliases.csv", "04_graph/entity_aliases.csv"),
+    ("themes.csv", "05_themes/themes.csv"),
+    ("themes_aggregated.csv", "05_themes/themes_aggregated.csv"),
+    ("theme_pairs.csv", "05_themes/theme_pairs.csv"),
+    ("narrative_curve.csv", "06_narrative/narrative_curve.csv"),
+    ("structured_raw.json", "audit/structured_raw.json"),
+    ("cleaned_full.md", "audit/cleaned_full.md"),
+    ("raw_full.md", "audit/raw_full.md"),
+)
+
+
+def cleanup_legacy_flat_outputs(play_dir: Path) -> list[str]:
+    """Drop obsolete r4 flat files after r6 layered layout is present."""
+    if not (play_dir / "01_meta" / "documents.csv").is_file():
+        return []
+    removed: list[str] = []
+    for flat_name, layered_rel in LEGACY_FLAT_TO_LAYERED:
+        flat = play_dir / flat_name
+        layered = play_dir / layered_rel
+        if flat.is_file() and layered.is_file():
+            flat.unlink()
+            removed.append(flat_name)
+    return removed
 
 
 def write_play_package(
@@ -4029,6 +4069,7 @@ def write_play_package(
         "structured.json            全量 JSON（可视化/二次开发入口）\n"
     )
     (layout["root"] / "README.txt").write_text(index_text, encoding="utf-8")
+    cleanup_legacy_flat_outputs(layout["root"])
 
 
 def convert_one_batch(
@@ -4710,7 +4751,30 @@ def repack_one_play(play_dir: Path, out_root: Path) -> bool:
         structured=structured,
         structured_raw=structured.get("structured_raw"),
     )
+    cleanup_legacy_flat_outputs(play_dir)
     return True
+
+
+def run_cleanup_legacy(args: argparse.Namespace) -> int:
+    out_root: Path = args.output_dir.resolve()
+    if not out_root.exists():
+        print(f"Output directory not found: {out_root}", file=sys.stderr)
+        return 1
+    prefix = (args.collection_prefix or "").replace("\\", "/").strip("/")
+    total_removed = 0
+    plays = 0
+    for structured_path in sorted(out_root.rglob("structured.json")):
+        play_dir = structured_path.parent
+        rel = play_dir.relative_to(out_root).as_posix()
+        if prefix and not rel.startswith(prefix):
+            continue
+        removed = cleanup_legacy_flat_outputs(play_dir)
+        if removed:
+            plays += 1
+            total_removed += len(removed)
+            print(f"[CLEANUP] {rel}: removed {len(removed)} legacy file(s)")
+    print(f"[CLEANUP-ONLY] plays={plays} files_removed={total_removed} under {out_root}")
+    return 0
 
 
 def run_repack_only(args: argparse.Namespace) -> int:
@@ -4758,11 +4822,17 @@ def main() -> int:
         return run_combine_only(args)
     if args.repack_only:
         return run_repack_only(args)
+    if args.cleanup_legacy:
+        return run_cleanup_legacy(args)
     if args.status_only:
         return run_status_only(args)
 
     if not args.input_dir and not args.files:
-        print("Need --input-dir or --files (or use --combine-only / --repack-only / --status-only).", file=sys.stderr)
+        print(
+            "Need --input-dir or --files (or use --combine-only / --repack-only / "
+            "--cleanup-legacy / --status-only).",
+            file=sys.stderr,
+        )
         return 2
 
     token = os.getenv("MINERU_TOKEN", "").strip()
