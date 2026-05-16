@@ -1,0 +1,40 @@
+# --- 密钥与本地配置 ---
+.env
+.env.local
+*.pem
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.python-version
+
+# --- IDE / 系统 ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- 原始数据（体积大，网盘共享）---
+opera_dataset/
+opera_dataset_md/
+
+# --- 流水线产出（本地生成或网盘共享）---
+opera_output/
+analysis_figures/
+*.log
+batch_*.log
+mineru_manifest_*.csv
+
+# --- 历史脚本迭代（仓库只保留 v8）---
+mineru_batch_convert.py
+mineru_batch_convert_v*.py
+mineru_batch_convert_structured*.py
+!mineru_batch_convert_structured_llm_final_v8.py
+
+# --- 临时 / 杂项 ---
+01001001_*.md
+*.zip
+extracted/
