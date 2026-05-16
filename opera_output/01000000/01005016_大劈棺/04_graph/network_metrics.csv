@@ -1,0 +1,7 @@
+doc_id,doc_title,character,char_id,degree,weighted_degree,degree_centrality,strength_centrality,derived_by
+pdf_01000000__01005016___bf6dd90755,大劈棺,童儿,pdf_01000000__01005016___bf6dd90755__char__df23dcde28,10,35,1.0,0.9722,relations_aggregated
+pdf_01000000__01005016___bf6dd90755,大劈棺,田氏,pdf_01000000__01005016___bf6dd90755__char__b4d5a80cf3,7,36,0.7,1.0,relations_aggregated
+pdf_01000000__01005016___bf6dd90755,大劈棺,王孙,pdf_01000000__01005016___bf6dd90755__char__3f88ec997b,7,11,0.7,0.3056,relations_aggregated
+pdf_01000000__01005016___bf6dd90755,大劈棺,庄周,pdf_01000000__01005016___bf6dd90755__char__f0de5ab95e,5,22,0.5,0.6111,relations_aggregated
+pdf_01000000__01005016___bf6dd90755,大劈棺,童男,pdf_01000000__01005016___bf6dd90755__char__b9cae1d893,5,10,0.5,0.2778,relations_aggregated
+pdf_01000000__01005016___bf6dd90755,大劈棺,老板,pdf_01000000__01005016___bf6dd90755__char__a71800f4ff,2,6,0.2,0.1667,relations_aggregated

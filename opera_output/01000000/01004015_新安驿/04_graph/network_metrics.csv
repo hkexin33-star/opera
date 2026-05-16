@@ -1,0 +1,6 @@
+doc_id,doc_title,character,char_id,degree,weighted_degree,degree_centrality,strength_centrality,derived_by
+pdf_01000000__01004015___871e6f9883,新安驿,李氏,pdf_01000000__01004015___871e6f9883__char__b4ba184e77,7,40,1.0,0.9756,relations_aggregated
+pdf_01000000__01004015___871e6f9883,新安驿,罗雁,pdf_01000000__01004015___871e6f9883__char__590fed4f40,7,41,1.0,1.0,relations_aggregated
+pdf_01000000__01004015___871e6f9883,新安驿,赵美容,pdf_01000000__01004015___871e6f9883__char__92eb3301aa,7,36,1.0,0.878,relations_aggregated
+pdf_01000000__01004015___871e6f9883,新安驿,周凤英,pdf_01000000__01004015___871e6f9883__char__235ca2f915,7,39,1.0,0.9512,relations_aggregated
+pdf_01000000__01004015___871e6f9883,新安驿,众人,pdf_01000000__01004015___871e6f9883__char__c95979967f,4,4,0.5714,0.0976,relations_aggregated

@@ -1,0 +1,4 @@
+doc_id,doc_title,scene_id,scene_index,scene,conflict_stage,scene_function,tension_level,tension_norm,dialogue_density,lyric_density,speech_density,narrative_turning_point,is_climax,derived_by
+pdf_01000000__01002014___534d1c1fdb,宇宙锋,pdf_01000000__01002014___534d1c1fdb__scene__000,0,序幕/前置内容,铺垫,引子,0,0.0,0.0,0.0,0.0,,0,scene_metrics
+pdf_01000000__01002014___534d1c1fdb,宇宙锋,pdf_01000000__01002014___534d1c1fdb__scene__001,1,【第一场】,冲突,对峙,4,1.0,6.9,0.2,7.1,赵艳容从顺从转为反抗，决定装疯以抗婚,1,scene_metrics
+pdf_01000000__01002014___534d1c1fdb,宇宙锋,pdf_01000000__01002014___534d1c1fdb__scene__002,2,【第二场】,高潮,对峙,4,1.0,1.3529,0.1176,1.4706,赵艳容以疯癫为掩护，公开挑战秦王权威，冲突达到顶点。,1,scene_metrics

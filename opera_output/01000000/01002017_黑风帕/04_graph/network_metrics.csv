@@ -1,0 +1,7 @@
+doc_id,doc_title,character,char_id,degree,weighted_degree,degree_centrality,strength_centrality,derived_by
+pdf_01000000__01002017___248eca40c2,黑风帕,高旺,pdf_01000000__01002017___248eca40c2__char__f1cacc05ac,10,62,1.0,1.0,relations_aggregated
+pdf_01000000__01002017___248eca40c2,黑风帕,张保,pdf_01000000__01002017___248eca40c2__char__c1d4c29bd0,7,21,0.7,0.3387,relations_aggregated
+pdf_01000000__01002017___248eca40c2,黑风帕,张兰英,pdf_01000000__01002017___248eca40c2__char__35f7d57ce3,6,21,0.6,0.3387,relations_aggregated
+pdf_01000000__01002017___248eca40c2,黑风帕,鞑婆,pdf_01000000__01002017___248eca40c2__char__2f517acee9,6,18,0.6,0.2903,relations_aggregated
+pdf_01000000__01002017___248eca40c2,黑风帕,杨八妹,pdf_01000000__01002017___248eca40c2__char__2773168095,5,21,0.5,0.3387,relations_aggregated
+pdf_01000000__01002017___248eca40c2,黑风帕,高来,pdf_01000000__01002017___248eca40c2__char__653e756cb9,4,29,0.4,0.4677,relations_aggregated

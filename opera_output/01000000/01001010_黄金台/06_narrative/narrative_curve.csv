@@ -1,0 +1,4 @@
+doc_id,doc_title,scene_id,scene_index,scene,conflict_stage,scene_function,tension_level,tension_norm,dialogue_density,lyric_density,speech_density,narrative_turning_point,is_climax,derived_by
+pdf_01000000__01001010___86bc12e35b,黄金台,pdf_01000000__01001010___86bc12e35b__scene__000,0,序幕/前置内容,铺垫,引子,0,0.0,0.0,0.0,0.0,救,0,scene_metrics
+pdf_01000000__01001010___86bc12e35b,黄金台,pdf_01000000__01001010___86bc12e35b__scene__001,1,【第一场】,铺垫,引子,2,0.5,1.5,0.0,1.5,无显著转折，为后续冲突埋下伏笔,0,scene_metrics
+pdf_01000000__01001010___86bc12e35b,黄金台,pdf_01000000__01001010___86bc12e35b__scene__002,2,【第二场】,冲突,推进,4,1.0,1.1261,0.0,1.1261,田单决定让田法章扮女装，冲突升级至面对面搜查,1,scene_metrics

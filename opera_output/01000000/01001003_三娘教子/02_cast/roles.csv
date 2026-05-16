@@ -1,0 +1,4 @@
+doc_id,doc_title,char_id,role_name,alias_names,role_type_raw,role_type_inferred,gender_inferred,age_inferred,status_identity,personality_tags,behavior_tags,speech_style,narrative_function,line_count,scene_coverage,scene_count_present,centrality_hint,evidence,source_line,raw,confidence,llm_error,role_note
+pdf_01000000__01001003___c7b0d12542,三娘教子,pdf_01000000__01001003___c7b0d12542__char__222fbb7f68,王春娥,,旦,旦,女,中年,三娘，薛家妾室，后为节妇,贤惠；坚贞；慈爱；刚毅,教子；持家；守节；忍辱负重,温婉中带刚；教诲语气；情感真挚,主角,0,,0,0.0,# 《三娘教子》（《双官诰》【前本】）,5,王春娥：旦,0.95,,
+pdf_01000000__01001003___c7b0d12542,三娘教子,pdf_01000000__01001003___c7b0d12542__char__965042f127,薛保,,外,外,男,老年,薛家老仆,忠诚；善良；正直；勤恳,辅助主母；照料家务；劝解矛盾,朴实；恳切；略带沧桑,配角,0,,0,0.0,# 《三娘教子》（《双官诰》【前本】）,7,薛保：外,0.9,,
+pdf_01000000__01001003___c7b0d12542,三娘教子,pdf_01000000__01001003___c7b0d12542__char__c17fa8c819,薛倚哥,,小生,小生,男,少年,薛家之子，王春娥继子,顽皮；叛逆；后知孝顺；可塑,逃学；顶撞母亲；最终悔悟,稚气；倔强；后期转为恭敬,配角,0,,0,0.0,# 《三娘教子》（《双官诰》【前本】）,9,薛倚哥：小生,0.9,,

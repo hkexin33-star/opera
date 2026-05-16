@@ -1,0 +1,7 @@
+doc_id,doc_title,character,char_id,degree,weighted_degree,degree_centrality,strength_centrality,derived_by
+pdf_01000000__01001011___b32a64375f,文昭关,东皋公,pdf_01000000__01001011___b32a64375f__char__73b4f3469d,10,47,1.0,1.0,relations_aggregated
+pdf_01000000__01001011___b32a64375f,文昭关,皇甫讷,pdf_01000000__01001011___b32a64375f__char__f030df69b8,9,33,0.9,0.7021,relations_aggregated
+pdf_01000000__01001011___b32a64375f,文昭关,米南适,pdf_01000000__01001011___b32a64375f__char__768b0d2c53,6,24,0.6,0.5106,relations_aggregated
+pdf_01000000__01001011___b32a64375f,文昭关,四青袍,pdf_01000000__01001011___b32a64375f__char__0a5ae5d0c0,6,11,0.6,0.234,relations_aggregated
+pdf_01000000__01001011___b32a64375f,文昭关,伍员,pdf_01000000__01001011___b32a64375f__char__5835435b22,5,26,0.5,0.5532,relations_aggregated
+pdf_01000000__01001011___b32a64375f,文昭关,童儿,pdf_01000000__01001011___b32a64375f__char__30fb62994b,4,7,0.4,0.1489,relations_aggregated

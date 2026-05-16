@@ -1,0 +1,4 @@
+doc_id,doc_title,character,char_id,degree,weighted_degree,degree_centrality,strength_centrality,derived_by
+pdf_01000000__01002003___ad1a817c3c,祭长江,孙尚香,pdf_01000000__01002003___ad1a817c3c__char__d02d5340ae,2,6,1.0,1.0,relations_aggregated
+pdf_01000000__01002003___ad1a817c3c,祭长江,刘备,pdf_01000000__01002003___ad1a817c3c__char__35608de659,1,5,0.5,0.8333,relations_aggregated
+pdf_01000000__01002003___ad1a817c3c,祭长江,龙王,pdf_01000000__01002003___ad1a817c3c__char__d789489960,1,1,0.5,0.1667,relations_aggregated

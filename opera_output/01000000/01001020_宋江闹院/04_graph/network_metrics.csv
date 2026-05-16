@@ -1,0 +1,5 @@
+doc_id,doc_title,character,char_id,degree,weighted_degree,degree_centrality,strength_centrality,derived_by
+pdf_01000000__01001020___4ed03adea1,宋江闹院,宋江,pdf_01000000__01001020___4ed03adea1__char__6d76ac7bcd,6,27,1.0,0.7941,relations_aggregated
+pdf_01000000__01001020___4ed03adea1,宋江闹院,张文远,pdf_01000000__01001020___4ed03adea1__char__b75d48c051,5,21,0.8333,0.6176,relations_aggregated
+pdf_01000000__01001020___4ed03adea1,宋江闹院,阎惜姣,pdf_01000000__01001020___4ed03adea1__char__897332419a,4,34,0.6667,1.0,relations_aggregated
+pdf_01000000__01001020___4ed03adea1,宋江闹院,众人,pdf_01000000__01001020___4ed03adea1__char__fd98c75ebe,3,4,0.5,0.1176,relations_aggregated

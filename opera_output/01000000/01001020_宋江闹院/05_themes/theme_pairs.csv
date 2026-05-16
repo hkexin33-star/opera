@@ -1,0 +1,13 @@
+doc_id,doc_title,theme_a,theme_b,cooccurrence_weight,evidence,derived_by
+pdf_01000000__01001020___4ed03adea1,宋江闹院,亲情,喜剧,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01001020___4ed03adea1,宋江闹院,亲情,情爱,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01001020___4ed03adea1,宋江闹院,亲情,战争,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01001020___4ed03adea1,宋江闹院,喜剧,情爱,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01001020___4ed03adea1,宋江闹院,喜剧,战争,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01001020___4ed03adea1,宋江闹院,情爱,战争,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01001020___4ed03adea1,宋江闹院,情爱,权力与地位,1,【第二场】,scene_cooccurrence
+pdf_01000000__01001020___4ed03adea1,宋江闹院,情爱,猜疑与欺骗,1,【第二场】,scene_cooccurrence
+pdf_01000000__01001020___4ed03adea1,宋江闹院,情爱,私通,1,【第一场】,scene_cooccurrence
+pdf_01000000__01001020___4ed03adea1,宋江闹院,情爱,背叛,1,【第一场】,scene_cooccurrence
+pdf_01000000__01001020___4ed03adea1,宋江闹院,权力与地位,猜疑与欺骗,1,【第二场】,scene_cooccurrence
+pdf_01000000__01001020___4ed03adea1,宋江闹院,私通,背叛,1,【第一场】,scene_cooccurrence

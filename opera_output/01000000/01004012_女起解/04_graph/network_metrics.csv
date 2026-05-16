@@ -1,0 +1,6 @@
+doc_id,doc_title,character,char_id,degree,weighted_degree,degree_centrality,strength_centrality,derived_by
+pdf_01000000__01004012___2ea5375b61,女起解,张公道,pdf_01000000__01004012___2ea5375b61__char__61048cf418,8,29,1.0,1.0,relations_aggregated
+pdf_01000000__01004012___2ea5375b61,女起解,苏三,pdf_01000000__01004012___2ea5375b61__char__c8bd1558f6,5,20,0.625,0.6897,relations_aggregated
+pdf_01000000__01004012___2ea5375b61,女起解,狱官,pdf_01000000__01004012___2ea5375b61__char__2c2a7f33f8,4,9,0.5,0.3103,relations_aggregated
+pdf_01000000__01004012___2ea5375b61,女起解,禁子,pdf_01000000__01004012___2ea5375b61__char__5b3ec65f25,3,4,0.375,0.1379,relations_aggregated
+pdf_01000000__01004012___2ea5375b61,女起解,客人,pdf_01000000__01004012___2ea5375b61__char__8f9f6d4aa7,2,2,0.25,0.069,relations_aggregated

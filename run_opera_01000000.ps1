@@ -1,5 +1,6 @@
 # 《戏考》合集 01000000 批处理辅助脚本
-# 用法：在 PowerShell 中先激活环境并设置密钥，再执行本脚本或其中某一步。
+# 完整说明见 README.md（第五～十二节：操作流程、中断重启、命令速查）
+# 用法：在 PowerShell 中先激活环境并设置密钥，再取消下面对应步骤的注释并执行。
 
 $ErrorActionPreference = "Stop"
 $Root = Split-Path -Parent $MyInvocation.MyCommand.Path
@@ -38,7 +39,8 @@ Write-Host "`n=== 1. 处理进度 ===" -ForegroundColor Cyan
 python mineru_batch_convert_structured_llm_final_v8.py `
     --status-only `
     --input-dir $InputDir `
-    --output-dir $OutputDir
+    --output-dir $OutputDir `
+    --collection-prefix 01000000
 
 # 取消下面各步注释以执行对应阶段
 
@@ -56,7 +58,7 @@ python mineru_batch_convert_structured_llm_final_v8.py `
 #     --output-dir $OutputDir `
 #     --llm-enabled `
 #     --chunk-size 50 `
-#     --no-skip-existing `
+#     --collection-prefix 01000000 `
 #     --manifest (Join-Path $OutputDir "mineru_manifest_01000000.csv")
 
 # ---------- 4. 仅刷新全库汇总表（中断后可单独跑）----------

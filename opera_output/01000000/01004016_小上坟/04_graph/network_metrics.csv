@@ -1,0 +1,5 @@
+doc_id,doc_title,character,char_id,degree,weighted_degree,degree_centrality,strength_centrality,derived_by
+pdf_01000000__01004016___8e04e3a822,小上坟,萧素贞,pdf_01000000__01004016___8e04e3a822__char__5350ba1219,6,21,1.0,0.875,relations_aggregated
+pdf_01000000__01004016___8e04e3a822,小上坟,刘禄敬,pdf_01000000__01004016___8e04e3a822__char__049a62ab9c,6,24,1.0,1.0,relations_aggregated
+pdf_01000000__01004016___8e04e3a822,小上坟,青袍甲,pdf_01000000__01004016___8e04e3a822__char__688a51a7a5,5,10,0.8333,0.4167,relations_aggregated
+pdf_01000000__01004016___8e04e3a822,小上坟,青袍,pdf_01000000__01004016___8e04e3a822__char__bed30bf88c,5,7,0.8333,0.2917,relations_aggregated

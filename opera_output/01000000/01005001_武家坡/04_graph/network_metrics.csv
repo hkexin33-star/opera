@@ -1,0 +1,4 @@
+doc_id,doc_title,character,char_id,degree,weighted_degree,degree_centrality,strength_centrality,derived_by
+pdf_01000000__01005001___8bae4c8a7d,武家坡,王宝钏,pdf_01000000__01005001___8bae4c8a7d__char__1d2367a08b,4,23,1.0,0.8519,relations_aggregated
+pdf_01000000__01005001___8bae4c8a7d,武家坡,薛平贵,pdf_01000000__01005001___8bae4c8a7d__char__b74cd28ad0,4,27,1.0,1.0,relations_aggregated
+pdf_01000000__01005001___8bae4c8a7d,武家坡,大嫂,pdf_01000000__01005001___8bae4c8a7d__char__fd85e697a4,4,10,1.0,0.3704,relations_aggregated

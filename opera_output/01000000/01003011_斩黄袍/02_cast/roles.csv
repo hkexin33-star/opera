@@ -1,0 +1,8 @@
+doc_id,doc_title,char_id,role_name,alias_names,role_type_raw,role_type_inferred,gender_inferred,age_inferred,status_identity,personality_tags,behavior_tags,speech_style,narrative_function,line_count,scene_coverage,scene_count_present,centrality_hint,evidence,source_line,raw,confidence,llm_error,role_note
+pdf_01000000__01003011___a844c57d4e,斩黄袍,pdf_01000000__01003011___a844c57d4e__char__72668eef72,赵匡胤,,红生,红生,未知,未知,未知,[],[],[],,62,1；4；5；7；12,5,1.0,赵匡胤：红生,5,赵匡胤：红生,0.3,No JSON object found in LLM response,
+pdf_01000000__01003011___a844c57d4e,斩黄袍,pdf_01000000__01003011___a844c57d4e__char__0fc20654bc,郑恩,,净,净,未知,未知,未知,[],[],[],,41,1；4；7；9,4,0.6842,郑恩：净,7,郑恩：净,0.3,No JSON object found in LLM response,
+pdf_01000000__01003011___a844c57d4e,斩黄袍,pdf_01000000__01003011___a844c57d4e__char__bcdba448ac,苗顺,,末,末,未知,未知,未知,[],[],[],,13,1；4；7,3,0.193,苗顺：末,11,苗顺：末,0.3,No JSON object found in LLM response,
+pdf_01000000__01003011___a844c57d4e,斩黄袍,pdf_01000000__01003011___a844c57d4e__char__61f13d5518,韩龙,,丑,丑,未知,未知,未知,[],[],[],,18,4；7；9,3,0.2924,韩龙：丑,13,韩龙：丑,0.3,No JSON object found in LLM response,
+pdf_01000000__01003011___a844c57d4e,斩黄袍,pdf_01000000__01003011___a844c57d4e__char__3ee7c6ada5,郑英,,小生,小生,男,偏少/少年,未知,[],[],[],,7,8；9,2,0.152,郑英：小生,15,郑英：小生,0.3,No JSON object found in LLM response,
+pdf_01000000__01003011___a844c57d4e,斩黄袍,pdf_01000000__01003011___a844c57d4e__char__e52cb8b02b,陶三春,,正旦,正旦,未知,未知,未知,[],[],[],,10,12,1,0.2105,陶三春：正旦,17,陶三春：正旦,0.3,No JSON object found in LLM response,
+pdf_01000000__01003011___a844c57d4e,斩黄袍,pdf_01000000__01003011___a844c57d4e__char__64f848f8e7,家院,,老生,老生,未知,偏老/中老年,基层/随从,[],[],[],,1,9,1,0.0234,家院：老生,19,家院：老生,0.3,No JSON object found in LLM response,

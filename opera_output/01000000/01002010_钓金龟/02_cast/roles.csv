@@ -1,0 +1,3 @@
+doc_id,doc_title,char_id,role_name,alias_names,role_type_raw,role_type_inferred,gender_inferred,age_inferred,status_identity,personality_tags,behavior_tags,speech_style,narrative_function,line_count,scene_coverage,scene_count_present,centrality_hint,evidence,source_line,raw,confidence,llm_error,role_note
+pdf_01000000__01002010___3013c653cd,钓金龟,pdf_01000000__01002010___3013c653cd__char__a470bd08ab,康氏,,老旦,老旦,女,老年,贫苦老妇，张义之母,慈祥；坚韧；爱子,训子；哭灵；诉苦,唱腔苍劲；念白沉稳；多用哭头,主角,0,,0,0.0,角色类型为老旦，剧中为张义之母，有训子、哭灵等情节，符合老年女性身份。,7,康氏：老旦,0.95,,
+pdf_01000000__01002010___3013c653cd,钓金龟,pdf_01000000__01002010___3013c653cd__char__59a78e16c6,张义,,丑,丑,男,青年,贫苦渔夫，康氏之子,憨厚；孝顺；直率,钓鱼；得宝；报喜,念白诙谐；京白为主；语气活泼,主角,0,,0,0.0,角色类型为丑，剧中为康氏之子，以钓鱼得宝推动剧情，性格憨厚直率。,9,张义：丑,0.95,,

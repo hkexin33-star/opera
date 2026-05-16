@@ -1,0 +1,7 @@
+doc_id,doc_title,theme_a,theme_b,cooccurrence_weight,evidence,derived_by
+pdf_01000000__01002004___832d202725,探寒窑,亲情,公案,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01002004___832d202725,探寒窑,亲情,情爱,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01002004___832d202725,探寒窑,亲情,战争,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01002004___832d202725,探寒窑,公案,情爱,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01002004___832d202725,探寒窑,公案,战争,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01002004___832d202725,探寒窑,情爱,战争,1,序幕/前置内容,scene_cooccurrence

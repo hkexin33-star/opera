@@ -1,0 +1,245 @@
+{
+  "metadata": {
+    "source_file": "01002013_华容道.pdf",
+    "source_path": "D:\\University_studies\\Junior\\data_visualization\\experiment\\final_self\\opera_dataset\\01000000\\01002013_华容道.pdf",
+    "relative_path": "01000000/01002013_华容道.pdf",
+    "batch_id": "3eabbee2-5357-420e-8360-4cf6a7a1b512",
+    "doc_id": "pdf_01000000__01002013___a1d909916b",
+    "collection_dir": "01000000",
+    "collection_code": "1000000",
+    "collection_name": "《戏考》",
+    "collection_label": "《戏考》（1000000）",
+    "work_code": "01002013",
+    "work_title_hint": "华容道",
+    "parser_version": "2026-05-16-r6",
+    "phase": "pre_llm",
+    "play_title": "华容道",
+    "aliases": [
+      "挡曹"
+    ],
+    "alias_text": "一名：《挡曹》",
+    "synopsis": "赤壁之战后，曹操败走华容道，遇关羽拦截。关羽念及旧恩，不顾军令状，放走曹操，后因刘备求情免于军法处置。",
+    "note_text": "《戏考》收录，别名《挡曹》，为历史战争戏，突出关羽重义性格。",
+    "period_hint": "三国",
+    "genre_hint": "历史戏",
+    "line_count": 19,
+    "role_count": 2,
+    "scene_count": 1,
+    "dialogue_count": 2,
+    "performance_count": 2,
+    "relation_count": 0,
+    "theme_count": 4,
+    "llm_enabled": false,
+    "llm_model": ""
+  },
+  "roles": [
+    {
+      "role_name": "关羽",
+      "role_type_raw": "红生",
+      "role_note": "",
+      "source_line": 7,
+      "raw": "关羽：红生",
+      "role_type_inferred": "红生",
+      "gender_inferred": "男",
+      "age_inferred": "中年",
+      "status_identity": "蜀汉名将，义薄云天的武圣",
+      "personality_tags": "忠义；重情；高傲；守信",
+      "behavior_tags": "挡曹；念旧情；放走曹操",
+      "speech_style": "威严；简洁；掷地有声",
+      "evidence": "# 《华容道》 # （一名：《挡曹》）",
+      "confidence": 0.95,
+      "narrative_function": "主角"
+    },
+    {
+      "role_name": "曹操",
+      "role_type_raw": "净",
+      "role_note": "",
+      "source_line": 9,
+      "raw": "曹操：净",
+      "role_type_inferred": "净",
+      "gender_inferred": "男",
+      "age_inferred": "老年",
+      "status_identity": "败退的魏王，一代枭雄",
+      "personality_tags": "奸诈；多疑；机变；善于求饶",
+      "behavior_tags": "败走华容道；向关羽求情；以旧恩打动关羽",
+      "speech_style": "狡黠；动之以情；低声下气",
+      "evidence": "# 《华容道》 # （一名：《挡曹》）",
+      "confidence": 0.95,
+      "narrative_function": "主角"
+    }
+  ],
+  "scenes": [
+    {
+      "scene_index": 0,
+      "scene": "序幕/前置内容",
+      "line_no": 1,
+      "start_line": 1,
+      "end_line": 3,
+      "characters_present": "",
+      "line_count": 2,
+      "dialogue_count": 0,
+      "lyric_count": 0,
+      "stage_direction_count": 0,
+      "narration_count": 2,
+      "key_characters": "",
+      "summary": "# 《华容道》；# （一名：《挡曹》）",
+      "location": "",
+      "time_hint": "",
+      "dominant_action": "对话",
+      "main_event": "# 《华容道》；# （一名：《挡曹》）",
+      "narrative_turning_point": "",
+      "scene_function": "引子",
+      "conflict_stage": "铺垫",
+      "tension_level": 0,
+      "theme_labels": "忠义；战争；情爱；离散"
+    }
+  ],
+  "dialogues": [
+    {
+      "source_file": "01002013_华容道.pdf",
+      "source_path": "D:\\University_studies\\Junior\\data_visualization\\experiment\\final_self\\opera_dataset\\01000000\\01002013_华容道.pdf",
+      "relative_path": "01000000/01002013_华容道.pdf",
+      "batch_id": "3eabbee2-5357-420e-8360-4cf6a7a1b512",
+      "doc_id": "pdf_01000000__01002013___a1d909916b",
+      "scene_index": 0,
+      "scene": "序幕/前置内容",
+      "line_no": 1,
+      "row_type": "narration",
+      "speaker": "",
+      "cue": "",
+      "text": "# 《华容道》",
+      "raw_line": "# 《华容道》"
+    },
+    {
+      "source_file": "01002013_华容道.pdf",
+      "source_path": "D:\\University_studies\\Junior\\data_visualization\\experiment\\final_self\\opera_dataset\\01000000\\01002013_华容道.pdf",
+      "relative_path": "01000000/01002013_华容道.pdf",
+      "batch_id": "3eabbee2-5357-420e-8360-4cf6a7a1b512",
+      "doc_id": "pdf_01000000__01002013___a1d909916b",
+      "scene_index": 0,
+      "scene": "序幕/前置内容",
+      "line_no": 3,
+      "row_type": "narration",
+      "speaker": "",
+      "cue": "",
+      "text": "# （一名：《挡曹》）",
+      "raw_line": "# （一名：《挡曹》）"
+    }
+  ],
+  "performances": [
+    {
+      "doc_id": "pdf_01000000__01002013___a1d909916b",
+      "doc_title": "华容道",
+      "source_file": "01002013_华容道.pdf",
+      "source_path": "D:\\University_studies\\Junior\\data_visualization\\experiment\\final_self\\opera_dataset\\01000000\\01002013_华容道.pdf",
+      "relative_path": "01000000/01002013_华容道.pdf",
+      "batch_id": "3eabbee2-5357-420e-8360-4cf6a7a1b512",
+      "scene_index": 0,
+      "scene": "序幕/前置内容",
+      "line_no": 1,
+      "row_type": "narration",
+      "speaker": "",
+      "cue": "",
+      "perform_type": "说明",
+      "perform_subtype": "",
+      "action_tags": "道",
+      "participants": "《华容道》",
+      "text": "# 《华容道》",
+      "raw_line": "# 《华容道》"
+    },
+    {
+      "doc_id": "pdf_01000000__01002013___a1d909916b",
+      "doc_title": "华容道",
+      "source_file": "01002013_华容道.pdf",
+      "source_path": "D:\\University_studies\\Junior\\data_visualization\\experiment\\final_self\\opera_dataset\\01000000\\01002013_华容道.pdf",
+      "relative_path": "01000000/01002013_华容道.pdf",
+      "batch_id": "3eabbee2-5357-420e-8360-4cf6a7a1b512",
+      "scene_index": 0,
+      "scene": "序幕/前置内容",
+      "line_no": 3,
+      "row_type": "narration",
+      "speaker": "",
+      "cue": "",
+      "perform_type": "说明",
+      "perform_subtype": "",
+      "action_tags": "",
+      "participants": "（一名：《挡曹》",
+      "text": "# （一名：《挡曹》）",
+      "raw_line": "# （一名：《挡曹》）"
+    }
+  ],
+  "relations": [],
+  "relations_aggregated": [],
+  "themes": [
+    {
+      "doc_title": "华容道",
+      "scene_index": 0,
+      "scene": "序幕/前置内容",
+      "theme_label_raw": "忠义",
+      "theme_label": "忠义",
+      "theme_strength": 1,
+      "evidence": "# 《华容道》；# （一名：《挡曹》）",
+      "derived_by": "keyword"
+    },
+    {
+      "doc_title": "华容道",
+      "scene_index": 0,
+      "scene": "序幕/前置内容",
+      "theme_label_raw": "战争",
+      "theme_label": "战争",
+      "theme_strength": 1,
+      "evidence": "# 《华容道》；# （一名：《挡曹》）",
+      "derived_by": "keyword"
+    },
+    {
+      "doc_title": "华容道",
+      "scene_index": 0,
+      "scene": "序幕/前置内容",
+      "theme_label_raw": "情爱",
+      "theme_label": "情爱",
+      "theme_strength": 1,
+      "evidence": "# 《华容道》；# （一名：《挡曹》）",
+      "derived_by": "keyword"
+    },
+    {
+      "doc_title": "华容道",
+      "scene_index": 0,
+      "scene": "序幕/前置内容",
+      "theme_label_raw": "离散",
+      "theme_label": "离散",
+      "theme_strength": 1,
+      "evidence": "# 《华容道》；# （一名：《挡曹》）",
+      "derived_by": "keyword"
+    }
+  ],
+  "themes_aggregated": [
+    {
+      "doc_title": "华容道",
+      "theme_label": "忠义",
+      "weight": 1,
+      "evidence": "# 《华容道》；# （一名：《挡曹》）",
+      "derived_by": "keyword"
+    },
+    {
+      "doc_title": "华容道",
+      "theme_label": "情爱",
+      "weight": 1,
+      "evidence": "# 《华容道》；# （一名：《挡曹》）",
+      "derived_by": "keyword"
+    },
+    {
+      "doc_title": "华容道",
+      "theme_label": "战争",
+      "weight": 1,
+      "evidence": "# 《华容道》；# （一名：《挡曹》）",
+      "derived_by": "keyword"
+    },
+    {
+      "doc_title": "华容道",
+      "theme_label": "离散",
+      "weight": 1,
+      "evidence": "# 《华容道》；# （一名：《挡曹》）",
+      "derived_by": "keyword"
+    }
+  ]
+}

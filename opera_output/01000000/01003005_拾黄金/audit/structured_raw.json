@@ -1,0 +1,212 @@
+{
+  "metadata": {
+    "source_file": "01003005_拾黄金.pdf",
+    "source_path": "D:\\University_studies\\Junior\\data_visualization\\experiment\\final_self\\opera_dataset\\01000000\\01003005_拾黄金.pdf",
+    "relative_path": "01000000/01003005_拾黄金.pdf",
+    "batch_id": "3eabbee2-5357-420e-8360-4cf6a7a1b512",
+    "doc_id": "pdf_01000000__01003005___ee5df368d2",
+    "collection_dir": "01000000",
+    "collection_code": "1000000",
+    "collection_name": "《戏考》",
+    "collection_label": "《戏考》（1000000）",
+    "work_code": "01003005",
+    "work_title_hint": "拾黄金",
+    "parser_version": "2026-05-16-r6",
+    "phase": "pre_llm",
+    "play_title": "拾黄金",
+    "aliases": [
+      "财迷传",
+      "化子拾金"
+    ],
+    "alias_text": "一名：《财迷传》；一名：《化子拾金》",
+    "synopsis": "丐者范陶于雪中拾得黄金一锭，喜极入魔，骤得财迷。忽而哭，忽而笑，忽而指金怒骂，借演唱发挥喜怒哀乐。",
+    "note_text": "白中冷嘲热骂，使患金钱热者及铜臭骄人之辈心动。系丑角单幕独角戏，寓言讽世，寄慨甚深。李百岁唱此最工，或谓脱胎昆剧《罗梦》。",
+    "period_hint": "",
+    "genre_hint": "喜剧",
+    "line_count": 27,
+    "role_count": 1,
+    "scene_count": 1,
+    "dialogue_count": 2,
+    "performance_count": 2,
+    "relation_count": 0,
+    "theme_count": 3,
+    "llm_enabled": false,
+    "llm_model": ""
+  },
+  "roles": [
+    {
+      "role_name": "范陶",
+      "role_type_raw": "丑",
+      "role_note": "",
+      "source_line": 7,
+      "raw": "范陶：丑",
+      "role_type_inferred": "丑",
+      "gender_inferred": "男",
+      "age_inferred": "中年",
+      "status_identity": "乞丐/流浪汉",
+      "personality_tags": "贪财；滑稽；市侩",
+      "behavior_tags": "拾金；自嘲；夸张表演",
+      "speech_style": "诙谐；口语化；带方言或俚语",
+      "evidence": "剧名《拾黄金》又名《财迷传》《化子拾金》，角色类型为丑，暗示其身份为底层滑稽人物，核心情节围绕拾金展开。",
+      "confidence": 0.85,
+      "narrative_function": "主角"
+    }
+  ],
+  "scenes": [
+    {
+      "scene_index": 0,
+      "scene": "序幕/前置内容",
+      "line_no": 1,
+      "start_line": 1,
+      "end_line": 3,
+      "characters_present": "",
+      "line_count": 2,
+      "dialogue_count": 0,
+      "lyric_count": 0,
+      "stage_direction_count": 0,
+      "narration_count": 2,
+      "key_characters": "",
+      "summary": "# 《拾黄金》；# （一名：《财迷传》；一名：《化子拾金》）",
+      "location": "",
+      "time_hint": "",
+      "dominant_action": "命令",
+      "main_event": "# 《拾黄金》；# （一名：《财迷传》；一名：《化子拾金》）",
+      "narrative_turning_point": "",
+      "scene_function": "引子",
+      "conflict_stage": "铺垫",
+      "tension_level": 0,
+      "theme_labels": "亲情；喜剧；情爱"
+    }
+  ],
+  "dialogues": [
+    {
+      "source_file": "01003005_拾黄金.pdf",
+      "source_path": "D:\\University_studies\\Junior\\data_visualization\\experiment\\final_self\\opera_dataset\\01000000\\01003005_拾黄金.pdf",
+      "relative_path": "01000000/01003005_拾黄金.pdf",
+      "batch_id": "3eabbee2-5357-420e-8360-4cf6a7a1b512",
+      "doc_id": "pdf_01000000__01003005___ee5df368d2",
+      "scene_index": 0,
+      "scene": "序幕/前置内容",
+      "line_no": 1,
+      "row_type": "narration",
+      "speaker": "",
+      "cue": "",
+      "text": "# 《拾黄金》",
+      "raw_line": "# 《拾黄金》"
+    },
+    {
+      "source_file": "01003005_拾黄金.pdf",
+      "source_path": "D:\\University_studies\\Junior\\data_visualization\\experiment\\final_self\\opera_dataset\\01000000\\01003005_拾黄金.pdf",
+      "relative_path": "01000000/01003005_拾黄金.pdf",
+      "batch_id": "3eabbee2-5357-420e-8360-4cf6a7a1b512",
+      "doc_id": "pdf_01000000__01003005___ee5df368d2",
+      "scene_index": 0,
+      "scene": "序幕/前置内容",
+      "line_no": 3,
+      "row_type": "narration",
+      "speaker": "",
+      "cue": "",
+      "text": "# （一名：《财迷传》；一名：《化子拾金》）",
+      "raw_line": "# （一名：《财迷传》；一名：《化子拾金》）"
+    }
+  ],
+  "performances": [
+    {
+      "doc_id": "pdf_01000000__01003005___ee5df368d2",
+      "doc_title": "拾黄金",
+      "source_file": "01003005_拾黄金.pdf",
+      "source_path": "D:\\University_studies\\Junior\\data_visualization\\experiment\\final_self\\opera_dataset\\01000000\\01003005_拾黄金.pdf",
+      "relative_path": "01000000/01003005_拾黄金.pdf",
+      "batch_id": "3eabbee2-5357-420e-8360-4cf6a7a1b512",
+      "scene_index": 0,
+      "scene": "序幕/前置内容",
+      "line_no": 1,
+      "row_type": "narration",
+      "speaker": "",
+      "cue": "",
+      "perform_type": "说明",
+      "perform_subtype": "",
+      "action_tags": "",
+      "participants": "《拾黄金》",
+      "text": "# 《拾黄金》",
+      "raw_line": "# 《拾黄金》"
+    },
+    {
+      "doc_id": "pdf_01000000__01003005___ee5df368d2",
+      "doc_title": "拾黄金",
+      "source_file": "01003005_拾黄金.pdf",
+      "source_path": "D:\\University_studies\\Junior\\data_visualization\\experiment\\final_self\\opera_dataset\\01000000\\01003005_拾黄金.pdf",
+      "relative_path": "01000000/01003005_拾黄金.pdf",
+      "batch_id": "3eabbee2-5357-420e-8360-4cf6a7a1b512",
+      "scene_index": 0,
+      "scene": "序幕/前置内容",
+      "line_no": 3,
+      "row_type": "narration",
+      "speaker": "",
+      "cue": "",
+      "perform_type": "说明",
+      "perform_subtype": "",
+      "action_tags": "传",
+      "participants": "（一名：《财迷传》；一名：《化子拾金》",
+      "text": "# （一名：《财迷传》；一名：《化子拾金》）",
+      "raw_line": "# （一名：《财迷传》；一名：《化子拾金》）"
+    }
+  ],
+  "relations": [],
+  "relations_aggregated": [],
+  "themes": [
+    {
+      "doc_title": "拾黄金",
+      "scene_index": 0,
+      "scene": "序幕/前置内容",
+      "theme_label_raw": "亲情",
+      "theme_label": "亲情",
+      "theme_strength": 1,
+      "evidence": "# 《拾黄金》；# （一名：《财迷传》；一名：《化子拾金》）",
+      "derived_by": "keyword"
+    },
+    {
+      "doc_title": "拾黄金",
+      "scene_index": 0,
+      "scene": "序幕/前置内容",
+      "theme_label_raw": "喜剧",
+      "theme_label": "喜剧",
+      "theme_strength": 1,
+      "evidence": "# 《拾黄金》；# （一名：《财迷传》；一名：《化子拾金》）",
+      "derived_by": "keyword"
+    },
+    {
+      "doc_title": "拾黄金",
+      "scene_index": 0,
+      "scene": "序幕/前置内容",
+      "theme_label_raw": "情爱",
+      "theme_label": "情爱",
+      "theme_strength": 1,
+      "evidence": "# 《拾黄金》；# （一名：《财迷传》；一名：《化子拾金》）",
+      "derived_by": "keyword"
+    }
+  ],
+  "themes_aggregated": [
+    {
+      "doc_title": "拾黄金",
+      "theme_label": "亲情",
+      "weight": 1,
+      "evidence": "# 《拾黄金》；# （一名：《财迷传》；一名：《化子拾金》）",
+      "derived_by": "keyword"
+    },
+    {
+      "doc_title": "拾黄金",
+      "theme_label": "喜剧",
+      "weight": 1,
+      "evidence": "# 《拾黄金》；# （一名：《财迷传》；一名：《化子拾金》）",
+      "derived_by": "keyword"
+    },
+    {
+      "doc_title": "拾黄金",
+      "theme_label": "情爱",
+      "weight": 1,
+      "evidence": "# 《拾黄金》；# （一名：《财迷传》；一名：《化子拾金》）",
+      "derived_by": "keyword"
+    }
+  ]
+}

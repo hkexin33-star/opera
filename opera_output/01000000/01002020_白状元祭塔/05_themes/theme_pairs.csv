@@ -1,0 +1,12 @@
+doc_id,doc_title,theme_a,theme_b,cooccurrence_weight,evidence,derived_by
+pdf_01000000__01002020___b68a4c781b,白状元祭塔,亲情,孝道,2,【第一场】,scene_cooccurrence
+pdf_01000000__01002020___b68a4c781b,白状元祭塔,亲情,功名,1,【第一场】,scene_cooccurrence
+pdf_01000000__01002020___b68a4c781b,白状元祭塔,亲情,喜剧,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01002020___b68a4c781b,白状元祭塔,亲情,悲情,1,【第二场】,scene_cooccurrence
+pdf_01000000__01002020___b68a4c781b,白状元祭塔,亲情,情爱,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01002020___b68a4c781b,白状元祭塔,亲情,神人界限,1,【第二场】,scene_cooccurrence
+pdf_01000000__01002020___b68a4c781b,白状元祭塔,功名,孝道,1,【第一场】,scene_cooccurrence
+pdf_01000000__01002020___b68a4c781b,白状元祭塔,喜剧,情爱,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01002020___b68a4c781b,白状元祭塔,孝道,悲情,1,【第二场】,scene_cooccurrence
+pdf_01000000__01002020___b68a4c781b,白状元祭塔,孝道,神人界限,1,【第二场】,scene_cooccurrence
+pdf_01000000__01002020___b68a4c781b,白状元祭塔,悲情,神人界限,1,【第二场】,scene_cooccurrence

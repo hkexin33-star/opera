@@ -1,0 +1,4 @@
+doc_id,doc_title,scene_id,scene_index,scene,conflict_stage,scene_function,tension_level,tension_norm,dialogue_density,lyric_density,speech_density,narrative_turning_point,is_climax,derived_by
+pdf_01000000__01005009___5df172a065,孝感天,pdf_01000000__01005009___5df172a065__scene__000,0,序幕/前置内容,铺垫,引子,0,0.0,0.0,0.0,0.0,,0,scene_metrics
+pdf_01000000__01005009___5df172a065,孝感天,pdf_01000000__01005009___5df172a065__scene__001,1,【第一场】,铺垫,引子,2,0.5,0.3333,0.0,0.3333,无重大转折，为后续托梦情节做铺垫,0,scene_metrics
+pdf_01000000__01005009___5df172a065,孝感天,pdf_01000000__01005009___5df172a065__scene__002,2,【第二场】,发展,推进,4,1.0,0.8148,0.0,0.8148,武姜与亡子鬼魂相见，揭示共叔段悔恨及母子永隔的悲剧，情感冲突升级。,1,scene_metrics

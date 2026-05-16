@@ -1,0 +1,6 @@
+doc_id,doc_title,character,char_id,degree,weighted_degree,degree_centrality,strength_centrality,derived_by
+pdf_01000000__01005009___5df172a065,孝感天,魏氏,pdf_01000000__01005009___5df172a065__char__faf7f07456,6,21,1.0,0.913,relations_aggregated
+pdf_01000000__01005009___5df172a065,孝感天,共叔段,pdf_01000000__01005009___5df172a065__char__a6f3be951f,5,23,0.8333,1.0,relations_aggregated
+pdf_01000000__01005009___5df172a065,孝感天,武姜,pdf_01000000__01005009___5df172a065__char__0d51cb8567,5,16,0.8333,0.6957,relations_aggregated
+pdf_01000000__01005009___5df172a065,孝感天,龙套,pdf_01000000__01005009___5df172a065__char__258998f6a4,2,4,0.3333,0.1739,relations_aggregated
+pdf_01000000__01005009___5df172a065,孝感天,二宫女,pdf_01000000__01005009___5df172a065__char__abe54ec91f,2,2,0.3333,0.087,relations_aggregated

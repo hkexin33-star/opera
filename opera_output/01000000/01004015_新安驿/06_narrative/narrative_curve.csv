@@ -1,0 +1,5 @@
+doc_id,doc_title,scene_id,scene_index,scene,conflict_stage,scene_function,tension_level,tension_norm,dialogue_density,lyric_density,speech_density,narrative_turning_point,is_climax,derived_by
+pdf_01000000__01004015___871e6f9883,新安驿,pdf_01000000__01004015___871e6f9883__scene__000,0,序幕/前置内容,铺垫,引子,0,0.0,0.0,0.0,0.0,,0,scene_metrics
+pdf_01000000__01004015___871e6f9883,新安驿,pdf_01000000__01004015___871e6f9883__scene__001,1,【第一场】,铺垫,引子,1,0.25,0.1,0.0,0.1,无转折，为后续冲突做铺垫,0,scene_metrics
+pdf_01000000__01004015___871e6f9883,新安驿,pdf_01000000__01004015___871e6f9883__scene__002,2,【第二场】,发展,推进,4,1.0,3.8125,0.0,3.8125,周凤英从杀意转为爱慕，李氏提亲引发新冲突,1,scene_metrics
+pdf_01000000__01004015___871e6f9883,新安驿,pdf_01000000__01004015___871e6f9883__scene__003,3,【第三场】,冲突,反转,4,1.0,1.7895,0.0526,1.8421,周凤英发现罗雁女性身份，冲突升级，赵美容提出解决方案,1,scene_metrics

@@ -1,0 +1,5 @@
+doc_id,doc_title,scene_id,scene_index,scene,conflict_stage,scene_function,tension_level,tension_norm,dialogue_density,lyric_density,speech_density,narrative_turning_point,is_climax,derived_by
+pdf_01000000__01004014___d6eca0fe85,遗翠花,pdf_01000000__01004014___d6eca0fe85__scene__000,0,序幕/前置内容,铺垫,引子,0,0.0,0.0,0.0,0.0,,0,scene_metrics
+pdf_01000000__01004014___d6eca0fe85,遗翠花,pdf_01000000__01004014___d6eca0fe85__scene__001,1,【第一场】,发展,推进,2,0.5,6.0,1.0,7.0,相公从相思苦闷转为得知小姐心意，剧情由单相思转向双向互动。,0,scene_metrics
+pdf_01000000__01004014___d6eca0fe85,遗翠花,pdf_01000000__01004014___d6eca0fe85__scene__002,2,【第二场】,发展,推进,3,0.75,3.95,0.2,4.15,翠香从拒绝到暗示索要‘外’，相公领悟并接受，关系从主仆协助转为私情同盟。,1,scene_metrics
+pdf_01000000__01004014___d6eca0fe85,遗翠花,pdf_01000000__01004014___d6eca0fe85__scene__003,3,【第三场】,冲突,高潮,4,1.0,16.1111,0.7778,16.8889,老夫人突然返回并发现相公，冲突升级,1,scene_metrics

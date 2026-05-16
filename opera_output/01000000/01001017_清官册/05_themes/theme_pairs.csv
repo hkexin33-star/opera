@@ -1,0 +1,8 @@
+doc_id,doc_title,theme_a,theme_b,cooccurrence_weight,evidence,derived_by
+pdf_01000000__01001017___e46f29227d,清官册,仕途无常,忠义,1,【第一场】,scene_cooccurrence
+pdf_01000000__01001017___e46f29227d,清官册,公案,家国,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01001017___e46f29227d,清官册,公案,忠义,1,【第二场】,scene_cooccurrence
+pdf_01000000__01001017___e46f29227d,清官册,公案,权力威胁,1,【第二场】,scene_cooccurrence
+pdf_01000000__01001017___e46f29227d,清官册,家国,王法威严,1,【第三场】,scene_cooccurrence
+pdf_01000000__01001017___e46f29227d,清官册,忠义,权力威胁,1,【第二场】,scene_cooccurrence
+pdf_01000000__01001017___e46f29227d,清官册,忠义,权力斗争,1,【第五场】,scene_cooccurrence

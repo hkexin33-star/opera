@@ -1,0 +1,7 @@
+doc_id,doc_title,character,char_id,degree,weighted_degree,degree_centrality,strength_centrality,derived_by
+pdf_01000000__01003008___7111d9396e,断太后,包拯,pdf_01000000__01003008___7111d9396e__char__6e8fb3e655,8,48,1.0,1.0,relations_aggregated
+pdf_01000000__01003008___7111d9396e,断太后,地方,pdf_01000000__01003008___7111d9396e__char__9a35090a8f,7,29,0.875,0.6042,relations_aggregated
+pdf_01000000__01003008___7111d9396e,断太后,李后,pdf_01000000__01003008___7111d9396e__char__f1b3d35973,5,31,0.625,0.6458,relations_aggregated
+pdf_01000000__01003008___7111d9396e,断太后,马汉,pdf_01000000__01003008___7111d9396e__char__42ac04172b,3,8,0.375,0.1667,relations_aggregated
+pdf_01000000__01003008___7111d9396e,断太后,王朝,pdf_01000000__01003008___7111d9396e__char__c5b0dece4f,3,8,0.375,0.1667,relations_aggregated
+pdf_01000000__01003008___7111d9396e,断太后,众人,pdf_01000000__01003008___7111d9396e__char__32760fc13d,2,2,0.25,0.0417,relations_aggregated

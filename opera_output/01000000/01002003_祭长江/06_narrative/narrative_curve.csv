@@ -1,0 +1,4 @@
+doc_id,doc_title,scene_id,scene_index,scene,conflict_stage,scene_function,tension_level,tension_norm,dialogue_density,lyric_density,speech_density,narrative_turning_point,is_climax,derived_by
+pdf_01000000__01002003___ad1a817c3c,祭长江,pdf_01000000__01002003___ad1a817c3c__scene__000,0,序幕/前置内容,铺垫,引子,0,0.0,0.0,0.0,0.0,,0,scene_metrics
+pdf_01000000__01002003___ad1a817c3c,祭长江,pdf_01000000__01002003___ad1a817c3c__scene__001,1,【第一场】,高潮,高潮,5,1.0,0.5,0.0,0.5,孙尚香通过哭诉刘备一生经历，将个人情感与历史悲剧交织，情感达到高潮，为后续投江埋下伏笔。,1,scene_metrics
+pdf_01000000__01002003___ad1a817c3c,祭长江,pdf_01000000__01002003___ad1a817c3c__scene__002,2,【第二场】,收束,收束,1,0.2,0.1724,0.0,0.1724,孙尚香从凡人转为神祇，完成身份转变,0,scene_metrics

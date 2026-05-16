@@ -1,0 +1,6 @@
+doc_id,doc_title,character,char_id,degree,weighted_degree,degree_centrality,strength_centrality,derived_by
+pdf_01000000__01003010___2fda4a58c1,战蒲关,王霸,pdf_01000000__01003010___2fda4a58c1__char__cbd0dd5563,7,23,1.0,0.7188,relations_aggregated
+pdf_01000000__01003010___2fda4a58c1,战蒲关,刘忠,pdf_01000000__01003010___2fda4a58c1__char__ddadc41d7a,5,32,0.7143,1.0,relations_aggregated
+pdf_01000000__01003010___2fda4a58c1,战蒲关,徐艳贞,pdf_01000000__01003010___2fda4a58c1__char__da288cda1a,4,17,0.5714,0.5312,relations_aggregated
+pdf_01000000__01003010___2fda4a58c1,战蒲关,众百姓,pdf_01000000__01003010___2fda4a58c1__char__6fb6242498,2,2,0.2857,0.0625,relations_aggregated
+pdf_01000000__01003010___2fda4a58c1,战蒲关,军士,pdf_01000000__01003010___2fda4a58c1__char__a2746ec882,2,2,0.2857,0.0625,relations_aggregated

@@ -1,0 +1,4 @@
+doc_id,doc_title,char_id,role_name,alias_names,role_type_raw,role_type_inferred,gender_inferred,age_inferred,status_identity,personality_tags,behavior_tags,speech_style,narrative_function,line_count,scene_coverage,scene_count_present,centrality_hint,evidence,source_line,raw,confidence,llm_error,role_note
+pdf_01000000__01002006___78213d9d3b,探阴山,pdf_01000000__01002006___78213d9d3b__char__241d0f2798,包拯,,净,净,男,中年,开封府尹，龙图阁大学士,刚正不阿；铁面无私；智慧果断,审案；微服私访；夜探阴山,威严；沉稳；正义凛然,主角,0,,0,0.0,# 《探阴山》,5,包拯：净,0.9,,
+pdf_01000000__01002006___78213d9d3b,探阴山,pdf_01000000__01002006___78213d9d3b__char__deaae7d659,油流鬼,,丑,丑,男,青年,阴山小鬼，柳金蝉的守护者,滑稽；忠诚；机灵,看守柳金蝉；向包拯告密；插科打诨,诙谐；俚俗；快言快语,配角,0,,0,0.0,# 《探阴山》,7,油流鬼：丑,0.85,,
+pdf_01000000__01002006___78213d9d3b,探阴山,pdf_01000000__01002006___78213d9d3b__char__bbaeedf4af,柳金蝉,,旦,旦,女,青年,冤死女鬼，大家闺秀,善良；柔弱；坚贞,诉冤；等待昭雪；受困阴山,哀婉；凄楚；文雅,配角,0,,0,0.0,# 《探阴山》,9,柳金蝉：旦,0.85,,

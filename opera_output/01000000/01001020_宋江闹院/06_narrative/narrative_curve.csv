@@ -1,0 +1,4 @@
+doc_id,doc_title,scene_id,scene_index,scene,conflict_stage,scene_function,tension_level,tension_norm,dialogue_density,lyric_density,speech_density,narrative_turning_point,is_climax,derived_by
+pdf_01000000__01001020___4ed03adea1,宋江闹院,pdf_01000000__01001020___4ed03adea1__scene__000,0,序幕/前置内容,铺垫,引子,0,0.0,0.0,0.0,0.0,,0,scene_metrics
+pdf_01000000__01001020___4ed03adea1,宋江闹院,pdf_01000000__01001020___4ed03adea1__scene__001,1,【第一场】,铺垫,引子,2,0.5,10.25,0.0,10.25,无重大转折，为后续宋江发现奸情埋下伏笔。,0,scene_metrics
+pdf_01000000__01001020___4ed03adea1,宋江闹院,pdf_01000000__01001020___4ed03adea1__scene__002,2,【第二场】,冲突,推进,4,1.0,20.2727,0.3636,20.6364,阎惜姣藏匿张文远，宋江察觉异常，冲突开始升级。,1,scene_metrics

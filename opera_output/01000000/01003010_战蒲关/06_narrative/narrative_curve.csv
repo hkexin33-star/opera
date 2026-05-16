@@ -1,0 +1,5 @@
+doc_id,doc_title,scene_id,scene_index,scene,conflict_stage,scene_function,tension_level,tension_norm,dialogue_density,lyric_density,speech_density,narrative_turning_point,is_climax,derived_by
+pdf_01000000__01003010___2fda4a58c1,战蒲关,pdf_01000000__01003010___2fda4a58c1__scene__000,0,序幕/前置内容,铺垫,引子,2,0.4,0.0,0.0,0.0,,0,scene_metrics
+pdf_01000000__01003010___2fda4a58c1,战蒲关,pdf_01000000__01003010___2fda4a58c1__scene__001,1,【第一场】,发展,推进,4,0.8,0.4138,0.0,0.4138,刘忠的汇报揭示了城中绝粮的极端困境，冲突升级,1,scene_metrics
+pdf_01000000__01003010___2fda4a58c1,战蒲关,pdf_01000000__01003010___2fda4a58c1__scene__002,2,【第二场】,冲突,推进,4,0.8,2.0,0.0,2.0,刘忠从坚决拒绝到被迫接受命令，王霸从命令他人到欲自尽，冲突升级并出现转折。,1,scene_metrics
+pdf_01000000__01003010___2fda4a58c1,战蒲关,pdf_01000000__01003010___2fda4a58c1__scene__003,3,【第四场】,高潮,高潮,5,1.0,0.3916,0.0,0.3916,徐艳贞识破借粮暗语，决定赴死，但被刘忠劝阻，王霸出现下令处理尸体。,1,scene_metrics

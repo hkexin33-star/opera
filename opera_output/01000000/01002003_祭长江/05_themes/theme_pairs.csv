@@ -1,0 +1,13 @@
+doc_id,doc_title,theme_a,theme_b,cooccurrence_weight,evidence,derived_by
+pdf_01000000__01002003___ad1a817c3c,祭长江,亲情,家国,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01002003___ad1a817c3c,祭长江,亲情,战争,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01002003___ad1a817c3c,祭长江,亲情,权谋,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01002003___ad1a817c3c,祭长江,使命,忠义,1,【第一场】,scene_cooccurrence
+pdf_01000000__01002003___ad1a817c3c,祭长江,使命,悲情,1,【第一场】,scene_cooccurrence
+pdf_01000000__01002003___ad1a817c3c,祭长江,因果报应,封神,1,【第二场】,scene_cooccurrence
+pdf_01000000__01002003___ad1a817c3c,祭长江,因果报应,贞烈,1,【第二场】,scene_cooccurrence
+pdf_01000000__01002003___ad1a817c3c,祭长江,家国,战争,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01002003___ad1a817c3c,祭长江,家国,权谋,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01002003___ad1a817c3c,祭长江,封神,贞烈,1,【第二场】,scene_cooccurrence
+pdf_01000000__01002003___ad1a817c3c,祭长江,忠义,悲情,1,【第一场】,scene_cooccurrence
+pdf_01000000__01002003___ad1a817c3c,祭长江,战争,权谋,1,序幕/前置内容,scene_cooccurrence

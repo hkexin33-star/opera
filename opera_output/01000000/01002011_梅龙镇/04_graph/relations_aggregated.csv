@@ -1,0 +1,3 @@
+doc_id,doc_title,source,target,relation_type,weight,merged_relation_types,evidence,derived_by,llm_confidence
+pdf_01000000__01002011___1a9416b419,梅龙镇,李凤姐,正德帝,试探,5,劝阻；协助；同场共现；对话；试探,李凤姐在梅龙镇酒馆中与正德帝周旋，试探其身份与意图。,llm_refined,0.9
+pdf_01000000__01002011___1a9416b419,梅龙镇,正德帝,李凤姐,命令,5,命令；对话；提及；试探,正德帝以皇帝身份命令李凤姐听封。,llm_refined,0.9

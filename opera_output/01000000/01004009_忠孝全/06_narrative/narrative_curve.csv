@@ -1,0 +1,7 @@
+doc_id,doc_title,scene_id,scene_index,scene,conflict_stage,scene_function,tension_level,tension_norm,dialogue_density,lyric_density,speech_density,narrative_turning_point,is_climax,derived_by
+pdf_01000000__01004009___abe4e0ff20,忠孝全,pdf_01000000__01004009___abe4e0ff20__scene__000,0,序幕/前置内容,铺垫,引子,0,0.0,0.0,0.0,0.0,,0,scene_metrics
+pdf_01000000__01004009___abe4e0ff20,忠孝全,pdf_01000000__01004009___abe4e0ff20__scene__001,1,【第一场】,铺垫,铺垫,2,0.4,30.75,0.0,30.75,秦季龙被派去探查金鳌，为后续冲突埋下伏笔,0,scene_metrics
+pdf_01000000__01004009___abe4e0ff20,忠孝全,pdf_01000000__01004009___abe4e0ff20__scene__002,2,【第二场】,高潮,高潮,4,0.8,0.2917,0.0208,0.3125,金鳌从对抗转为投降，冲突解决,1,scene_metrics
+pdf_01000000__01004009___abe4e0ff20,忠孝全,pdf_01000000__01004009___abe4e0ff20__scene__003,3,【第三场】,发展,推进,3,0.6,1.3478,0.0,1.3478,福建粮草迟到引发王振下令追赶，秦洪突然出现，形成潜在冲突。,0,scene_metrics
+pdf_01000000__01004009___abe4e0ff20,忠孝全,pdf_01000000__01004009___abe4e0ff20__scene__004,4,【第四场】,发展,推进,3,0.6,0.1429,0.0,0.1429,秦季龙从接受命令到产生怀疑，决定前往法场，为后续冲突埋下伏笔。,0,scene_metrics
+pdf_01000000__01004009___abe4e0ff20,忠孝全,pdf_01000000__01004009___abe4e0ff20__scene__005,5,【第五场】,高潮,反转,5,1.0,10.2857,0.0,10.2857,秦季龙发现死囚是养父秦洪，从监斩官转为救子，剧情由悲转喜,1,scene_metrics

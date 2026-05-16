@@ -1,0 +1,6 @@
+doc_id,doc_title,scene_id,scene_index,scene,conflict_stage,scene_function,tension_level,tension_norm,dialogue_density,lyric_density,speech_density,narrative_turning_point,is_climax,derived_by
+pdf_01000000__01001012___3dcca783f4,黄鹤楼,pdf_01000000__01001012___3dcca783f4__scene__000,0,序幕/前置内容,铺垫,引子,0,0.0,0.0,0.0,0.0,,0,scene_metrics
+pdf_01000000__01001012___3dcca783f4,黄鹤楼,pdf_01000000__01001012___3dcca783f4__scene__001,1,【第一场】,发展,推进,4,0.8,10.25,1.0,11.25,诸葛亮以竹节为信物，设定十六日回朝，为后续冲突埋下伏笔。,1,scene_metrics
+pdf_01000000__01001012___3dcca783f4,黄鹤楼,pdf_01000000__01001012___3dcca783f4__scene__002,2,【第三场】,铺垫,推进,3,0.6,0.8125,0.0,0.8125,无重大转折，但为后续冲突埋下伏笔,0,scene_metrics
+pdf_01000000__01001012___3dcca783f4,黄鹤楼,pdf_01000000__01001012___3dcca783f4__scene__003,3,【第四场】,铺垫,推进,3,0.6,0.875,0.0,0.875,周瑜以太后染病为由阻止刘备探病，将宴席地点定于黄鹤楼，为后续冲突埋下伏笔。,0,scene_metrics
+pdf_01000000__01001012___3dcca783f4,黄鹤楼,pdf_01000000__01001012___3dcca783f4__scene__004,4,【第五场】,高潮,对峙,5,1.0,0.6,0.0471,0.6471,赵云盗取周瑜令箭，使刘备得以安全下楼，冲突从口头争执转向行动对抗,1,scene_metrics

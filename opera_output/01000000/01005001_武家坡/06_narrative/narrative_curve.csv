@@ -1,0 +1,4 @@
+doc_id,doc_title,scene_id,scene_index,scene,conflict_stage,scene_function,tension_level,tension_norm,dialogue_density,lyric_density,speech_density,narrative_turning_point,is_climax,derived_by
+pdf_01000000__01005001___8bae4c8a7d,武家坡,pdf_01000000__01005001___8bae4c8a7d__scene__000,0,序幕/前置内容,铺垫,引子,0,0.0,0.0,0.0,0.0,,0,scene_metrics
+pdf_01000000__01005001___8bae4c8a7d,武家坡,pdf_01000000__01005001___8bae4c8a7d__scene__001,1,【第一场】,铺垫,铺垫,3,0.75,14.5,2.875,17.375,薛平贵决定调戏试探王宝钏贞节，为后续冲突埋下伏笔,1,scene_metrics
+pdf_01000000__01005001___8bae4c8a7d,武家坡,pdf_01000000__01005001___8bae4c8a7d__scene__002,2,【第二场】,高潮,高潮,4,1.0,5.5455,1.3636,6.9091,薛平贵展示番王宝，身份确认后王宝钏讨封，关系从怀疑转为臣服,1,scene_metrics

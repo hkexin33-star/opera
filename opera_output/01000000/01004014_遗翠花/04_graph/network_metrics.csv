@@ -1,0 +1,6 @@
+doc_id,doc_title,character,char_id,degree,weighted_degree,degree_centrality,strength_centrality,derived_by
+pdf_01000000__01004014___d6eca0fe85,遗翠花,相公,pdf_01000000__01004014___d6eca0fe85__char__8a2a62d872,8,27,1.0,0.8182,relations_aggregated
+pdf_01000000__01004014___d6eca0fe85,遗翠花,翠香,pdf_01000000__01004014___d6eca0fe85__char__98e42ad287,7,33,0.875,1.0,relations_aggregated
+pdf_01000000__01004014___d6eca0fe85,遗翠花,老夫人,pdf_01000000__01004014___d6eca0fe85__char__75dcd83458,6,14,0.75,0.4242,relations_aggregated
+pdf_01000000__01004014___d6eca0fe85,遗翠花,小姐,pdf_01000000__01004014___d6eca0fe85__char__4dbc7fe4f9,6,9,0.75,0.2727,relations_aggregated
+pdf_01000000__01004014___d6eca0fe85,遗翠花,翠香相公,pdf_01000000__01004014___d6eca0fe85__char__1ccf7b99c7,3,3,0.375,0.0909,relations_aggregated

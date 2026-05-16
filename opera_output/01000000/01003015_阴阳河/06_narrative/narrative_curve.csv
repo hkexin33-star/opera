@@ -1,0 +1,4 @@
+doc_id,doc_title,scene_id,scene_index,scene,conflict_stage,scene_function,tension_level,tension_norm,dialogue_density,lyric_density,speech_density,narrative_turning_point,is_climax,derived_by
+pdf_01000000__01003015___7938d34c45,阴阳河,pdf_01000000__01003015___7938d34c45__scene__000,0,序幕/前置内容,铺垫,引子,0,0.0,0.0,0.0,0.0,,0,scene_metrics
+pdf_01000000__01003015___7938d34c45,阴阳河,pdf_01000000__01003015___7938d34c45__scene__001,1,【第一场】,铺垫,铺垫,3,1.0,5.3333,0.8333,6.1667,张茂深在阴阳界偶遇亡妻李桂莲，发现其鬼魂身份，为后续人鬼重逢埋下伏笔。,1,scene_metrics
+pdf_01000000__01003015___7938d34c45,阴阳河,pdf_01000000__01003015___7938d34c45__scene__002,2,【第三场】,发展,推进,3,1.0,0.9038,0.0577,0.9615,倪木决定带张茂深回阳间，并嘱托保全李桂莲尸身，为后续还阳埋下伏笔,1,scene_metrics

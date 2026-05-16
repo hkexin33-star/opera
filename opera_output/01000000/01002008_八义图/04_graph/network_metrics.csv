@@ -1,0 +1,7 @@
+doc_id,doc_title,character,char_id,degree,weighted_degree,degree_centrality,strength_centrality,derived_by
+pdf_01000000__01002008___7e0325cb8b,八义图,屠岸贾,pdf_01000000__01002008___7e0325cb8b__char__f41756c410,8,32,1.0,0.6667,relations_aggregated
+pdf_01000000__01002008___7e0325cb8b,八义图,程婴,pdf_01000000__01002008___7e0325cb8b__char__58587740c4,7,48,0.875,1.0,relations_aggregated
+pdf_01000000__01002008___7e0325cb8b,八义图,公孙杵臼,pdf_01000000__01002008___7e0325cb8b__char__6746e5781f,7,28,0.875,0.5833,relations_aggregated
+pdf_01000000__01002008___7e0325cb8b,八义图,程妻,pdf_01000000__01002008___7e0325cb8b__char__49c2bce8c2,4,18,0.5,0.375,relations_aggregated
+pdf_01000000__01002008___7e0325cb8b,八义图,龙套,pdf_01000000__01002008___7e0325cb8b__char__79d6827cec,4,6,0.5,0.125,relations_aggregated
+pdf_01000000__01002008___7e0325cb8b,八义图,二龙套,pdf_01000000__01002008___7e0325cb8b__char__695b32fb97,2,2,0.25,0.0417,relations_aggregated

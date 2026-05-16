@@ -1,0 +1,5 @@
+doc_id,doc_title,char_id,role_name,alias_names,role_type_raw,role_type_inferred,gender_inferred,age_inferred,status_identity,personality_tags,behavior_tags,speech_style,narrative_function,line_count,scene_coverage,scene_count_present,centrality_hint,evidence,source_line,raw,confidence,llm_error,role_note
+pdf_01000000__01004008___27d1eda64f,大保国,pdf_01000000__01004008___27d1eda64f__char__ed88cf71dd,李艳妃,,正旦,正旦,女,青年至中年,皇妃，后宫高位,端庄；有主见；忧国,垂帘听政；与朝臣争执,正式；威严；略带焦虑,主角,0,,0,0.0,正旦行当，剧中核心女性角色，主导保国议题,5,李艳妃：正旦,0.9,,
+pdf_01000000__01004008___27d1eda64f,大保国,pdf_01000000__01004008___27d1eda64f__char__e958a8b65a,徐延昭,,净,净,男,中年至老年,开国元勋之后，朝廷重臣,忠勇；刚直；老成持重,持铜锤上殿；力谏；与李良对峙,慷慨激昂；直率；多用典故,主角,0,,0,0.0,净行，铜锤花脸，剧中主要忠臣代表,7,徐延昭：净,0.9,,
+pdf_01000000__01004008___27d1eda64f,大保国,pdf_01000000__01004008___27d1eda64f__char__32f1f9727c,杨波,,老生,老生,男,中年,兵部侍郎，文臣,忠义；谨慎；有谋略,进谏；分析局势；联合徐延昭,文雅；条理清晰；恳切,主角,0,,0,0.0,老生行当，剧中与徐延昭并列为忠臣双璧,9,杨波：老生,0.9,,
+pdf_01000000__01004008___27d1eda64f,大保国,pdf_01000000__01004008___27d1eda64f__char__d8aec1184d,李良,,净,净,男,中年,国丈，皇亲,奸诈；贪婪；野心勃勃,篡位；欺瞒李艳妃；与忠臣对立,谄媚；虚伪；咄咄逼人,配角,0,,0,0.0,净行，剧中反派，推动冲突,11,李良：净,0.9,,

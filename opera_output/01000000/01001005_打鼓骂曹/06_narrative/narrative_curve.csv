@@ -1,0 +1,5 @@
+doc_id,doc_title,scene_id,scene_index,scene,conflict_stage,scene_function,tension_level,tension_norm,dialogue_density,lyric_density,speech_density,narrative_turning_point,is_climax,derived_by
+pdf_01000000__01001005___9cd2b8992a,打鼓骂曹,pdf_01000000__01001005___9cd2b8992a__scene__000,0,序幕/前置内容,铺垫,引子,0,0.0,0.0,0.0,0.0,,0,scene_metrics
+pdf_01000000__01001005___9cd2b8992a,打鼓骂曹,pdf_01000000__01001005___9cd2b8992a__scene__001,1,【第一场】,铺垫,引子,1,0.2,0.25,0.0,0.25,无转折，仅为人物性格与情绪铺垫。,0,scene_metrics
+pdf_01000000__01001005___9cd2b8992a,打鼓骂曹,pdf_01000000__01001005___9cd2b8992a__scene__002,2,【第二场】,冲突,推进,4,0.8,4.0,0.9,4.9,冲突升级：祢衡从礼节不满转为公开辱骂曹操集团，曹操从试探转为羞辱性压制。,1,scene_metrics
+pdf_01000000__01001005___9cd2b8992a,打鼓骂曹,pdf_01000000__01001005___9cd2b8992a__scene__003,3,【第四场】,高潮,对峙,5,1.0,5.5333,1.5333,7.0667,祢衡从辱骂转为被迫接受曹操命令，冲突从直接对抗转为间接压制。,1,scene_metrics

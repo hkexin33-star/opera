@@ -1,0 +1,5 @@
+doc_id,doc_title,scene_id,scene_index,scene,conflict_stage,scene_function,tension_level,tension_norm,dialogue_density,lyric_density,speech_density,narrative_turning_point,is_climax,derived_by
+pdf_01000000__01005016___bf6dd90755,大劈棺,pdf_01000000__01005016___bf6dd90755__scene__000,0,序幕/前置内容,铺垫,引子,0,0.0,0.0,0.0,0.0,,0,scene_metrics
+pdf_01000000__01005016___bf6dd90755,大劈棺,pdf_01000000__01005016___bf6dd90755__scene__001,1,【第一场】,铺垫,铺垫,3,0.6,12.875,1.25,14.125,庄周假装病死，为后续试探田氏贞节埋下伏笔。,0,scene_metrics
+pdf_01000000__01005016___bf6dd90755,大劈棺,pdf_01000000__01005016___bf6dd90755__scene__002,2,【第二场】,发展,推进,4,0.8,10.4167,0.9167,11.3333,田氏为改嫁答应打倒亡夫灵牌，伦理底线被突破,1,scene_metrics
+pdf_01000000__01005016___bf6dd90755,大劈棺,pdf_01000000__01005016___bf6dd90755__scene__003,3,【第三场】,高潮,高潮,5,1.0,0.7692,0.0,0.7692,庄周突然坐起，从死者变为质问者，冲突瞬间升级至顶点,1,scene_metrics

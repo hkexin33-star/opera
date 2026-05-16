@@ -1,0 +1,4 @@
+doc_id,doc_title,scene_id,scene_index,scene,conflict_stage,scene_function,tension_level,tension_norm,dialogue_density,lyric_density,speech_density,narrative_turning_point,is_climax,derived_by
+pdf_01000000__01005013___06cdc26947,双摇会,pdf_01000000__01005013___06cdc26947__scene__000,0,序幕/前置内容,铺垫,引子,1,0.25,0.0,0.0,0.0,,0,scene_metrics
+pdf_01000000__01005013___06cdc26947,双摇会,pdf_01000000__01005013___06cdc26947__scene__001,1,【第一场】,冲突,推进,4,1.0,12.0,0.75,12.75,李相公回家，小妾从隐忍转向准备告状，冲突升级。,1,scene_metrics
+pdf_01000000__01005013___06cdc26947,双摇会,pdf_01000000__01005013___06cdc26947__scene__002,2,【第二场】,冲突,对峙,4,1.0,6.7556,0.0222,6.7778,街坊介入，将家庭内部矛盾公开化，冲突从夫妻妾三人扩展至邻里。,1,scene_metrics

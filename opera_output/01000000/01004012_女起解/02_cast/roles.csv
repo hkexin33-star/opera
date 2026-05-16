@@ -1,0 +1,4 @@
+doc_id,doc_title,char_id,role_name,alias_names,role_type_raw,role_type_inferred,gender_inferred,age_inferred,status_identity,personality_tags,behavior_tags,speech_style,narrative_function,line_count,scene_coverage,scene_count_present,centrality_hint,evidence,source_line,raw,confidence,llm_error,role_note
+pdf_01000000__01004012___2ea5375b61,女起解,pdf_01000000__01004012___2ea5375b61__char__c8bd1558f6,苏三,,旦,旦,女,青年,囚犯，原为妓女,悲苦；坚韧；重情,听从召唤；拜神祈福；表达哀怨,唱词为主；抒情性强；使用感叹词,主角,53,1；2；3,3,0.7647,"苏三（内西皮导板）忽听唤苏三；苏三（反二黄慢板）适才间老伯一声禀,到叫苏三长笑容。",5,苏三：旦,0.95,,
+pdf_01000000__01004012___2ea5375b61,女起解,pdf_01000000__01004012___2ea5375b61__char__61048cf418,张公道,,丑,丑,男,中年,解差（押解犯人的公差）,世故；幽默；贪小便宜,押解犯人；与狱官周旋；调侃,念白为主；口语化；带调侃语气,配角,66,1；2；3,3,1.0,"张公道（念）公道不公道,自有天知道。张公道（白）将你发了配了。",7,张公道：丑,0.9,,
+pdf_01000000__01004012___2ea5375b61,女起解,pdf_01000000__01004012___2ea5375b61__char__2c2a7f33f8,狱官,,末,末,男,中年,监狱官员,刻板；多疑；贪财,盘问解差；检查文书；索要贿赂,念白；命令式；带质问语气,功能性角色,15,2,1,0.2222,狱官（白）怎么过来过去总是你? 狱官（白）你与我带个骡子来。,9,狱官：末,0.85,,

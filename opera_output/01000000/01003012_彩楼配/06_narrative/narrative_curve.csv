@@ -1,0 +1,6 @@
+doc_id,doc_title,scene_id,scene_index,scene,conflict_stage,scene_function,tension_level,tension_norm,dialogue_density,lyric_density,speech_density,narrative_turning_point,is_climax,derived_by
+pdf_01000000__01003012___c2beeb2822,彩楼配,pdf_01000000__01003012___c2beeb2822__scene__000,0,序幕/前置内容,铺垫,引子,0,0.0,0.0,0.0,0.0,,0,scene_metrics
+pdf_01000000__01003012___c2beeb2822,彩楼配,pdf_01000000__01003012___c2beeb2822__scene__001,1,【第一场】,铺垫,铺垫,2,0.6667,6.25,1.75,8.0,王宝钏从怜悯到主动透露婚姻信息，为后续情节埋下伏笔。,1,scene_metrics
+pdf_01000000__01003012___c2beeb2822,彩楼配,pdf_01000000__01003012___c2beeb2822__scene__002,2,【第二场】,铺垫,铺垫,2,0.6667,9.0,1.5,10.5,薛平贵被门官驱赶，月老登场，预示后续姻缘安排,1,scene_metrics
+pdf_01000000__01003012___c2beeb2822,彩楼配,pdf_01000000__01003012___c2beeb2822__scene__003,3,【第三场】,发展,推进,3,1.0,0.2,0.7,0.9,王宝钏从犹豫到决断抛球，月老介入促成关键转折。,1,scene_metrics
+pdf_01000000__01003012___c2beeb2822,彩楼配,pdf_01000000__01003012___c2beeb2822__scene__004,4,【第四场】,铺垫,引子,1,0.3333,0.7059,0.0,0.7059,薛平贵持有众人寻找之物，但拒绝出售，暗示其身份或处境特殊。,0,scene_metrics

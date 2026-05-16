@@ -1,0 +1,5 @@
+doc_id,doc_title,scene_id,scene_index,scene,conflict_stage,scene_function,tension_level,tension_norm,dialogue_density,lyric_density,speech_density,narrative_turning_point,is_climax,derived_by
+pdf_01000000__01001006___06011d42c6,捉放曹,pdf_01000000__01001006___06011d42c6__scene__000,0,序幕/前置内容,铺垫,引子,0,0.0,0.0,0.0,0.0,,0,scene_metrics
+pdf_01000000__01001006___06011d42c6,捉放曹,pdf_01000000__01001006___06011d42c6__scene__001,1,【第一场】,转折,反转,4,0.8,0.7414,0.1207,0.8621,陈宫从抓捕者转变为同盟者，决定弃官与曹操共谋大事,1,scene_metrics
+pdf_01000000__01001006___06011d42c6,捉放曹,pdf_01000000__01001006___06011d42c6__scene__002,2,【第二场】,冲突,推进,4,0.8,10.8333,2.0,12.8333,曹操从信任转为猜疑，决定主动杀人，冲突升级,1,scene_metrics
+pdf_01000000__01001006___06011d42c6,捉放曹,pdf_01000000__01001006___06011d42c6__scene__003,3,【第三场】,高潮,高潮,5,1.0,8.7143,2.4286,11.1429,曹操杀吕伯奢并宣称“宁可我负天下人”，陈宫从信任转为悔恨，关系彻底破裂。,1,scene_metrics

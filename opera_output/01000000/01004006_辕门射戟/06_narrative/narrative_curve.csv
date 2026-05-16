@@ -1,0 +1,6 @@
+doc_id,doc_title,scene_id,scene_index,scene,conflict_stage,scene_function,tension_level,tension_norm,dialogue_density,lyric_density,speech_density,narrative_turning_point,is_climax,derived_by
+pdf_01000000__01004006___13b2265b9d,辕门射戟,pdf_01000000__01004006___13b2265b9d__scene__000,0,序幕/前置内容,铺垫,引子,1,0.25,0.0,0.0,0.0,,0,scene_metrics
+pdf_01000000__01004006___13b2265b9d,辕门射戟,pdf_01000000__01004006___13b2265b9d__scene__001,1,【第一场】,铺垫,引子,2,0.5,0.1667,0.0,0.1667,无转折，为后续冲突做铺垫,0,scene_metrics
+pdf_01000000__01004006___13b2265b9d,辕门射戟,pdf_01000000__01004006___13b2265b9d__scene__002,2,【第二场】,发展,推进,3,0.75,2.4,0.0,2.4,吕布从被动收礼转向主动调解，决定邀请双方前来，为后续射戟解围埋下伏笔。,1,scene_metrics
+pdf_01000000__01004006___13b2265b9d,辕门射戟,pdf_01000000__01004006___13b2265b9d__scene__003,3,【第三场】,发展,推进,3,0.75,4.0,0.25,4.25,吕布来信成为转折点，将冲突从直接对抗转向外交斡旋,1,scene_metrics
+pdf_01000000__01004006___13b2265b9d,辕门射戟,pdf_01000000__01004006___13b2265b9d__scene__004,4,【第四场】,发展,推进,4,1.0,1.8841,0.1159,2.0,纪灵欲走被吕布强留，冲突从张飞与吕布的口角转向吕布主导的调解局面。,1,scene_metrics

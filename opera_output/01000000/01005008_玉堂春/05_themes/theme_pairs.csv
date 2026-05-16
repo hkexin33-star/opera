@@ -1,0 +1,11 @@
+doc_id,doc_title,theme_a,theme_b,cooccurrence_weight,evidence,derived_by
+pdf_01000000__01005008___a144dc7076,玉堂春,亲情,公案,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01005008___a144dc7076,玉堂春,亲情,情爱,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01005008___a144dc7076,玉堂春,亲情,权谋,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01005008___a144dc7076,玉堂春,亲情,离散,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01005008___a144dc7076,玉堂春,公案,情爱,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01005008___a144dc7076,玉堂春,公案,权谋,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01005008___a144dc7076,玉堂春,公案,离散,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01005008___a144dc7076,玉堂春,情爱,权谋,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01005008___a144dc7076,玉堂春,情爱,离散,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01005008___a144dc7076,玉堂春,权谋,离散,1,序幕/前置内容,scene_cooccurrence

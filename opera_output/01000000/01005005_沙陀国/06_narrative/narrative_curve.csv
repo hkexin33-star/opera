@@ -1,0 +1,7 @@
+doc_id,doc_title,scene_id,scene_index,scene,conflict_stage,scene_function,tension_level,tension_norm,dialogue_density,lyric_density,speech_density,narrative_turning_point,is_climax,derived_by
+pdf_01000000__01005005___45b85eecde,沙陀国,pdf_01000000__01005005___45b85eecde__scene__000,0,序幕/前置内容,铺垫,引子,0,0.0,0.0,0.0,0.0,,0,scene_metrics
+pdf_01000000__01005005___45b85eecde,沙陀国,pdf_01000000__01005005___45b85eecde__scene__001,1,【第一场】,铺垫,引子,2,0.5,1.625,0.0,1.625,李克用因旧怨追回将令，为后续程敬思劝说出兵埋下伏笔,0,scene_metrics
+pdf_01000000__01005005___45b85eecde,沙陀国,pdf_01000000__01005005___45b85eecde__scene__002,2,【第二场】,铺垫,引子,1,0.25,3.25,0.0,3.25,无显著转折，仅为情感铺垫,0,scene_metrics
+pdf_01000000__01005005___45b85eecde,沙陀国,pdf_01000000__01005005___45b85eecde__scene__003,3,【第三场】,冲突,对峙,4,1.0,2.8,3.3,6.1,程敬思以圣旨相逼，李克用压旨拒兵，冲突升级；程敬思求情救李嗣源，关系缓和。,1,scene_metrics
+pdf_01000000__01005005___45b85eecde,沙陀国,pdf_01000000__01005005___45b85eecde__scene__004,4,【第四场】,发展,推进,3,0.75,1.5,0.8333,2.3333,王娘们得知程恩官到来，决定介入，为后续发兵埋下转折。,1,scene_metrics
+pdf_01000000__01005005___45b85eecde,沙陀国,pdf_01000000__01005005___45b85eecde__scene__005,5,【第五场】,冲突,推进,4,1.0,5.8571,3.2857,9.1429,李克用三次拒绝发兵后，二位王娘夺令箭直接下令，迫使李克用改变态度，冲突升级并解决,1,scene_metrics

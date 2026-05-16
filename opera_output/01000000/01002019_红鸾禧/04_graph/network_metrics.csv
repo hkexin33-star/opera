@@ -1,0 +1,6 @@
+doc_id,doc_title,character,char_id,degree,weighted_degree,degree_centrality,strength_centrality,derived_by
+pdf_01000000__01002019___9cf1474dd0,红鸾禧,金松,pdf_01000000__01002019___9cf1474dd0__char__44e8d6f505,6,29,1.0,0.9667,relations_aggregated
+pdf_01000000__01002019___9cf1474dd0,红鸾禧,莫稽,pdf_01000000__01002019___9cf1474dd0__char__c6198e9eda,4,30,0.6667,1.0,relations_aggregated
+pdf_01000000__01002019___9cf1474dd0,红鸾禧,金玉奴,pdf_01000000__01002019___9cf1474dd0__char__6134f9b89d,4,25,0.6667,0.8333,relations_aggregated
+pdf_01000000__01002019___9cf1474dd0,红鸾禧,二杆,pdf_01000000__01002019___9cf1474dd0__char__fa6fc2aeaf,4,6,0.6667,0.2,relations_aggregated
+pdf_01000000__01002019___9cf1474dd0,红鸾禧,众人,pdf_01000000__01002019___9cf1474dd0__char__7749c777ae,2,2,0.3333,0.0667,relations_aggregated

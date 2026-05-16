@@ -1,0 +1,4 @@
+doc_id,doc_title,character,char_id,degree,weighted_degree,degree_centrality,strength_centrality,derived_by
+pdf_01000000__01005002___c9467a74fd,浣纱记,伍员,pdf_01000000__01005002___c9467a74fd__char__a4637c1ac0,4,34,1.0,1.0,relations_aggregated
+pdf_01000000__01005002___c9467a74fd,浣纱记,浣纱女,pdf_01000000__01005002___c9467a74fd__char__e631f33369,2,18,0.5,0.5294,relations_aggregated
+pdf_01000000__01005002___c9467a74fd,浣纱记,渔父,pdf_01000000__01005002___c9467a74fd__char__31638d7fa8,2,16,0.5,0.4706,relations_aggregated

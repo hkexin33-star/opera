@@ -1,0 +1,14 @@
+doc_id,doc_title,theme_a,theme_b,cooccurrence_weight,evidence,derived_by
+pdf_01000000__01002019___9cf1474dd0,红鸾禧,亲情,功名与安逸,1,【第三场】,scene_cooccurrence
+pdf_01000000__01002019___9cf1474dd0,红鸾禧,亲情,家国,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01002019___9cf1474dd0,红鸾禧,亲情,情爱,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01002019___9cf1474dd0,红鸾禧,亲情,战争,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01002019___9cf1474dd0,红鸾禧,亲情,阶级身份,1,【第三场】,scene_cooccurrence
+pdf_01000000__01002019___9cf1474dd0,红鸾禧,功名与安逸,阶级身份,1,【第三场】,scene_cooccurrence
+pdf_01000000__01002019___9cf1474dd0,红鸾禧,吉祥,喜庆,1,【第二场】,scene_cooccurrence
+pdf_01000000__01002019___9cf1474dd0,红鸾禧,家国,情爱,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01002019___9cf1474dd0,红鸾禧,家国,战争,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01002019___9cf1474dd0,红鸾禧,情爱,战争,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01002019___9cf1474dd0,红鸾禧,情爱,救助,1,【第一场】,scene_cooccurrence
+pdf_01000000__01002019___9cf1474dd0,红鸾禧,情爱,阶级跨越,1,【第一场】,scene_cooccurrence
+pdf_01000000__01002019___9cf1474dd0,红鸾禧,救助,阶级跨越,1,【第一场】,scene_cooccurrence

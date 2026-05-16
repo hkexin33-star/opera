@@ -1,0 +1,4 @@
+doc_id,doc_title,scene_id,scene_index,scene,conflict_stage,scene_function,tension_level,tension_norm,dialogue_density,lyric_density,speech_density,narrative_turning_point,is_climax,derived_by
+pdf_01000000__01005002___c9467a74fd,浣纱记,pdf_01000000__01005002___c9467a74fd__scene__000,0,序幕/前置内容,铺垫,引子,0,0.0,0.0,0.0,0.0,,0,scene_metrics
+pdf_01000000__01005002___c9467a74fd,浣纱记,pdf_01000000__01005002___c9467a74fd__scene__001,1,【第一场】,铺垫,引子,3,0.75,0.3542,0.0,0.3542,渔父以梦兆歌暗示伍员身份，为后续信任建立伏笔,1,scene_metrics
+pdf_01000000__01005002___c9467a74fd,浣纱记,pdf_01000000__01005002___c9467a74fd__scene__002,2,【第二场】,发展,推进,4,1.0,0.5652,0.3043,0.8696,浣纱女投水自尽，将伍员推向更深的道德困境与复仇决心,1,scene_metrics

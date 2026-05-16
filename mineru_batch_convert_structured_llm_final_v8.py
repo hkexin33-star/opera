@@ -3829,13 +3829,13 @@ def build_argparser() -> argparse.ArgumentParser:
         "--auto-combine",
         action="store_true",
         default=True,
-        help="After batch run, write opera_output/all_*.csv (default: on)",
+        help="Rebuild opera_output/all_*.csv from disk after each MinerU chunk and at end (default: on)",
     )
     p.add_argument(
         "--no-auto-combine",
         action="store_false",
         dest="auto_combine",
-        help="Skip writing combined all_*.csv after batch",
+        help="Skip writing combined all_*.csv during/after batch",
     )
     p.set_defaults(manifest=Path("opera_output/mineru_manifest.csv"))
     return p
@@ -4275,6 +4275,35 @@ def convert_one_batch(
         print(f"[OK] {file_name} -> {md_path if cfg.keep_md and not cfg.structured_only else target_dir / 'structured.json'}")
 
     return processed
+
+
+def infer_collection_prefix_from_input(input_dir: Path | None) -> str:
+    """e.g. opera_dataset/01000000 -> 01000000 for scoped all_*.csv."""
+    if not input_dir:
+        return ""
+    try:
+        resolved = input_dir.resolve()
+    except OSError:
+        return ""
+    name = resolved.name
+    if name.isdigit():
+        return name
+    return ""
+
+
+def refresh_combined_exports(args: argparse.Namespace, out_root: Path) -> int:
+    """Rebuild opera_output/all_*.csv from every structured.json on disk."""
+    apply_default_combined_paths(out_root, args)
+    buckets = collect_combined_from_output(out_root, args.collection_prefix or "")
+    if not buckets.get("docs"):
+        return 0
+    write_combined_exports(args, buckets)
+    ready = sum(
+        1 for d in buckets["docs"]
+        if d.get("analysis_ready") in (True, "True", "true", 1, "1")
+    )
+    log_info(f"[AUTO-COMBINE] {len(buckets['docs'])} plays, analysis_ready={ready}")
+    return len(buckets["docs"])
 
 
 def apply_default_combined_paths(out_root: Path, args: argparse.Namespace) -> None:
@@ -4797,14 +4826,13 @@ def run_combine_only(args: argparse.Namespace) -> int:
     if not out_root.exists():
         print(f"Output directory not found: {out_root}", file=sys.stderr)
         return 1
-    apply_default_combined_paths(out_root, args)
-    buckets = collect_combined_from_output(out_root, args.collection_prefix or "")
-    if not buckets["docs"]:
+    if not args.collection_prefix and args.input_dir:
+        args.collection_prefix = infer_collection_prefix_from_input(args.input_dir.resolve())
+    n = refresh_combined_exports(args, out_root)
+    if not n:
         print(f"No structured.json found under {out_root}", file=sys.stderr)
         return 1
-    write_combined_exports(args, buckets)
-    ready = sum(1 for d in buckets["docs"] if d.get("analysis_ready") in (True, "True", "true", 1, "1"))
-    print(f"[COMBINE-ONLY] {len(buckets['docs'])} plays, analysis_ready={ready}")
+    print(f"[COMBINE-ONLY] refreshed {n} plays")
     return 0
 
 
@@ -4899,20 +4927,12 @@ def main() -> int:
     )
 
     all_records: list[dict] = []
-    all_docs: list[dict] = []
-    all_roles: list[dict] = []
-    all_scenes: list[dict] = []
-    all_dialogues: list[dict] = []
-    all_performances: list[dict] = []
-    all_relations: list[dict] = []
-    all_relations_aggregated: list[dict] = []
-    all_themes: list[dict] = []
-    all_themes_aggregated: list[dict] = []
-    all_entity_aliases: list[dict] = []
-    all_theme_pairs: list[dict] = []
-    all_narrative_curve: list[dict] = []
-    all_network_metrics: list[dict] = []
-    all_structured: list[dict] = []
+
+    if not args.collection_prefix:
+        inferred_prefix = infer_collection_prefix_from_input(input_root)
+        if inferred_prefix:
+            args.collection_prefix = inferred_prefix
+            log_info(f"[PLAN] collection_prefix={inferred_prefix} (from input-dir)")
 
     llm_session = build_session(trust_env=False) if llm_cfg.enabled else None
     mineru_session = build_session(trust_env=cfg.trust_env)
@@ -4922,76 +4942,8 @@ def main() -> int:
             batch_records = convert_one_batch(session, cfg, batch_files, batch_rel_paths, out_root, llm_cfg, llm_session)
             all_records.extend(batch_records)
 
-            for rec in batch_records:
-                if rec.get("error"):
-                    continue
-                structured_path = Path(rec["structured_json"])
-                if not structured_path.exists():
-                    continue
-                structured = json.loads(structured_path.read_text(encoding="utf-8"))
-                all_structured.append(structured)
-
-                doc_id = rec["doc_id"]
-                row_collection_meta = {
-                    "doc_id": doc_id,
-                    "collection_dir": rec.get("collection_dir", ""),
-                    "collection_code": rec.get("collection_code", ""),
-                    "collection_name": rec.get("collection_name", ""),
-                    "collection_label": rec.get("collection_label", ""),
-                    "work_code": rec.get("work_code", ""),
-                    "work_title_hint": rec.get("work_title_hint", ""),
-                    "source_file": rec.get("source_file", ""),
-                    "source_path": rec.get("source_path", ""),
-                    "relative_path": rec.get("relative_path", ""),
-                    "title": rec.get("title", rec.get("play_title", "")),
-                }
-
-                sm = structured.get("metadata", {})
-                doc_row = {
-                    **row_collection_meta,
-                    "aliases": "；".join(sm.get("aliases", []) or []) if isinstance(sm.get("aliases"), list) else rec.get("aliases", ""),
-                    "alias_text": sm.get("alias_text", rec.get("alias_text", "")),
-                    "period_hint": sm.get("period_hint", rec.get("period_hint", "")),
-                    "genre_hint": sm.get("genre_hint", rec.get("genre_hint", "")),
-                    "synopsis": sm.get("synopsis", rec.get("synopsis", "")),
-                    "note_text": sm.get("note_text", rec.get("note_text", "")),
-                    "doc_tags": "；".join(sm.get("doc_tags", []) or []) if isinstance(sm.get("doc_tags"), list) else rec.get("doc_tags", ""),
-                    "text_length": sm.get("text_length", 0),
-                    "parse_quality_score": sm.get("parse_quality_score", rec.get("parse_quality_score", 0)),
-                    "parse_quality_label": sm.get("parse_quality_label", ""),
-                    "analysis_ready": sm.get("analysis_ready", False),
-                    "parser_version": sm.get("parser_version", rec.get("parser_version", "")),
-                    "scene_count": sm.get("scene_count", rec.get("scene_count", 0)),
-                    "role_count": sm.get("role_count", rec.get("role_count", 0)),
-                    "dialogue_count": sm.get("dialogue_count", rec.get("dialogue_count", 0)),
-                    "performance_count": sm.get("performance_count", rec.get("performance_count", 0)),
-                    "relation_count": sm.get("relation_count", rec.get("relation_count", 0)),
-                    "aggregated_relation_count": sm.get("aggregated_relation_count", rec.get("aggregated_relation_count", 0)),
-                    "theme_count": sm.get("theme_count", rec.get("theme_count", 0)),
-                    "aggregated_theme_count": sm.get("aggregated_theme_count", rec.get("aggregated_theme_count", 0)),
-                    "entity_alias_count": sm.get("entity_alias_count", 0),
-                    "theme_pair_count": sm.get("theme_pair_count", 0),
-                    "llm_enabled": sm.get("llm_enabled", rec.get("llm_enabled", False)),
-                    "llm_model": sm.get("llm_model", rec.get("llm_model", "")),
-                    "state": rec.get("state", ""),
-                    "raw_md_path": rec.get("raw_md_path", ""),
-                    "cleaned_md_path": rec.get("cleaned_md_path", ""),
-                    "structured_raw_json": rec.get("structured_raw_json", ""),
-                    "structured_json": rec.get("structured_json", ""),
-                }
-                all_docs.append(doc_row)
-                all_roles.extend(merge_collection_row(r, row_collection_meta) for r in structured.get("roles", []))
-                all_scenes.extend(merge_collection_row(s, row_collection_meta) for s in structured.get("scenes", []))
-                all_dialogues.extend(merge_collection_row(d, row_collection_meta) for d in structured.get("dialogues", []))
-                all_performances.extend(merge_collection_row(p, row_collection_meta) for p in structured.get("performances", []))
-                all_relations.extend(merge_collection_row(r, row_collection_meta) for r in structured.get("relations", []))
-                all_relations_aggregated.extend(merge_collection_row(r, row_collection_meta) for r in structured.get("relations_aggregated", []))
-                all_themes.extend(merge_collection_row(t, row_collection_meta) for t in structured.get("themes", []))
-                all_themes_aggregated.extend(merge_collection_row(t, row_collection_meta) for t in structured.get("themes_aggregated", []))
-                all_entity_aliases.extend(merge_collection_row(a, row_collection_meta) for a in structured.get("entity_aliases", []))
-                all_theme_pairs.extend(merge_collection_row(t, row_collection_meta) for t in structured.get("theme_pairs", []))
-                all_narrative_curve.extend(merge_collection_row(n, row_collection_meta) for n in structured.get("narrative_curve", []))
-                all_network_metrics.extend(merge_collection_row(n, row_collection_meta) for n in structured.get("network_metrics", []))
+            if args.auto_combine:
+                refresh_combined_exports(args, out_root)
 
     print_batch_summary(all_records)
 
@@ -5000,17 +4952,8 @@ def main() -> int:
         print(f"[MANIFEST] saved -> {args.manifest.resolve()}")
 
     if args.auto_combine:
-        apply_default_combined_paths(out_root, args)
-        buckets = collect_combined_from_output(out_root, args.collection_prefix or "")
-        if buckets.get("docs"):
-            write_combined_exports(args, buckets)
-            ready = sum(
-                1 for d in buckets["docs"]
-                if d.get("analysis_ready") in (True, "True", "true", 1, "1")
-            )
-            print(f"[AUTO-COMBINE] {len(buckets['docs'])} plays, analysis_ready={ready}")
-        else:
-            print("[AUTO-COMBINE] no structured.json found, skipped")
+        if not refresh_combined_exports(args, out_root):
+            log_info("[AUTO-COMBINE] no structured.json found, skipped")
 
     return 0
 

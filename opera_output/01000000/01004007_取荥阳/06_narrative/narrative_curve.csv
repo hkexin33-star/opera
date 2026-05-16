@@ -1,0 +1,5 @@
+doc_id,doc_title,scene_id,scene_index,scene,conflict_stage,scene_function,tension_level,tension_norm,dialogue_density,lyric_density,speech_density,narrative_turning_point,is_climax,derived_by
+pdf_01000000__01004007___a24f152422,取荥阳,pdf_01000000__01004007___a24f152422__scene__000,0,序幕/前置内容,铺垫,引子,0,0.0,0.0,0.0,0.0,,0,scene_metrics
+pdf_01000000__01004007___a24f152422,取荥阳,pdf_01000000__01004007___a24f152422__scene__001,1,【第一场】,冲突,推进,4,0.8,0.3108,0.2027,0.5135,张良提出诈降计，为后续突围埋下伏笔,1,scene_metrics
+pdf_01000000__01004007___a24f152422,取荥阳,pdf_01000000__01004007___a24f152422__scene__002,2,【第二场】,铺垫,铺垫,2,0.4,0.25,0.0,0.25,张良决定设宴并悬图激励文武，为后续计策实施铺垫,0,scene_metrics
+pdf_01000000__01004007___a24f152422,取荥阳,pdf_01000000__01004007___a24f152422__scene__003,3,【第三场】,高潮,高潮,5,1.0,4.6471,1.4118,6.0588,纪信以拔剑自刎相逼，迫使刘邦接受替身计划，冲突达到顶点并转向行动,1,scene_metrics

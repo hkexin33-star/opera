@@ -1,0 +1,5 @@
+doc_id,doc_title,scene_id,scene_index,scene,conflict_stage,scene_function,tension_level,tension_norm,dialogue_density,lyric_density,speech_density,narrative_turning_point,is_climax,derived_by
+pdf_01000000__01004012___2ea5375b61,女起解,pdf_01000000__01004012___2ea5375b61__scene__000,0,序幕/前置内容,铺垫,引子,0,0.0,0.0,0.0,0.0,,0,scene_metrics
+pdf_01000000__01004012___2ea5375b61,女起解,pdf_01000000__01004012___2ea5375b61__scene__001,1,【第一场】,铺垫,引子,1,0.3333,1.9167,0.0,1.9167,苏三得知发配消息，情绪由愁转喜，为后续行程铺垫。,0,scene_metrics
+pdf_01000000__01004012___2ea5375b61,女起解,pdf_01000000__01004012___2ea5375b61__scene__002,2,【第二场】,过渡,过渡,1,0.3333,0.8333,0.0,0.8333,无重大转折，为过渡性场景。,0,scene_metrics
+pdf_01000000__01004012___2ea5375b61,女起解,pdf_01000000__01004012___2ea5375b61__scene__003,3,【第三场】,发展,推进,3,1.0,3.5652,0.2174,3.7826,苏三失言说洪桐县无好人，激怒张公道，后道歉挽回，关系缓和。,1,scene_metrics

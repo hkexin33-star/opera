@@ -1,0 +1,11 @@
+doc_id,doc_title,theme_a,theme_b,cooccurrence_weight,evidence,derived_by
+pdf_01000000__01003003___c9d807e88a,桑园会,亲情,公案,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01003003___c9d807e88a,桑园会,亲情,孝道,1,【第二场】,scene_cooccurrence
+pdf_01000000__01003003___c9d807e88a,桑园会,亲情,家国,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01003003___c9d807e88a,桑园会,亲情,贞节,1,【第二场】,scene_cooccurrence
+pdf_01000000__01003003___c9d807e88a,桑园会,亲情,道德考验,1,【第二场】,scene_cooccurrence
+pdf_01000000__01003003___c9d807e88a,桑园会,公案,家国,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01003003___c9d807e88a,桑园会,孝道,贞节,1,【第二场】,scene_cooccurrence
+pdf_01000000__01003003___c9d807e88a,桑园会,孝道,道德考验,1,【第二场】,scene_cooccurrence
+pdf_01000000__01003003___c9d807e88a,桑园会,忠义,思乡,1,【第一场】,scene_cooccurrence
+pdf_01000000__01003003___c9d807e88a,桑园会,贞节,道德考验,1,【第二场】,scene_cooccurrence

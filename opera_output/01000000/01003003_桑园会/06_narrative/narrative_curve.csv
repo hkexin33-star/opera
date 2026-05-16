@@ -1,0 +1,4 @@
+doc_id,doc_title,scene_id,scene_index,scene,conflict_stage,scene_function,tension_level,tension_norm,dialogue_density,lyric_density,speech_density,narrative_turning_point,is_climax,derived_by
+pdf_01000000__01003003___c9d807e88a,桑园会,pdf_01000000__01003003___c9d807e88a__scene__000,0,序幕/前置内容,铺垫,引子,0,0.0,0.0,0.0,0.0,,0,scene_metrics
+pdf_01000000__01003003___c9d807e88a,桑园会,pdf_01000000__01003003___c9d807e88a__scene__001,1,【第一场】,铺垫,引子,1,0.25,0.5,0.25,0.75,无转折，为后续归家情节做铺垫,0,scene_metrics
+pdf_01000000__01003003___c9d807e88a,桑园会,pdf_01000000__01003003___c9d807e88a__scene__002,2,【第二场】,高潮,高潮,4,1.0,32.3333,8.6667,41.0,秋胡调戏罗氏导致夫妻关系破裂，罗氏自尽未遂，秋母介入迫使秋胡认错。,1,scene_metrics

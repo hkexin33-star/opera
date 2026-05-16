@@ -1,0 +1,7 @@
+doc_id,doc_title,character,char_id,degree,weighted_degree,degree_centrality,strength_centrality,derived_by
+pdf_01000000__01001004___c0c4e6569b,乌盆计,张别古,pdf_01000000__01001004___c0c4e6569b__char__5424b307bc,8,40,1.0,1.0,relations_aggregated
+pdf_01000000__01001004___c0c4e6569b,乌盆计,刘世昌,pdf_01000000__01001004___c0c4e6569b__char__3d58ac8562,5,23,0.625,0.575,relations_aggregated
+pdf_01000000__01001004___c0c4e6569b,乌盆计,包拯,pdf_01000000__01001004___c0c4e6569b__char__ebe18b18cb,5,16,0.625,0.4,relations_aggregated
+pdf_01000000__01001004___c0c4e6569b,乌盆计,二衙役,pdf_01000000__01001004___c0c4e6569b__char__5670318b96,4,9,0.5,0.225,relations_aggregated
+pdf_01000000__01001004___c0c4e6569b,乌盆计,赵大,pdf_01000000__01001004___c0c4e6569b__char__e8bcce398f,3,13,0.375,0.325,relations_aggregated
+pdf_01000000__01001004___c0c4e6569b,乌盆计,家人,pdf_01000000__01001004___c0c4e6569b__char__502c1de4b1,1,1,0.125,0.025,relations_aggregated

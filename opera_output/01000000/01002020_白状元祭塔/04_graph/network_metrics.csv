@@ -1,0 +1,4 @@
+doc_id,doc_title,character,char_id,degree,weighted_degree,degree_centrality,strength_centrality,derived_by
+pdf_01000000__01002020___b68a4c781b,白状元祭塔,白素贞,pdf_01000000__01002020___b68a4c781b__char__76dba5e700,4,23,1.0,1.0,relations_aggregated
+pdf_01000000__01002020___b68a4c781b,白状元祭塔,许仕林,pdf_01000000__01002020___b68a4c781b__char__2d9eeff834,4,19,1.0,0.8261,relations_aggregated
+pdf_01000000__01002020___b68a4c781b,白状元祭塔,塔神,pdf_01000000__01002020___b68a4c781b__char__fd48930619,4,12,1.0,0.5217,relations_aggregated

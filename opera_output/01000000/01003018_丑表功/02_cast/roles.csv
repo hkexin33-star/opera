@@ -1,0 +1,4 @@
+doc_id,doc_title,char_id,role_name,alias_names,role_type_raw,role_type_inferred,gender_inferred,age_inferred,status_identity,personality_tags,behavior_tags,speech_style,narrative_function,line_count,scene_coverage,scene_count_present,centrality_hint,evidence,source_line,raw,confidence,llm_error,role_note
+pdf_01000000__01003018___b62f621a21,丑表功,pdf_01000000__01003018___b62f621a21__char__97c6cfe4d3,保儿,,丑,丑,男,少年,仆从或小厮,机灵；滑稽,插科打诨；动作夸张,京白；快节奏；诙谐,配角,0,,0,0.0,# 《丑表功》,5,保儿：丑,0.7,,
+pdf_01000000__01003018___b62f621a21,丑表功,pdf_01000000__01003018___b62f621a21__char__89a9a0f707,万人迷,,花旦,花旦,女,青年,风尘女子或交际花,妩媚；泼辣,卖弄风情；巧言令色,韵白；娇嗔；伶牙俐齿,主角,0,,0,0.0,# 《丑表功》,7,万人迷：花旦,0.7,,
+pdf_01000000__01003018___b62f621a21,丑表功,pdf_01000000__01003018___b62f621a21__char__c14dda66db,顶先生,,老生,老生,男,中年,文人或塾师,迂腐；好面子,摆架子；咬文嚼字,韵白；慢条斯理；引经据典,配角,0,,0,0.0,# 《丑表功》,9,顶先生：老生,0.7,,

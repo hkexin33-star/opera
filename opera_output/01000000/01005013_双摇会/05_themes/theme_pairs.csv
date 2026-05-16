@@ -1,0 +1,12 @@
+doc_id,doc_title,theme_a,theme_b,cooccurrence_weight,evidence,derived_by
+pdf_01000000__01005013___06cdc26947,双摇会,亲情,妻妾争宠,2,【第一场】,scene_cooccurrence
+pdf_01000000__01005013___06cdc26947,双摇会,亲情,喜剧,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01005013___06cdc26947,双摇会,亲情,家国,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01005013___06cdc26947,双摇会,亲情,情爱,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01005013___06cdc26947,双摇会,亲情,权力斗争,1,【第一场】,scene_cooccurrence
+pdf_01000000__01005013___06cdc26947,双摇会,亲情,邻里调解,1,【第二场】,scene_cooccurrence
+pdf_01000000__01005013___06cdc26947,双摇会,喜剧,家国,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01005013___06cdc26947,双摇会,喜剧,情爱,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01005013___06cdc26947,双摇会,妻妾争宠,权力斗争,1,【第一场】,scene_cooccurrence
+pdf_01000000__01005013___06cdc26947,双摇会,妻妾争宠,邻里调解,1,【第二场】,scene_cooccurrence
+pdf_01000000__01005013___06cdc26947,双摇会,家国,情爱,1,序幕/前置内容,scene_cooccurrence

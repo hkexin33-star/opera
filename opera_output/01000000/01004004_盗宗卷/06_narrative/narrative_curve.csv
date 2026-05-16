@@ -1,0 +1,8 @@
+doc_id,doc_title,scene_id,scene_index,scene,conflict_stage,scene_function,tension_level,tension_norm,dialogue_density,lyric_density,speech_density,narrative_turning_point,is_climax,derived_by
+pdf_01000000__01004004___a91ecdeeef,盗宗卷,pdf_01000000__01004004___a91ecdeeef__scene__000,0,序幕/前置内容,铺垫,引子,0,0.0,0.0,0.0,0.0,,0,scene_metrics
+pdf_01000000__01004004___a91ecdeeef,盗宗卷,pdf_01000000__01004004___a91ecdeeef__scene__001,1,【第一场】,发展,推进,3,0.75,3.25,0.125,3.375,吕后焚卷引发张苍恐慌，陈平质疑暴露政治阴谋,1,scene_metrics
+pdf_01000000__01004004___a91ecdeeef,盗宗卷,pdf_01000000__01004004___a91ecdeeef__scene__002,2,【第二场】,铺垫,引子,1,0.25,0.0,0.0833,0.0833,无转折，为后续行动做铺垫。,0,scene_metrics
+pdf_01000000__01004004___a91ecdeeef,盗宗卷,pdf_01000000__01004004___a91ecdeeef__scene__003,3,【第三场】,发展,推进,4,1.0,11.6667,0.1667,11.8333,田子春直接表明盗卷意图，陈平谎称宗卷已焚，冲突升级，田子春发出三日威胁。,1,scene_metrics
+pdf_01000000__01004004___a91ecdeeef,盗宗卷,pdf_01000000__01004004___a91ecdeeef__scene__004,4,【第四场】,过渡,过渡,0,0.0,0.0,0.0,0.0,,0,scene_metrics
+pdf_01000000__01004004___a91ecdeeef,盗宗卷,pdf_01000000__01004004___a91ecdeeef__scene__005,5,【第五场】,冲突,推进,4,1.0,17.5,1.5,19.0,张秀玉献出宗卷副本，剧情从危机转向转机,1,scene_metrics
+pdf_01000000__01004004___a91ecdeeef,盗宗卷,pdf_01000000__01004004___a91ecdeeef__scene__006,6,【第六场】,发展,推进,3,0.75,14.1429,0.1429,14.2857,张苍献出真宗卷，揭示宗卷为儿子誊写，化解危机，并引出田子春的内应计划,1,scene_metrics

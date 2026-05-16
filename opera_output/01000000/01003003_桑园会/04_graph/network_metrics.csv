@@ -1,0 +1,5 @@
+doc_id,doc_title,character,char_id,degree,weighted_degree,degree_centrality,strength_centrality,derived_by
+pdf_01000000__01003003___c9d807e88a,桑园会,秋胡,pdf_01000000__01003003___c9d807e88a__char__145f2cd0b9,5,34,1.0,1.0,relations_aggregated
+pdf_01000000__01003003___c9d807e88a,桑园会,罗氏,pdf_01000000__01003003___c9d807e88a__char__6925305228,5,32,1.0,0.9412,relations_aggregated
+pdf_01000000__01003003___c9d807e88a,桑园会,秋母,pdf_01000000__01003003___c9d807e88a__char__7822eb6f95,4,28,0.8,0.8235,relations_aggregated
+pdf_01000000__01003003___c9d807e88a,桑园会,秋胡罗氏,pdf_01000000__01003003___c9d807e88a__char__5b554f81b1,2,2,0.4,0.0588,relations_aggregated

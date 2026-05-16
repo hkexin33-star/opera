@@ -1,0 +1,5 @@
+doc_id,doc_title,char_id,role_name,alias_names,role_type_raw,role_type_inferred,gender_inferred,age_inferred,status_identity,personality_tags,behavior_tags,speech_style,narrative_function,line_count,scene_coverage,scene_count_present,centrality_hint,evidence,source_line,raw,confidence,llm_error,role_note
+pdf_01000000__01005015___57a2100514,审李七,pdf_01000000__01005015___57a2100514__char__afafc5eda1,李七,,净,净,男,中年,囚犯/强盗,凶悍；粗犷；狡诈,受审；供述；挣扎,粗声大气；直白；带江湖气,主角,0,,0,0.0,# 《审李七》（一名：《白绫记》）,5,李七：净,0.9,,
+pdf_01000000__01005015___57a2100514,审李七,pdf_01000000__01005015___57a2100514__char__325cd34269,王良,,小生,小生,男,青年,书生/平民,文弱；正直；胆小,被牵连；申辩；恐惧,文雅；急促；带哭腔,配角,0,,0,0.0,# 《审李七》（一名：《白绫记》）,7,王良：小生,0.8,,
+pdf_01000000__01005015___57a2100514,审李七,pdf_01000000__01005015___57a2100514__char__2fb6ee581c,李永成,,老生,老生,男,老年,官员/长者,威严；公正；沉稳,审案；问话；判决,庄重；缓慢；有官腔,配角,0,,0,0.0,# 《审李七》（一名：《白绫记》）,9,李永成：老生,0.8,,
+pdf_01000000__01005015___57a2100514,审李七,pdf_01000000__01005015___57a2100514__char__1ff9c79362,禁卒,,丑,丑,男,中年,狱卒/差役,滑稽；势利；粗俗,押解；插科打诨；讨好,油滑；快语；带方言,功能性角色,0,,0,0.0,# 《审李七》（一名：《白绫记》）,11,禁卒：丑,0.7,,

@@ -1,0 +1,16 @@
+doc_id,doc_title,theme_a,theme_b,cooccurrence_weight,evidence,derived_by
+pdf_01000000__01001014___552f523069,七星灯,悲情,权谋,2,【第四场】,scene_cooccurrence
+pdf_01000000__01001014___552f523069,七星灯,传承,使命,1,【第二场】,scene_cooccurrence
+pdf_01000000__01001014___552f523069,七星灯,传承,忠义,1,【第二场】,scene_cooccurrence
+pdf_01000000__01001014___552f523069,七星灯,传承,权谋,1,【第二场】,scene_cooccurrence
+pdf_01000000__01001014___552f523069,七星灯,使命,忠义,1,【第二场】,scene_cooccurrence
+pdf_01000000__01001014___552f523069,七星灯,使命,权谋,1,【第二场】,scene_cooccurrence
+pdf_01000000__01001014___552f523069,七星灯,威名,悲情,1,【第四场】,scene_cooccurrence
+pdf_01000000__01001014___552f523069,七星灯,威名,权谋,1,【第四场】,scene_cooccurrence
+pdf_01000000__01001014___552f523069,七星灯,家国,战争,1,序幕/前置内容,scene_cooccurrence
+pdf_01000000__01001014___552f523069,七星灯,忠义,权谋,1,【第二场】,scene_cooccurrence
+pdf_01000000__01001014___552f523069,七星灯,悲情,谨慎,1,【第五场】,scene_cooccurrence
+pdf_01000000__01001014___552f523069,七星灯,情爱,权谋,1,【第一场】,scene_cooccurrence
+pdf_01000000__01001014___552f523069,七星灯,情爱,羞辱与反羞辱,1,【第一场】,scene_cooccurrence
+pdf_01000000__01001014___552f523069,七星灯,权谋,羞辱与反羞辱,1,【第一场】,scene_cooccurrence
+pdf_01000000__01001014___552f523069,七星灯,权谋,谨慎,1,【第五场】,scene_cooccurrence

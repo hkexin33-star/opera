@@ -1,0 +1,2 @@
+doc_id,doc_title,scene_id,scene_index,scene,line_no,start_line,end_line,location,time_hint,main_event,dominant_action,summary,conflict_stage,tension_level,key_characters,theme_labels,scene_function,narrative_turning_point,characters_present,line_count,dialogue_count,lyric_count,dialogue_density,lyric_density,speech_density,stage_direction_count,narration_count,llm_error
+pdf_01000000__01003016___702c945adb,打花鼓,pdf_01000000__01003016___702c945adb__scene__000,0,序幕/前置内容,1,1,1,,,# 《打花鼓》,命令,# 《打花鼓》,铺垫,0,,家国；亲情；喜剧；离散,引子,,,1,0,0,0.0,0.0,0.0,0,1,

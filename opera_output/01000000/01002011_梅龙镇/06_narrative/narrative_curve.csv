@@ -1,0 +1,4 @@
+doc_id,doc_title,scene_id,scene_index,scene,conflict_stage,scene_function,tension_level,tension_norm,dialogue_density,lyric_density,speech_density,narrative_turning_point,is_climax,derived_by
+pdf_01000000__01002011___1a9416b419,梅龙镇,pdf_01000000__01002011___1a9416b419__scene__000,0,序幕/前置内容,铺垫,引子,0,0.0,0.0,0.0,0.0,,0,scene_metrics
+pdf_01000000__01002011___1a9416b419,梅龙镇,pdf_01000000__01002011___1a9416b419__scene__001,1,【第一场】,铺垫,铺垫,3,1.0,27.375,1.0,28.375,正德帝赠银并意图进入李凤姐卧房，李凤姐以‘男女授受不亲’拒绝，冲突初现。,1,scene_metrics
+pdf_01000000__01002011___1a9416b419,梅龙镇,pdf_01000000__01002011___1a9416b419__scene__002,2,【第二场】,高潮,高潮,3,1.0,4.8889,0.0,4.8889,正德帝从拒绝封赏到最终封李凤姐为妃，关系从戏谑转为正式。,1,scene_metrics
