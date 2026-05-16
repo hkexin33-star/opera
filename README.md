@@ -11,6 +11,7 @@
 | 原始输入 | `opera_dataset/<合集>/` 下 PDF |
 | 结构化输出 | `opera_output/<合集>/<剧目>/` |
 | 全库汇总 | `opera_output/all_*.csv`、`all_structured.jsonl` |
+| LLM 说明 | 见 [§七 大语言模型使用情况与效果](#七大语言模型llm使用情况与效果) |
 
 ---
 
@@ -22,16 +23,17 @@
 4. [环境准备](#四环境准备)
 5. [完整操作流程（分步：方式 → 结果 → 赛题用途）](#五完整操作流程分步方式--结果--赛题用途)
 6. [数据处理流水线详解](#六数据处理流水线详解)
-7. [输出目录与文件说明](#七输出目录与文件说明)
-8. [核心字段说明](#八核心字段说明)
-9. [赛题五任务数据对照（详细）](#九赛题五任务数据对照详细)
-10. [数据质量与使用规范](#十数据质量与使用规范)
-11. [分析脚手架 analysis_starter.py](#十一分析脚手架-analysis_starterpy)
-12. [中断、重启与维护](#十二中断重启与维护)
-13. [命令速查表](#十三命令速查表)
-14. [团队协作与 GitHub](#十四团队协作与-github)
-15. [赛题满足度评估](#十五赛题满足度评估)
-16. [常见问题](#十六常见问题)
+7. [大语言模型（LLM）使用情况与效果](#七大语言模型llm使用情况与效果)
+8. [输出目录与文件说明](#八输出目录与文件说明)
+9. [核心字段说明](#九核心字段说明)
+10. [赛题五任务数据对照（详细）](#十赛题五任务数据对照详细)
+11. [数据质量与使用规范](#十一数据质量与使用规范)
+12. [分析脚手架 analysis_starter.py](#十二分析脚手架-analysis_starterpy)
+13. [中断、重启与维护](#十三中断重启与维护)
+14. [命令速查表](#十四命令速查表)
+15. [团队协作与 GitHub](#十五团队协作与-github)
+16. [赛题满足度评估](#十六赛题满足度评估)
+17. [常见问题](#十七常见问题)
 
 ---
 
@@ -206,7 +208,7 @@ opera_dataset\01000000\*.pdf
 | 项目 | 内容 |
 |------|------|
 | **方式** | `python mineru_batch_convert_structured_llm_final_v8.py --status-only ...` |
-| **命令** | 见 [§十三](#十三命令速查表) |
+| **命令** | 见 [§十四](#十四命令速查表) |
 | **结果** | 终端输出 `total / r6_ok / old_version / pending`；不修改任何文件 |
 | **赛题用途** | 项目管理：估算剩余批次、决定是否中断重启 |
 
@@ -302,7 +304,7 @@ python mineru_batch_convert_structured_llm_final_v8.py `
 | 项目 | 内容 |
 |------|------|
 | **方式** | `analysis_starter.py` |
-| **命令** | 见 [§十一](#十一分析脚手架-analysis_starterpy) |
+| **命令** | 见 [§十二](#十二分析脚手架-analysis_starterpy) |
 | **结果** | `analysis_figures/` 下 PNG + `play_summary.json` |
 | **赛题用途** | 任务二网络图、任务四曲线、任务三主题条、全库质量概览；可直接放入答辩 PPT |
 
@@ -351,13 +353,7 @@ PDF
 
 ### 阶段 3：大语言模型增强（`--llm-enabled`）
 
-| 环节 | 方式 | 落盘字段 | 赛题用途 |
-|------|------|----------|----------|
-| 文档元数据 | 前言 + 合集信息 + 台词样例 | `synopsis`、`genre_hint`、`doc_tags` | 任务五列表、任务一年代/戏种 |
-| 角色画像 | 批量（默认 8 人/次） | `role_type_inferred`、`personality_tags`、`narrative_function` | **任务一** |
-| 场次/关系/主题 | 按场调用 | `scenes.*`、`relations(derived_by=llm)` | **任务二、三、四** |
-| 台词情感/受话人 | 关键台词批量（默认最多 100 条/剧） | `emotion_tag`、`target`、`speech_act` | 情感分析、关系验证 |
-| 关系聚合校正 | 规则合并 + LLM Top 48 边 + 再合并 | `relations_aggregated`、`llm_confidence` | **任务二主网络** |
+在规则解析之后、写出 CSV 之前调用 DeepSeek 等兼容 API，对文档/角色/场次/台词/关系进行**语义补全与校正**。五类模块、落盘字段、赛题映射及实测效果见 **[§七 大语言模型使用情况与效果](#七大语言模型llm使用情况与效果)**。
 
 关闭部分 LLM：`--no-llm-dialogue`、`--no-llm-relation-refine`。
 
@@ -380,9 +376,137 @@ PDF
 
 ---
 
-## 七、输出目录与文件说明
+## 七、大语言模型（LLM）使用情况与效果
 
-### 7.1 概念 ↔ 数据表映射
+本节说明：**在数据处理阶段**如何用 LLM、**得到哪些字段**、**对赛题分析有何提升**，以及如何在 CSV 中区分「规则结果」与「LLM 结果」。  
+（`analysis_starter.py` 仅读取已落盘字段作图，**不再调用** LLM API。）
+
+### 7.1 定位：LLM 在流水线中的角色
+
+| 维度 | 说明 |
+|------|------|
+| **做什么** | 在 MinerU + 规则解析之后，对**结构化字段**做语义推断与补全（不是把 PDF 直接交给 LLM 端到端生成全库） |
+| **不做什么** | 不替代 OCR；不对全部台词逐句标注（有数量上限）；不在可视化脚本中二次调 API |
+| **默认模型** | `deepseek-chat`（`--llm-model`，API 地址 `--llm-base-url`） |
+| **开关** | 批处理加 `--llm-enabled`；密钥环境变量 `DEEPSEEK_API_KEY`（或 `--llm-api-key-env` 指定） |
+| **失败策略** | 单次 LLM 调用失败时**保留规则结果**，不中断整部剧处理；角色批处理失败时写入 `llm_error` |
+
+**调用顺序**（单剧 `parse_markdown_to_structured` 内）：
+
+```
+规则解析（场次/角色/台词/启发式关系）
+    → ① llm_enrich_document_meta      （文档元数据）
+    → ② llm_enrich_roles_batched      （角色画像，批量）
+    → ③ llm_enrich_scenes_and_relations （按场：场次摘要/张力/关系/主题）
+    → 启发式关系合并 + 规则场次衍生
+    → finalize_structured_package 内：
+         ④ llm_enrich_dialogues       （关键台词：受话人/情绪/言语行为）
+         ⑤ llm_refine_relations_aggregated （全剧 Top 边语义校正）
+    → write_play_package → all_*.csv
+```
+
+### 7.2 五类 LLM 模块：输入 → 输出 → 赛题效果
+
+| 模块 | 代码函数 | 输入 | 主要落盘字段 | `derived_by` / 标记 | 赛题任务与效果 |
+|------|----------|------|--------------|---------------------|----------------|
+| **① 文档元数据** | `llm_enrich_document_meta` | 剧名、合集信息、规则前言、`dialogues` 前 80 条样例 | `synopsis`、`period_hint`、`genre_hint`、`doc_tags`、`main_conflict`、`note_text` | `documents.csv` 中 `llm_enabled=True`、`llm_model` | **任务五** 列表筛选与简介卡片；**任务一/二** 用 `genre_hint`、`period_hint` 分组对比 |
+| **② 角色画像** | `llm_enrich_roles_batched` | 角色表 + 每人最多 14 条台词证据，**8 人/批** | `role_type_inferred`、`gender_inferred`、`personality_tags`、`behavior_tags`、`speech_style`、**`narrative_function`** | 失败时 `llm_error` | **任务一** 行当推断、主角/配角划分；比纯规则行当表更适合作饼图/对比 |
+| **③ 场次·关系·主题** | `llm_enrich_scenes_and_relations` | **按场** transcript（默认最多 120 行/场） | `scenes`: `summary`、`conflict_stage`、`tension_level`、`scene_function`、`narrative_turning_point`、`theme_labels`；新增 `relations`（`derived_by=llm`）、`themes` | 关系边 `derived_by=llm` | **任务二** 分场子图与显式互动边；**任务三** 场次主题标签；**任务四** 张力阶段/高潮点 → 驱动 `narrative_curve` |
+| **④ 台词语用** | `llm_enrich_dialogues` | 打分选出的关键台词，**最多 100 条/剧**，**18 条/批** | `target`、`emotion_tag`、`speech_act`、`llm_confidence` | `emotion_derived_by=llm`、`target_derived_by=llm` | 情感分布、受话人网络、言语行为统计；任务五点击台词展示情绪标签 |
+| **⑤ 关系聚合校正** | `llm_refine_relations_aggregated` | 规则聚合后 **Top 48** 条边（按 weight） | `relation_type`、`merged_relation_types`、`evidence`、`llm_confidence` | `derived_by=llm_refined` | **任务二** 全剧主网络边类型更准确、证据句更可读；减少「对话/提及」泛滥 |
+
+**规则与 LLM 如何共存**：
+
+- **关系**：`heuristic_relations_from_dialogues`（邻接/提及/共现）+ LLM 分场关系 → 合并去重 → 聚合 → LLM 校正 Top 边 → 再经 `refine_relations_aggregated_semantic` 规则收口。
+- **台词情绪**：`enrich_dialogue_rows` 规则先填 `emotion_tag`/`target`，LLM 仅**覆盖**候选关键句，并写入 `*_derived_by=llm` 便于审计。
+- **主题**：`THEME_KEYWORDS` 启发式 + LLM 场次 `theme_labels` 双源，写入 `themes.csv` 时保留 `derived_by`。
+
+### 7.3 启用方式与参数
+
+**启用（全量批处理推荐）**：
+
+```powershell
+python mineru_batch_convert_structured_llm_final_v8.py `
+  --input-dir opera_dataset\01000000 `
+  --output-dir opera_output `
+  --llm-enabled `
+  --collection-prefix 01000000
+```
+
+**常用参数**（控制成本与粒度）：
+
+| 参数 | 默认值 | 含义 |
+|------|--------|------|
+| `--llm-model` | `deepseek-chat` | 模型名称 |
+| `--llm-base-url` | `https://api.deepseek.com` | API 基址 |
+| `--llm-max-dialogue-lines` | 100 | 每剧 LLM 标注台词上限（按重要性打分选取，非随机截断） |
+| `--llm-dialogue-batch-size` | 18 | 台词批大小 |
+| `--llm-roles-batch-size` | 8 | 角色批大小 |
+| `--llm-max-relation-refine` | 48 | 聚合关系 LLM 校正条数上限 |
+| `--llm-max-scene-lines` | 120 | 每场送入 LLM 的最大行数 |
+| `--no-llm-dialogue` | — | 关闭模块 ④ |
+| `--no-llm-relation-refine` | — | 关闭模块 ⑤ |
+
+**台词候选策略**（`select_dialogue_llm_candidates`）：优先 `is_key_line`、唱词、较长句及含「启禀/参见/如何」等戏剧功能词的行，在 `--llm-max-dialogue-lines` 内取得分最高者，保证 API 用在信息量大的句子上。
+
+### 7.4 如何在数据中识别 LLM 结果
+
+| 检查项 | 位置 | 含义 |
+|--------|------|------|
+| 是否启用 LLM | `01_meta/documents.csv` → `llm_enabled`、`llm_model` | 该剧批处理时是否带 `--llm-enabled` |
+| 台词是否 LLM 标注 | `03_script/dialogues.csv` → `emotion_derived_by`、`target_derived_by` | 值为 `llm` 表示该字段由 LLM 写入 |
+| 分场关系是否 LLM | `04_graph/relations.csv` → `derived_by` | `llm` 为按场 LLM 抽取 |
+| 聚合边是否 LLM 校正 | `04_graph/relations_aggregated.csv` → `derived_by` | `llm_refined` 为聚合校正 |
+| 置信度 | `llm_confidence`（台词/关系） | 可用于分析端过滤低置信边 |
+
+**Python 示例（统计一部剧的 LLM 台词覆盖）**：
+
+```python
+import pandas as pd
+
+dlg = pd.read_csv("opera_output/01000000/01001001_空城计/03_script/dialogues.csv")
+llm_mask = dlg["emotion_derived_by"].astype(str).eq("llm")
+print("LLM 标注台词数:", llm_mask.sum(), "/", len(dlg))
+print(dlg.loc[llm_mask, ["speaker", "emotion_tag", "target", "speech_act"]].head())
+```
+
+### 7.5 实测效果示例：《空城计》（r6 + LLM）
+
+路径：`opera_output/01000000/01001001_空城计/`（`analysis_ready=True`，`parse_quality_score≈0.96`）。
+
+| 维度 | 规则 alone 的局限 | LLM 增强后的效果 |
+|------|-------------------|------------------|
+| **文档** | 前言规则抽取较碎 | `synopsis` 为 40–120 字连贯剧情摘要；`doc_tags` 如「权谋；战争；忠义」便于任务三/五筛选 |
+| **角色** | 仅有行当原文 | `role_type_inferred`（如诸葛亮→老生）、`narrative_function` 区分主角/配角 |
+| **场次** | 仅有场名切分 | 每场 `conflict_stage`、`tension_level`、`scene_function` 可直接画**叙事曲线** |
+| **关系** | 启发式边多、类型粗 | 分场 `derived_by=llm` 边带 `evidence`；聚合网络 `llm_refined` 边类型更可解释 |
+| **台词** | 无受话人/情绪 | 关键句有 `emotion_tag`（怒/平/厉等）、`speech_act`（命令/汇报等），支持情感与互动分析 |
+
+**赛题侧可直接使用的分析**（无需再调 LLM）：
+
+- **任务一**：按 `role_type_inferred` 统计行当；`performances` + `speech_style` 看唱念做打与说话风格。
+- **任务二**：`relations_aggregated` 建图；按 `derived_by` 分层比较「启发式 vs LLM」边集。
+- **任务三**：`themes_aggregated` + `theme_pairs`；`theme_role_links` 看主题—角色关联。
+- **任务四**：`narrative_curve` 折线图；`is_climax` 标高潮场。
+- **任务五**：`structured.json` 一次加载；点击关系边用 `evidence_line_ids` 回链 `dialogues.text`。
+
+### 7.6 LLM 使用边界与建议
+
+| 边界 | 说明 |
+|------|------|
+| **非全句标注** | 默认每剧最多 100 条台词走 LLM，其余句 `emotion_derived_by=rule` 或为空 |
+| **成本** | 448 部全量 + LLM 显著增加 API 费用与耗时；冒烟可用 `--limit 2` |
+| **误差** | 受话人偶发偏差（如头衔误识别）；分析时可用 `llm_confidence` 过滤 |
+| **低质量 PDF** | LLM 无法挽救 OCR/表格错乱；仍须 `analysis_ready` 过滤 |
+| **后续分析** | 赛题深化（介数中心性、社群、统计检验）在 **pandas / NetworkX** 层完成；若需可另开 notebook 调 LLM，与主流水线解耦 |
+
+**报告撰写建议**：在方法部分写明「规则解析 + DeepSeek 结构化增强」、列出五类模块表；在局限性中说明台词采样上限与低质量剧排除策略。
+
+---
+
+## 八、输出目录与文件说明
+
+### 8.1 概念 ↔ 数据表映射
 
 | 概念 | 单剧路径 | 全库汇总 |
 |------|----------|----------|
@@ -400,7 +524,7 @@ PDF
 | 叙事曲线 | `06_narrative/narrative_curve.csv` | `all_narrative_curve.csv` |
 | 一站式 JSON | `structured.json` | `all_structured.jsonl` |
 
-### 7.2 全库汇总文件清单
+### 8.2 全库汇总文件清单
 
 | 文件 | 用途 |
 |------|------|
@@ -412,11 +536,11 @@ PDF
 
 ---
 
-## 八、核心字段说明
+## 九、核心字段说明
 
 路径以 **r6 分层**为准。
 
-### 8.1 `01_meta/documents.csv`
+### 9.1 `01_meta/documents.csv`
 
 | 字段 | 含义 |
 |------|------|
@@ -429,7 +553,7 @@ PDF
 | `scene_count` … `dialogue_count` | 规模指标 |
 | `structured_json` | 完整 JSON 路径 |
 
-### 8.2 `02_cast/roles.csv`（任务一）
+### 9.2 `02_cast/roles.csv`（任务一）
 
 | 字段 | 含义 |
 |------|------|
@@ -438,7 +562,7 @@ PDF
 | `narrative_function` | 主角/配角/功能性（r6） |
 | `line_count`、`centrality_hint` | 戏份与网络提示 |
 
-### 8.3 `03_script/dialogues.csv`（全任务基础）
+### 9.3 `03_script/dialogues.csv`（全任务基础）
 
 | 字段 | 含义 |
 |------|------|
@@ -448,7 +572,7 @@ PDF
 | `emotion_derived_by` | `rule` 或 `llm` |
 | `is_key_line` | 是否关键台词 |
 
-### 8.4 `04_graph/relations_aggregated.csv`（任务二主表）
+### 9.4 `04_graph/relations_aggregated.csv`（任务二主表）
 
 | 字段 | 含义 |
 |------|------|
@@ -458,17 +582,17 @@ PDF
 | `derived_by` | `llm_refined` / 启发式等 |
 | `evidence` | 文本证据摘要 |
 
-### 8.5 `06_narrative/narrative_curve.csv`（任务四）
+### 9.5 `06_narrative/narrative_curve.csv`（任务四）
 
 `tension_level`、`tension_norm`、`is_climax`、`speech_density` 等，可直接绘图。
 
-### 8.6 `structured.json`
+### 9.6 `structured.json`
 
 含 `metadata` 与全部子表数组；**任务五**前端一次加载即可实现多视图联动。
 
 ---
 
-## 九、赛题五任务数据对照（详细）
+## 十、赛题五任务数据对照（详细）
 
 ### 任务一：行当与年代变化
 
@@ -516,9 +640,9 @@ PDF
 
 ---
 
-## 十、数据质量与使用规范
+## 十一、数据质量与使用规范
 
-### 10.1 质量过滤（必做）
+### 11.1 质量过滤（必做）
 
 ```python
 import pandas as pd
@@ -537,7 +661,7 @@ good_ids = set(good["doc_id"])
 
 **low 质量剧（约 20 部）**：多为 PDF 解析失败（场次极少、关系为空），**勿纳入全库结论**。
 
-### 10.2 关系表选用
+### 11.2 关系表选用
 
 | 场景 | 表 |
 |------|-----|
@@ -545,7 +669,7 @@ good_ids = set(good["doc_id"])
 | 论文证据 | `relations` + `evidence` / `evidence_line_ids` |
 | 中心性 | `network_metrics`（或自算介数） |
 
-### 10.3 `derived_by` 含义
+### 11.3 `derived_by` 含义
 
 | 值 | 来源 |
 |----|------|
@@ -553,16 +677,16 @@ good_ids = set(good["doc_id"])
 | `adjacency` / `mention` / `cooccurrence` | 启发式 |
 | `keyword` | 主题关键词 |
 
-### 10.4 目录与版本
+### 11.4 目录与版本
 
 - 分析统一使用 **`opera_output`**，勿与 `opera_dataset_md` 混用。
 - 仅当 `parser_version` 含 `2026-05-16-r6` 且存在 `01_meta/documents.csv` 时视为 r6 标准输出。
 
 ---
 
-## 十一、分析脚手架 analysis_starter.py
+## 十二、分析脚手架 analysis_starter.py
 
-### 11.1 安装与全库检验
+### 12.1 安装与全库检验
 
 ```powershell
 python analysis_starter.py --verify --collection 01000000 --data-dir opera_output --out-dir analysis_figures
@@ -570,7 +694,7 @@ python analysis_starter.py --verify --collection 01000000 --data-dir opera_outpu
 
 **结果**：`analysis_figures/batch_verify_01000000.csv`
 
-### 11.2 全库质量概览 + 单剧示例图
+### 12.2 全库质量概览 + 单剧示例图
 
 ```powershell
 python analysis_starter.py `
@@ -594,14 +718,14 @@ python analysis_starter.py `
 
 ---
 
-## 十二、中断、重启与维护
+## 十三、中断、重启与维护
 
-### 12.1 安全中断
+### 13.1 安全中断
 
 1. 在运行 `python mineru_batch_convert...` 的终端按 **`Ctrl+C`**。
 2. 已写完的 `structured.json` 与分层 CSV **保留**；当前批中未完成的一部可能需下次重跑。
 
-### 12.2 重新启动全量（推荐命令）
+### 13.2 重新启动全量（推荐命令）
 
 ```powershell
 cd D:\University_studies\Junior\data_visualization\experiment\final_self
@@ -620,14 +744,14 @@ python mineru_batch_convert_structured_llm_final_v8.py `
 - **不要**加 `--no-skip-existing`（除非故意全库重跑）。
 - 每批结束会打印 `[AUTO-COMBINE] N plays, analysis_ready=M`。
 
-### 12.3 中断后同步汇总
+### 13.3 中断后同步汇总
 
 ```powershell
 python mineru_batch_convert_structured_llm_final_v8.py `
   --combine-only --output-dir opera_output --collection-prefix 01000000
 ```
 
-### 12.4 仅重组旧目录（不耗 API）
+### 13.4 仅重组旧目录（不耗 API）
 
 ```powershell
 python mineru_batch_convert_structured_llm_final_v8.py --repack-only --output-dir opera_output
@@ -636,7 +760,7 @@ python mineru_batch_convert_structured_llm_final_v8.py --combine-only --output-d
 
 ---
 
-## 十三、命令速查表
+## 十四、命令速查表
 
 | 命令 / 参数 | 作用 |
 |-------------|------|
@@ -655,9 +779,9 @@ python mineru_batch_convert_structured_llm_final_v8.py --combine-only --output-d
 
 ---
 
-## 十四、团队协作与 GitHub
+## 十五、团队协作与 GitHub
 
-### 14.1 仓库提交范围
+### 15.1 仓库提交范围
 
 | 提交 | 不提交（网盘共享） |
 |------|-------------------|
@@ -667,7 +791,7 @@ python mineru_batch_convert_structured_llm_final_v8.py --combine-only --output-d
 
 详见 `data/README.md`。
 
-### 14.2 分工建议
+### 15.2 分工建议
 
 | 角色 | 工作 |
 |------|------|
@@ -676,7 +800,7 @@ python mineru_batch_convert_structured_llm_final_v8.py --combine-only --output-d
 | 可视化 | `structured.json` + 五视图联动 |
 | 文档 | 赛题答卷、样本量说明 |
 
-### 14.3 初始化 Git
+### 15.3 初始化 Git
 
 ```powershell
 git init
@@ -688,13 +812,13 @@ git commit -m "docs: 合并京剧结构化流水线完整说明"
 
 ---
 
-## 十五、赛题满足度评估
+## 十六、赛题满足度评估
 
 | 维度 | 满足度 | 说明 |
 |------|--------|------|
 | 数据模型（文档+多表+图谱） | **约 90%** | r6 分层目录已规范 |
 | 五任务可直接开做 | **是（当前约 58 部 analysis_ready）** | 需过滤低质量 |
-| 任务一 行当/唱念做打 | **高** | roles + performances + LLM 行当 |
+| 任务一 行当/唱念做打 | **高** | roles + performances + LLM `role_type_inferred` / `narrative_function` |
 | 任务二 关系网络 | **中高** | 聚合边 + 度中心性；介数/社群待分析端 |
 | 任务三 主题 | **中高** | theme_pairs + theme_role_links |
 | 任务四 叙事 | **中高** | narrative_curve 可直接绘图 |
@@ -705,7 +829,7 @@ git commit -m "docs: 合并京剧结构化流水线完整说明"
 
 ---
 
-## 十六、常见问题
+## 十七、常见问题
 
 **Q：PowerShell 里 `python : [MinerU]...` 红色报错？**  
 A：多为 stderr 进度信息被 PowerShell 当成警告；若随后有 `[OK]`、`[AUTO-COMBINE]` 即正常。可用 `*>&1 | Tee-Object` 或减少 `2>&1`。
@@ -721,6 +845,9 @@ A：执行 `--combine-only`；新代码每批结束会自动刷新。
 
 **Q：如何只重跑一部？**  
 A：`--files opera_dataset\01000000\xxx.pdf --llm-enabled --no-skip-existing`
+
+**Q：如何确认 LLM 是否生效？**  
+A：查 `01_meta/documents.csv` 的 `llm_enabled=True`；台词看 `emotion_derived_by=llm`；关系看 `derived_by` 为 `llm` / `llm_refined`。详见 [§7.4](#74-如何在数据中识别-llm-结果)。
 
 ---
 
