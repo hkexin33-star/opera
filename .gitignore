@@ -22,7 +22,7 @@ opera_dataset/
 opera_dataset_md/
 
 # --- 流水线产出（本地生成或网盘共享）---
-opera_output/
+# opera_output/
 analysis_figures/
 *.log
 batch_*.log
