@@ -18,8 +18,8 @@ venv/
 Thumbs.db
 
 # --- 原始数据（体积大，网盘共享）---
-opera_dataset/
-opera_dataset_md/
+# opera_dataset/
+
 
 # --- 流水线产出（本地生成或网盘共享）---
 # opera_output/
