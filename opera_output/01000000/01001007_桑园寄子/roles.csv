@@ -1,0 +1,4 @@
+doc_id,role_name,role_type_raw,role_type_inferred,gender_inferred,age_inferred,status_identity,personality_tags,behavior_tags,speech_style,evidence,source_line,raw,confidence,llm_error,role_note
+pdf_01000000__01001007___1b262d262b,邓伯道,老生,老生,未知,偏老/中老年,未知,[],[],[],邓伯道：老生,5,邓伯道：老生,0.3,402 Client Error: Payment Required for url: https://api.deepseek.com/chat/completions,
+pdf_01000000__01001007___1b262d262b,金氏,旦,旦,未知,未知,未知,[],[],[],金氏：旦,7,金氏：旦,0.3,402 Client Error: Payment Required for url: https://api.deepseek.com/chat/completions,
+pdf_01000000__01001007___1b262d262b,然正史所载，邓伯道之子竟失去，故曰,天道无知，使伯道无儿。此剧情节离奇，神情悲惨，能使观者悲喜交加，感激涕零，油然起骨肉之感，诚有功世道人心之剧也。,生,未知,偏少/少年,未知,[],[],[],然正史所载，邓伯道之子竟失去，故曰：天道无知，使伯道无儿。此剧情节离奇，神情悲惨，能使观者悲喜交加，感激涕零，油然起骨肉之感，诚有功世道人心之剧也。,15,然正史所载，邓伯道之子竟失去，故曰：天道无知，使伯道无儿。此剧情节离奇，神情悲惨，能使观者悲喜交加，感激涕零，油然起骨肉之感，诚有功世道人心之剧也。,0.3,402 Client Error: Payment Required for url: https://api.deepseek.com/chat/completions,

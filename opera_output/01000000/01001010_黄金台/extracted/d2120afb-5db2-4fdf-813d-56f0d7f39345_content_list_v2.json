@@ -1,0 +1,1700 @@
+[
+    [
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "《黄金台》"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                48,
+                55,
+                189,
+                82
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "（一名：《田单救主》；一名：《搜府盘关》；一名：《乐毅伐齐》）"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                211,
+                63,
+                781,
+                82
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "主要角色"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                38,
+                110,
+                117,
+                126
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "田单：老生"
+                    }
+                ]
+            },
+            "bbox": [
+                38,
+                128,
+                134,
+                143
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "伊立：净 "
+                    }
+                ]
+            },
+            "bbox": [
+                38,
+                145,
+                115,
+                160
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "田法章：小生"
+                    }
+                ]
+            },
+            "bbox": [
+                38,
+                162,
+                154,
+                177
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "乳娘：老旦"
+                    }
+                ]
+            },
+            "bbox": [
+                38,
+                179,
+                134,
+                193
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "衙役甲：丑 "
+                    }
+                ]
+            },
+            "bbox": [
+                38,
+                196,
+                134,
+                210
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "衙役乙：丑 "
+                    }
+                ]
+            },
+            "bbox": [
+                38,
+                212,
+                134,
+                227
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "情节"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                38,
+                244,
+                80,
+                260
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "战国，齐湣王宠邹妃，用太监伊立，沉于酒色，不理朝政。邹妃、伊立，欲害太子田法章，诬以戏妃，齐王大怒，即命伊立搜斩太子。太子闻信，乘夜逃出宫。适遇田单巡街，获之，藏于田府中。伊立大索太子不得，将至田府。田单闻信，急将太子改妆，伪为田单妹。未几伊立来搜府，竟被混过。伊立去后，田单与太子又扮做兄妹进香，连夜出关。关吏再四查问，行贿得脱，逃至即墨。后燕昭王使乐毅伐齐，一朝下七十余城。齐都失守，齐湣王被弑，邹妃、伊立死于乱军之中。赖田单出奇计，用火牛阵大破燕军，齐地尽复。太子返国即位，田单亦至上卿。"
+                    }
+                ]
+            },
+            "bbox": [
+                36,
+                262,
+                919,
+                363
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "注释 "
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                38,
+                380,
+                80,
+                395
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "谭叫天、金秀山合演是剧，最为出色。金秀山去伊立，搜府时白口斩钉截铁，一字不苟，能将奸阉身份，活演出来。叫天则做工老当，神情周到，而尤以踢灯时，最为得势。唱至“回头再把千岁请”，一躬倒地，一“请”字抑扬顿挫，有余不尽。真有三日绕梁之慨。盘关时形容尽致，尤可做贪鄙官吏现形记也。"
+                    }
+                ]
+            },
+            "bbox": [
+                36,
+                397,
+                912,
+                448
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "根据《戏考》第一册整理"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                36,
+                480,
+                247,
+                498
+            ]
+        },
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/245338a0e96c84e646d9fd9928822330a347c356055d131222ca5e1a7dbb3cc4.jpg"
+                },
+                "table_caption": [
+                    {
+                        "type": "text",
+                        "content": "【第一场】"
+                    }
+                ],
+                "table_footnote": [],
+                "html": "<table><tr><td>田单</td><td>(内白)</td><td>掌灯。</td></tr><tr><td></td><td>(内二黄导板)</td><td>听樵楼打四更玉兔东上,</td></tr><tr><td colspan=\"3\">(二衙役同上。田单上。)</td></tr><tr><td>田单</td><td>(回龙)</td><td>为国家哪顾得昼夜奔忙。</td></tr><tr><td></td><td>(二黄原板)</td><td>西凉国欠我朝三载贡上,将邹妃和伊立来见大王。我主爷见邹妃龙心飘荡,每日里贪酒色不理朝纲。昭阳院害国母一命身丧,眼见得这江山付于汪洋。</td></tr><tr><td></td><td>(念)</td><td>身在胧朦睡,怀揣社稷忧。</td></tr><tr><td></td><td>(白)</td><td>下官田单,齐王驾前为臣,官拜巡城御史。适才家院报道,东宫小千岁,连夜逃出皇城,不知为了何事。因此下官亲自巡查。来!</td></tr><tr><td>二衙役</td><td>(同白)</td><td>有。</td></tr><tr><td>田单</td><td>(白)</td><td>掌灯。</td></tr><tr><td>二衙役</td><td>(同白)</td><td>哦。</td></tr><tr><td>田单</td><td>(二黄摇板)</td><td>叫人来掌红灯大街来上,若有那面生人细问端详。</td></tr><tr><td colspan=\"3\">(田法章上。二衙役同拿田法章。)</td></tr><tr><td>二衙役</td><td>(同白)</td><td>拿住了犯夜的了!</td></tr><tr><td>衙役甲</td><td>(白)</td><td>伙计你看住他,我去讨赏。</td></tr><tr><td>衙役乙</td><td>(白)</td><td>好,我来看住他,你去。</td></tr></table>",
+                "table_type": "complex_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                35,
+                546,
+                914,
+                940
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "中国京剧戏考"
+                    }
+                ]
+            },
+            "bbox": [
+                33,
+                24,
+                149,
+                41
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "《黄金台》"
+                    }
+                ]
+            },
+            "bbox": [
+                448,
+                24,
+                529,
+                41
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "1 "
+                    }
+                ]
+            },
+            "bbox": [
+                929,
+                24,
+                941,
+                39
+            ]
+        },
+        {
+            "type": "page_footer",
+            "content": {
+                "page_footer_content": [
+                    {
+                        "type": "text",
+                        "content": "http://scripts.xikao.com/play/01001010 "
+                    }
+                ]
+            },
+            "bbox": [
+                33,
+                958,
+                297,
+                972
+            ]
+        },
+        {
+            "type": "page_footer",
+            "content": {
+                "page_footer_content": [
+                    {
+                        "type": "text",
+                        "content": "2013-08-23 "
+                    }
+                ]
+            },
+            "bbox": [
+                882,
+                959,
+                964,
+                971
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/34f9983063c0cdb48fefbaf5a4182ede5cf4521ea498412abcaab0bbdab3e217.jpg"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "<table><tr><td>衙役甲 (白)</td><td>回禀老爷的话,小人拿住犯夜的了。</td></tr><tr><td>田单 (白)</td><td>哦,你拿着犯夜的了!</td></tr><tr><td>衙役甲 (白)</td><td>正是。</td></tr><tr><td>田单 (白)</td><td>好,回衙有赏。</td></tr><tr><td>衙役甲 (白)</td><td>多谢老爷!</td></tr><tr><td>衙役乙 (白)</td><td>怎么样了?</td></tr><tr><td>衙役甲 (白)</td><td>我有了赏了!</td></tr><tr><td>衙役乙 (白)</td><td>你看住他,我也去弄一份。</td></tr><tr><td>衙役甲 (白)</td><td>好。</td></tr><tr><td>衙役乙 (白)</td><td>回禀老爷的话,我也拿着犯夜的了。</td></tr><tr><td>田单 (白)</td><td>哦,你也拿着犯夜的了?也有赏。</td></tr><tr><td>衙役乙 (白)</td><td>多谢老爷。</td></tr><tr><td>衙役甲 (白)</td><td>怎么样了?</td></tr><tr><td>衙役乙 (白)</td><td>我也有了赏了!</td></tr><tr><td>衙役甲 (白)</td><td>你看住他,我再去弄一份!</td></tr><tr><td>衙役乙 (白)</td><td>好。</td></tr><tr><td>衙役甲 (白)</td><td>回禀老爷的话,小人又拿着犯夜的了。</td></tr><tr><td>田单 (白)</td><td>哽,夜静更深,哪有许多犯夜之人?掌灯,老爷亲自观看!(衙役甲允。田单看。)</td></tr><tr><td>田法章 (白)</td><td>哎呀,卿......</td></tr><tr><td>田单 (白)</td><td>静声!</td></tr><tr><td colspan=\"2\">(田单踢灯,扯田法章同下。二衙役同摸灯。)</td></tr><tr><td>衙役乙 (白)</td><td>卿......</td></tr><tr><td>衙役甲 (白)</td><td>静声!</td></tr><tr><td colspan=\"2\">(衙役甲扯衙役乙同下。)</td></tr></table>",
+                "table_type": "complex_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                36,
+                52,
+                754,
+                475
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "【第二场】"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                48,
+                491,
+                126,
+                507
+            ]
+        },
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/7a548cc687ba4fe881bc82df11466a1fb2f2be40c1447b02c502c3bf421c72ee.jpg"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "<table><tr><td colspan=\"3\">(田单、田法章同上。乳娘上,开门。田单、田法章同进门。)</td></tr><tr><td>田单</td><td>(白)</td><td>千岁醒来。</td></tr><tr><td>田法章</td><td>(二黄导板)</td><td>时才间搀得我昏迷不醒,</td></tr><tr><td>田单</td><td>(白)</td><td>千岁。</td></tr><tr><td>田法章</td><td>(哭)</td><td>哎呀!</td></tr><tr><td></td><td>(二黄摇板)</td><td>只见卿家面前存。</td></tr><tr><td>田单</td><td>(白)</td><td>千岁,</td></tr><tr><td></td><td>(二黄摇板)</td><td>问千岁因甚事逃出宫院,一一的对为臣细说根源。</td></tr><tr><td>田法章</td><td>(二黄摇板)</td><td>伊立与我结仇恨,要害小王命残生。</td></tr><tr><td>田单</td><td>(白)</td><td>好奸贼!</td></tr><tr><td></td><td>(二黄摇板)</td><td>背地里只把那伊立埋怨,平白地害幼主所为哪般?</td></tr><tr><td colspan=\"3\">(家院上。)</td></tr><tr><td>家院</td><td>(白)</td><td>今有伊公公带领许多校尉,前来搜府。</td></tr><tr><td>田单</td><td>(白)</td><td>再去打听!</td></tr><tr><td colspan=\"3\">(家院允,下。)</td></tr><tr><td>田单</td><td>(白)</td><td>哎呀,千岁,今有伊立带领许多校尉,前来搜寻殿下。这便如何是好?</td></tr><tr><td>田法章</td><td>(白)</td><td>哎呀,卿家,你要救我一救!</td></tr><tr><td>田单</td><td>(白)</td><td>哎呀,千岁,事到如今,并无别计:千岁扮做小妹模样,等那奸贼到来,混过一时,再作道理。</td></tr><tr><td>田法章</td><td>(白)</td><td>小王乃金枝玉叶,岂扮那妇人模样!</td></tr><tr><td>田单</td><td>(白)</td><td>哎呀,千岁,事到如今,讲什么“金枝玉叶”?龙驾要紧!乳娘,(乳娘允。)</td></tr></table>",
+                "table_type": "complex_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                35,
+                524,
+                914,
+                947
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "中国京剧戏考"
+                    }
+                ]
+            },
+            "bbox": [
+                35,
+                24,
+                149,
+                41
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "《黄金台》"
+                    }
+                ]
+            },
+            "bbox": [
+                450,
+                24,
+                527,
+                41
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "2 "
+                    }
+                ]
+            },
+            "bbox": [
+                927,
+                26,
+                942,
+                39
+            ]
+        },
+        {
+            "type": "page_footer",
+            "content": {
+                "page_footer_content": [
+                    {
+                        "type": "text",
+                        "content": "http://scripts.xikao.com/play/01001010 "
+                    }
+                ]
+            },
+            "bbox": [
+                33,
+                958,
+                297,
+                972
+            ]
+        },
+        {
+            "type": "page_footer",
+            "content": {
+                "page_footer_content": [
+                    {
+                        "type": "text",
+                        "content": "2013-08-23 "
+                    }
+                ]
+            },
+            "bbox": [
+                882,
+                959,
+                964,
+                971
+            ]
+        }
+    ],
+    [
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "田单 （白） 与千岁改扮起来！"
+                    }
+                ]
+            },
+            "bbox": [
+                36,
+                53,
+                418,
+                70
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "乳娘 （白） 是。"
+                    }
+                ]
+            },
+            "bbox": [
+                40,
+                71,
+                307,
+                87
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "（田法章、乳娘同下。）"
+                    }
+                ]
+            },
+            "bbox": [
+                52,
+                87,
+                233,
+                103
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "田单 （二黄导板） 水不清皆因是鱼儿搅混，"
+                    }
+                ]
+            },
+            "bbox": [
+                40,
+                104,
+                473,
+                120
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "（四校尉同上，过场。伊立上。）"
+                    }
+                ]
+            },
+            "bbox": [
+                52,
+                121,
+                307,
+                137
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "伊立 （白） 呔，马来！ "
+                    }
+                ]
+            },
+            "bbox": [
+                40,
+                137,
+                364,
+                154
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "（伊立过场，下。四校尉同下。）"
+                    }
+                ]
+            },
+            "bbox": [
+                52,
+                155,
+                307,
+                171
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "田单 （白） 好奸贼！"
+                    }
+                ]
+            },
+            "bbox": [
+                40,
+                172,
+                344,
+                187
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "（二黄摇板） 我朝中又出了卖国的奸臣！"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                189,
+                492,
+                204
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "施一礼我把千岁爷的驾请，"
+                    }
+                ]
+            },
+            "bbox": [
+                280,
+                205,
+                492,
+                221
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "（田法章、乳娘同上。）"
+                    }
+                ]
+            },
+            "bbox": [
+                52,
+                222,
+                233,
+                237
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "田法章 （二黄摇板） 金枝玉叶扮妇人。"
+                    }
+                ]
+            },
+            "bbox": [
+                40,
+                239,
+                418,
+                255
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "（白） 卿家，看小王扮得可像？"
+                    }
+                ]
+            },
+            "bbox": [
+                144,
+                256,
+                477,
+                272
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "田单 （白） 千岁扮得倒像，可晓得妇人家行走？ "
+                    }
+                ]
+            },
+            "bbox": [
+                40,
+                273,
+                569,
+                288
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "田法章 （白） 这倒不晓得妇人家行走。"
+                    }
+                ]
+            },
+            "bbox": [
+                40,
+                290,
+                473,
+                305
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "田单 （白） 乳娘教导千岁。"
+                    }
+                ]
+            },
+            "bbox": [
+                40,
+                307,
+                400,
+                322
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "乳娘 （白） 是。啊，千岁，妇人行走，必须要这样走。"
+                    }
+                ]
+            },
+            "bbox": [
+                40,
+                323,
+                621,
+                338
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "田法章 （白） 哦，妇人行走，必须要这样走。"
+                    }
+                ]
+            },
+            "bbox": [
+                40,
+                341,
+                529,
+                356
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "田单 （白） 哦，啊，照照照！"
+                    }
+                ]
+            },
+            "bbox": [
+                40,
+                357,
+                418,
+                373
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "（家院上。）"
+                    }
+                ]
+            },
+            "bbox": [
+                52,
+                374,
+                142,
+                390
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "家院 （白） 伊公公驾到！"
+                    }
+                ]
+            },
+            "bbox": [
+                40,
+                391,
+                381,
+                406
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "田单 （白） 有请！"
+                    }
+                ]
+            },
+            "bbox": [
+                40,
+                407,
+                327,
+                423
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "（田法章、乳娘同下。四校尉、伊立同上。）"
+                    }
+                ]
+            },
+            "bbox": [
+                52,
+                424,
+                401,
+                439
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "伊立 （二黄摇板） 御史衙前下了马， "
+                    }
+                ]
+            },
+            "bbox": [
+                40,
+                441,
+                418,
+                457
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "田单 （白） 公公请进！"
+                    }
+                ]
+            },
+            "bbox": [
+                40,
+                458,
+                364,
+                473
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "伊立 （二黄摇板） 有劳大人相迎咱。 "
+                    }
+                ]
+            },
+            "bbox": [
+                40,
+                475,
+                418,
+                491
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "田单 （白） 公公请坐。"
+                    }
+                ]
+            },
+            "bbox": [
+                40,
+                492,
+                364,
+                507
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "伊立 （白） 请。田大人这作什么？"
+                    }
+                ]
+            },
+            "bbox": [
+                40,
+                508,
+                457,
+                524
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "田单 （白） 与公公挡坐。"
+                    }
+                ]
+            },
+            "bbox": [
+                40,
+                526,
+                381,
+                541
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "伊立 （白） 这就不敢！"
+                    }
+                ]
+            },
+            "bbox": [
+                40,
+                542,
+                364,
+                557
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "田单 （白） 当得的！"
+                    }
+                ]
+            },
+            "bbox": [
+                40,
+                558,
+                344,
+                574
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "伊立 （白） 这就不敢，吓！"
+                    }
+                ]
+            },
+            "bbox": [
+                40,
+                576,
+                400,
+                590
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "田单、"
+                    }
+                ]
+            },
+            "bbox": [
+                40,
+                593,
+                84,
+                608
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "伊立 （同笑） 哈哈哈…… "
+                    }
+                ]
+            },
+            "bbox": [
+                40,
+                609,
+                364,
+                625
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "田单 （白） 公公这作什么？"
+                    }
+                ]
+            },
+            "bbox": [
+                40,
+                627,
+                401,
+                642
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "伊立 （白） 与田大人挡坐。 "
+                    }
+                ]
+            },
+            "bbox": [
+                40,
+                644,
+                400,
+                659
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "田单 （白） 这就不敢！"
+                    }
+                ]
+            },
+            "bbox": [
+                40,
+                659,
+                364,
+                676
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "伊立 （白） 当得的！ "
+                    }
+                ]
+            },
+            "bbox": [
+                40,
+                677,
+                344,
+                692
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "田单 （白） 这就不敢，吓！"
+                    }
+                ]
+            },
+            "bbox": [
+                40,
+                694,
+                400,
+                709
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "田单、"
+                    }
+                ]
+            },
+            "bbox": [
+                40,
+                711,
+                364,
+                726
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "伊立 （同笑） 哈哈哈…… "
+                    }
+                ]
+            },
+            "bbox": [
+                40,
+                728,
+                364,
+                743
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "田单 （白） 不知公公驾到，未曾远迎，当面恕罪！"
+                    }
+                ]
+            },
+            "bbox": [
+                40,
+                745,
+                584,
+                760
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "伊立 （白） 岂敢，岂敢。咱家来的鲁莽，望田大人恕过罪罢！ "
+                    }
+                ]
+            },
+            "bbox": [
+                40,
+                760,
+                678,
+                777
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "田单 （白） 岂敢那岂敢！"
+                    }
+                ]
+            },
+            "bbox": [
+                40,
+                778,
+                381,
+                794
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "（四校尉同喊。）"
+                    }
+                ]
+            },
+            "bbox": [
+                52,
+                795,
+                179,
+                810
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "田单 （白） 啊，公公，这夜静更深，带领许多校尉，来到敝衙，有何公干？"
+                    }
+                ]
+            },
+            "bbox": [
+                40,
+                810,
+                789,
+                827
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "伊立 （白） 怎么着，这桩事情，你还不知道么？"
+                    }
+                ]
+            },
+            "bbox": [
+                40,
+                828,
+                569,
+                844
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "田单 （白） 倒也不知。"
+                    }
+                ]
+            },
+            "bbox": [
+                40,
+                846,
+                364,
+                860
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "伊立 （白） 既然不知，待咱家慢慢的告诉于你。"
+                    }
+                ]
+            },
+            "bbox": [
+                40,
+                862,
+                566,
+                878
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "田单 （白） 公公请讲。"
+                    }
+                ]
+            },
+            "bbox": [
+                40,
+                879,
+                364,
+                895
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "伊立 （白） 今有东宫世子田法章，人伦大变，子淫父妃。大王大怒，赐咱家宝剑一口，三"
+                    }
+                ]
+            },
+            "bbox": [
+                40,
+                896,
+                917,
+                910
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "更时分，斩杀回奏。也不知何人走漏了消息，将世子放走。咱家二次启奏大王，"
+                    }
+                ]
+            },
+            "bbox": [
+                280,
+                913,
+                917,
+                928
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "大王赐咱家校尉四十名，各府搜寻。各府俱已搜到没有。我想那世子他定藏"
+                    }
+                ]
+            },
+            "bbox": [
+                280,
+                929,
+                892,
+                945
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "中国京剧戏考"
+                    }
+                ]
+            },
+            "bbox": [
+                35,
+                24,
+                149,
+                41
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "《黄金台》"
+                    }
+                ]
+            },
+            "bbox": [
+                450,
+                24,
+                527,
+                41
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "3 "
+                    }
+                ]
+            },
+            "bbox": [
+                929,
+                26,
+                942,
+                38
+            ]
+        },
+        {
+            "type": "page_footer",
+            "content": {
+                "page_footer_content": [
+                    {
+                        "type": "text",
+                        "content": "http://scripts.xikao.com/play/01001010 "
+                    }
+                ]
+            },
+            "bbox": [
+                33,
+                958,
+                295,
+                972
+            ]
+        },
+        {
+            "type": "page_footer",
+            "content": {
+                "page_footer_content": [
+                    {
+                        "type": "text",
+                        "content": "2013-08-23 "
+                    }
+                ]
+            },
+            "bbox": [
+                882,
+                959,
+                963,
+                971
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/56ff2ddbe7d977cebfc4aa995cee17d648d7d5fb75b42eb17792742864f7044f.jpg"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "<table><tr><td></td><td></td><td>在你府!</td></tr><tr><td>田单</td><td>(白)</td><td>啊,公公,既是千岁犯罪,你我为大臣者,就该上殿保奏才是。</td></tr><tr><td>伊立</td><td>(白)</td><td>咱家连保数本,大王不准,那也是枉然。</td></tr><tr><td>田单</td><td>(白)</td><td>哦,公公保过本了。</td></tr><tr><td>伊立</td><td>(白)</td><td>保过许多的呢!</td></tr><tr><td>田单</td><td>(白)</td><td>也罢,待下官明日亲自私访。有了千岁的下落献于公公,这桩事也就完了!</td></tr><tr><td>伊立</td><td>(白)</td><td>田大人,你这话不是这么说。</td></tr><tr><td>田单</td><td>(白)</td><td>要怎么的讲?</td></tr><tr><td>伊立</td><td>(白)</td><td>我想那世子定在你府,你将他献将出来,保你无事,那也就完了!</td></tr><tr><td>田单</td><td>(白)</td><td>哈哈哈,多蒙公公美意。我想世子他......</td></tr><tr><td>伊立</td><td>(白)</td><td>怎么着?</td></tr><tr><td>田单</td><td>(白)</td><td>不在敝府。</td></tr><tr><td>伊立</td><td>(白)</td><td>当真不在你府?</td></tr><tr><td>田单</td><td>(白)</td><td>当真不在。</td></tr><tr><td>伊立</td><td>(白)</td><td>果然不在?</td></tr><tr><td>田单</td><td>(白)</td><td>果然不在。</td></tr><tr><td>伊立</td><td>(白)</td><td>田大人你这儿来。你说世子不在你府,咱家就要......</td></tr><tr><td>田单</td><td>(白)</td><td>你要怎么?</td></tr><tr><td>伊立</td><td>(白)</td><td>我就要搜!</td></tr><tr><td>田单</td><td>(白)</td><td>公公你当真要搜?</td></tr><tr><td>伊立</td><td>(白)</td><td>当真要搜。</td></tr><tr><td>田单</td><td>(白)</td><td>果然要搜?</td></tr><tr><td>伊立</td><td>(白)</td><td>果然要搜。</td></tr><tr><td>田单</td><td>(白)</td><td>请搜!</td></tr><tr><td>伊立</td><td>(白)</td><td>校尉的与我搜!</td></tr><tr><td colspan=\"3\">(四校尉同允。四校尉两边搜。田法章、乳娘同上。)</td></tr><tr><td>四校尉</td><td>(同白)</td><td>有两个妇人。</td></tr><tr><td>伊立</td><td>(白)</td><td>起过了。田大人,你说世子不在你府,任我亲自一观。</td></tr><tr><td colspan=\"3\">(伊立亮架子。)</td></tr><tr><td>伊立</td><td>(白)</td><td>那两个妇人她是谁?</td></tr><tr><td>田单</td><td>(白)</td><td>哈哈哈,我道是谁,原来是小妹同乳娘,乳娘同小妹。</td></tr><tr><td>伊立</td><td>(白)</td><td>怎么着,田姑娘么?</td></tr><tr><td>田单</td><td>(白)</td><td>不敢,小妹。</td></tr><tr><td>伊立</td><td>(白)</td><td>请过来,咱家见过礼吧!</td></tr><tr><td>田单</td><td>(白)</td><td>小妹礼貌不周,冲撞公公,那还了得,不见也罢。</td></tr><tr><td>伊立</td><td>(白)</td><td>见见何妨?</td></tr><tr><td>田单</td><td>(白)</td><td>不见也罢。</td></tr><tr><td>伊立</td><td>(白)</td><td>我一定要见!</td></tr><tr><td>田单</td><td>(白)</td><td>当真要见?</td></tr><tr><td>伊立</td><td>(白)</td><td>当真要见!</td></tr><tr><td>田单</td><td>(白)</td><td>就见!</td></tr><tr><td>伊立</td><td>(白)</td><td>这不结了么!</td></tr><tr><td>田单</td><td>(白)</td><td>乳娘搀扶小妹,见过伊公公。</td></tr><tr><td>伊立</td><td>(白)</td><td>待我看她行走如何。</td></tr><tr><td>乳娘</td><td>(白)</td><td>是,姑娘有礼。</td></tr><tr><td>伊立</td><td>(白)</td><td>咱家还礼。</td></tr><tr><td colspan=\"3\">(田法章、乳娘同下。)</td></tr><tr><td>伊立</td><td>(白)</td><td>且住,我想那世子上了天?</td></tr><tr><td>田单</td><td>(白)</td><td>天高只怕上不去。</td></tr><tr><td>伊立</td><td>(白)</td><td>他入了地?</td></tr><tr><td>田单</td><td>(白)</td><td>地原无门,只怕下不去。</td></tr><tr><td>伊立</td><td>(白)</td><td>他往哪里去了呢?</td></tr><tr><td>田单</td><td>(白)</td><td>照吓,他往哪里去了?</td></tr><tr><td>伊立</td><td>(白)</td><td>哦呵,有了。不免回去多讨校尉,再来搜寻。田大人,咱家清晨起来,吃了几杯早酒,言语得罪大人。</td></tr><tr><td>田单</td><td>(白)</td><td>岂敢。</td></tr><tr><td>伊立</td><td>(白)</td><td>冒犯大人。</td></tr><tr><td>田单</td><td>(白)</td><td>越发的不敢。</td></tr><tr><td>伊立</td><td>(白)</td><td>告辞了。</td></tr><tr><td></td><td>(二黄摇板)</td><td>辞别大人把马跨,</td></tr><tr><td colspan=\"3\">(四校尉同带马,同下。)</td></tr><tr><td>伊立</td><td>(二黄摇板)</td><td>多讨校尉再搜查。</td></tr><tr><td>田单</td><td>(白)</td><td>送公公。</td></tr><tr><td>伊立</td><td>(三笑)</td><td>哈哈,哈哈,哈哈。</td></tr><tr><td colspan=\"3\">(伊立下。)</td></tr><tr><td>田单</td><td>(白)</td><td>好奸贼!</td></tr><tr><td></td><td>(二黄摇板)</td><td>狗奸贼发了怒令人害怕,倘若是漏机关就把头杀。二次里走上前急忙接驾,</td></tr><tr><td colspan=\"3\">(田法章、乳娘同上。)</td></tr><tr><td>田法章</td><td>(二黄摇板)</td><td>再与卿家把话答。</td></tr><tr><td>田单</td><td>(白)</td><td>哎呀千岁,那贼临行言道:还要多讨校尉,前来搜寻殿下。这便如何是好?</td></tr><tr><td>田法章</td><td>(白)</td><td>卿家你还要救我一救!</td></tr><tr><td>田单</td><td>(白)</td><td>哎呀,千岁,你我君臣扮作烧香还愿之人,诈出皇城,再作道理。</td></tr><tr><td>田法章</td><td>(白)</td><td>此计甚好!</td></tr><tr><td>田单</td><td>(白)</td><td>改扮起来。</td></tr><tr><td colspan=\"3\">(田单、田法章同换行头。)</td></tr><tr><td>田单</td><td>(白)</td><td>乳娘,这有官宝一锭,逃回原郡去吧!</td></tr><tr><td>乳娘</td><td>(白)</td><td>遵命。</td></tr><tr><td>田法章</td><td>(白)</td><td>卿家带马。</td></tr><tr><td>田单</td><td>(白)</td><td>领旨。</td></tr><tr><td colspan=\"3\">(田单带马。)</td></tr><tr><td>田法章</td><td>(白)</td><td>卿......</td></tr><tr><td>田单</td><td>(白)</td><td>静声。</td></tr><tr><td colspan=\"3\">(田单、田法章同下。)</td></tr><tr><td colspan=\"3\">(完)</td></tr></table>",
+                "table_type": "complex_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                35,
+                53,
+                884,
+                947
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "中国京剧戏考"
+                    }
+                ]
+            },
+            "bbox": [
+                35,
+                24,
+                149,
+                41
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "《黄金台》"
+                    }
+                ]
+            },
+            "bbox": [
+                450,
+                24,
+                527,
+                41
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "4 "
+                    }
+                ]
+            },
+            "bbox": [
+                927,
+                26,
+                942,
+                38
+            ]
+        },
+        {
+            "type": "page_footer",
+            "content": {
+                "page_footer_content": [
+                    {
+                        "type": "text",
+                        "content": "http://scripts.xikao.com/play/01001010 "
+                    }
+                ]
+            },
+            "bbox": [
+                33,
+                958,
+                297,
+                972
+            ]
+        },
+        {
+            "type": "page_footer",
+            "content": {
+                "page_footer_content": [
+                    {
+                        "type": "text",
+                        "content": "2013-08-23 "
+                    }
+                ]
+            },
+            "bbox": [
+                882,
+                959,
+                963,
+                971
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                36,
+                52,
+                914,
+                609
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "中国京剧戏考"
+                    }
+                ]
+            },
+            "bbox": [
+                35,
+                24,
+                149,
+                41
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "《黄金台》"
+                    }
+                ]
+            },
+            "bbox": [
+                450,
+                24,
+                527,
+                41
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "5 "
+                    }
+                ]
+            },
+            "bbox": [
+                929,
+                26,
+                942,
+                38
+            ]
+        },
+        {
+            "type": "page_footer",
+            "content": {
+                "page_footer_content": [
+                    {
+                        "type": "text",
+                        "content": "http://scripts.xikao.com/play/01001010 "
+                    }
+                ]
+            },
+            "bbox": [
+                35,
+                959,
+                295,
+                972
+            ]
+        },
+        {
+            "type": "page_footer",
+            "content": {
+                "page_footer_content": [
+                    {
+                        "type": "text",
+                        "content": "2013-08-23 "
+                    }
+                ]
+            },
+            "bbox": [
+                882,
+                959,
+                963,
+                971
+            ]
+        }
+    ]
+]

@@ -1,0 +1,161 @@
+{
+  "metadata": {
+    "source_file": "01001003_三娘教子.pdf",
+    "source_path": "D:\\University_studies\\Junior\\data_visualization\\experiment\\final\\opera_dataset\\01000000\\01001003_三娘教子.pdf",
+    "relative_path": "01000000/01001003_三娘教子.pdf",
+    "batch_id": "5e707aee-84dc-437f-ace5-4339d17a4514",
+    "collection_dir": "01000000",
+    "collection_code": "1000000",
+    "collection_name": "《戏考》",
+    "collection_label": "《戏考》（1000000）",
+    "work_code": "01001003",
+    "work_title_hint": "三娘教子",
+    "parser_version": "2026-05-16-r2",
+    "play_title": "三娘教子",
+    "doc_id": "pdf_01000000__01001003___c7b0d12542",
+    "aliases": [],
+    "alias_text": "",
+    "synopsis": "",
+    "note_text": "",
+    "period_hint": "",
+    "genre_hint": "",
+    "line_count": 25,
+    "role_count": 3,
+    "scene_count": 1,
+    "dialogue_count": 1,
+    "performance_count": 1,
+    "relation_count": 0,
+    "aggregated_relation_count": 0,
+    "theme_count": 2,
+    "llm_enabled": true,
+    "llm_model": "deepseek-chat"
+  },
+  "roles": [
+    {
+      "role_name": "王春娥",
+      "role_type_raw": "旦",
+      "role_note": "",
+      "source_line": 5,
+      "raw": "王春娥：旦",
+      "role_type_inferred": "旦",
+      "gender_inferred": "未知",
+      "age_inferred": "未知",
+      "status_identity": "高位/官员",
+      "personality_tags": [],
+      "behavior_tags": [],
+      "speech_style": [],
+      "evidence": "王春娥：旦",
+      "confidence": 0.3,
+      "llm_error": "402 Client Error: Payment Required for url: https://api.deepseek.com/chat/completions"
+    },
+    {
+      "role_name": "薛保",
+      "role_type_raw": "外",
+      "role_note": "",
+      "source_line": 7,
+      "raw": "薛保：外",
+      "role_type_inferred": "外",
+      "gender_inferred": "未知",
+      "age_inferred": "未知",
+      "status_identity": "未知",
+      "personality_tags": [],
+      "behavior_tags": [],
+      "speech_style": [],
+      "evidence": "薛保：外",
+      "confidence": 0.3,
+      "llm_error": "402 Client Error: Payment Required for url: https://api.deepseek.com/chat/completions"
+    },
+    {
+      "role_name": "薛倚哥",
+      "role_type_raw": "小生",
+      "role_note": "",
+      "source_line": 9,
+      "raw": "薛倚哥：小生",
+      "role_type_inferred": "小生",
+      "gender_inferred": "男",
+      "age_inferred": "偏少/少年",
+      "status_identity": "未知",
+      "personality_tags": [],
+      "behavior_tags": [],
+      "speech_style": [],
+      "evidence": "薛倚哥：小生",
+      "confidence": 0.3,
+      "llm_error": "402 Client Error: Payment Required for url: https://api.deepseek.com/chat/completions"
+    }
+  ],
+  "scenes": [
+    {
+      "scene_index": 0,
+      "scene": "序幕/前置内容",
+      "line_no": 1,
+      "start_line": 1,
+      "end_line": 1,
+      "characters_present": "",
+      "line_count": 1,
+      "dialogue_count": 0,
+      "lyric_count": 0,
+      "stage_direction_count": 0,
+      "narration_count": 1,
+      "scene_kind": "preface",
+      "llm_error": "402 Client Error: Payment Required for url: https://api.deepseek.com/chat/completions"
+    }
+  ],
+  "dialogues": [
+    {
+      "source_file": "01001003_三娘教子.pdf",
+      "source_path": "D:\\University_studies\\Junior\\data_visualization\\experiment\\final\\opera_dataset\\01000000\\01001003_三娘教子.pdf",
+      "relative_path": "01000000/01001003_三娘教子.pdf",
+      "batch_id": "5e707aee-84dc-437f-ace5-4339d17a4514",
+      "scene_index": 0,
+      "scene": "序幕/前置内容",
+      "line_no": 1,
+      "row_type": "narration",
+      "speaker": "",
+      "cue": "",
+      "text": "# 《三娘教子》（《双官诰》【前本】）",
+      "raw_line": "# 《三娘教子》（《双官诰》【前本】）"
+    }
+  ],
+  "performances": [
+    {
+      "doc_id": "pdf_01000000__01001003___c7b0d12542",
+      "doc_title": "三娘教子",
+      "source_file": "01001003_三娘教子.pdf",
+      "source_path": "D:\\University_studies\\Junior\\data_visualization\\experiment\\final\\opera_dataset\\01000000\\01001003_三娘教子.pdf",
+      "relative_path": "01000000/01001003_三娘教子.pdf",
+      "batch_id": "5e707aee-84dc-437f-ace5-4339d17a4514",
+      "scene_index": 0,
+      "scene": "序幕/前置内容",
+      "line_no": 1,
+      "row_type": "narration",
+      "speaker": "",
+      "cue": "",
+      "perform_type": "说明",
+      "perform_subtype": "",
+      "action_tags": "",
+      "participants": "",
+      "text": "# 《三娘教子》（《双官诰》【前本】）",
+      "raw_line": "# 《三娘教子》（《双官诰》【前本】）"
+    }
+  ],
+  "relations": [],
+  "relations_aggregated": [],
+  "themes": [
+    {
+      "doc_title": "三娘教子",
+      "scene_index": 0,
+      "scene": "序幕/前置内容",
+      "theme_label": "亲情",
+      "evidence": "（）# 《三娘教子》（《双官诰》【前本】）",
+      "derived_by": "keyword"
+    },
+    {
+      "doc_title": "三娘教子",
+      "scene_index": 0,
+      "scene": "序幕/前置内容",
+      "theme_label": "公案",
+      "evidence": "（）# 《三娘教子》（《双官诰》【前本】）",
+      "derived_by": "keyword"
+    }
+  ]
+}

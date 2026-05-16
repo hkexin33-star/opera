@@ -1,0 +1,6 @@
+doc_id,role_name,role_type_raw,role_type_inferred,gender_inferred,age_inferred,status_identity,personality_tags,behavior_tags,speech_style,evidence,source_line,raw,confidence,llm_error,role_note
+pdf_01000000__01001008___4e2bf00560,刘璋,老生,老生,未知,偏老/中老年,未知,[],[],[],刘璋：老生,7,刘璋：老生,0.3,402 Client Error: Payment Required for url: https://api.deepseek.com/chat/completions,
+pdf_01000000__01001008___4e2bf00560,刘玉,小生,小生,男,偏少/少年,未知,[],[],[],刘玉：小生,9,刘玉：小生,0.3,402 Client Error: Payment Required for url: https://api.deepseek.com/chat/completions,
+pdf_01000000__01001008___4e2bf00560,王累,老丑,老丑,未知,偏老/中老年,高位/官员,[],[],[],王累：老丑,11,王累：老丑,0.3,402 Client Error: Payment Required for url: https://api.deepseek.com/chat/completions,
+pdf_01000000__01001008___4e2bf00560,刘备,老生,老生,未知,偏老/中老年,未知,[],[],[],刘备：老生,13,刘备：老生,0.3,402 Client Error: Payment Required for url: https://api.deepseek.com/chat/completions,
+pdf_01000000__01001008___4e2bf00560,诸葛亮,老生,老生,未知,偏老/中老年,未知,[],[],[],诸葛亮：老生,15,诸葛亮：老生,0.3,402 Client Error: Payment Required for url: https://api.deepseek.com/chat/completions,

@@ -1,0 +1,5 @@
+doc_id,scene_index,scene,line_no,start_line,end_line,summary,conflict_stage,tension_level,key_characters,theme_labels,scene_function,characters_present,line_count,dialogue_count,lyric_count,stage_direction_count,narration_count,llm_error
+pdf_01000000__01001005___9cd2b8992a,0,序幕/前置内容,1,1,18,,,,,,,,1,0,0,0,1,402 Client Error: Payment Required for url: https://api.deepseek.com/chat/completions
+pdf_01000000__01001005___9cd2b8992a,1,【第一场】,19,19,22,,,,,,,,1,0,0,0,1,402 Client Error: Payment Required for url: https://api.deepseek.com/chat/completions
+pdf_01000000__01001005___9cd2b8992a,2,【第二场】,23,23,32,,,,,,,,4,0,0,1,3,402 Client Error: Payment Required for url: https://api.deepseek.com/chat/completions
+pdf_01000000__01001005___9cd2b8992a,3,【第四场】,33,33,47,,,,,,,,7,0,0,2,5,402 Client Error: Payment Required for url: https://api.deepseek.com/chat/completions
