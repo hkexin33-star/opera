@@ -26,29 +26,9 @@
 ├── analysis_starter.py
 ├── run_opera_01000000.ps1                         # 《戏考》批处理辅助
 ├── 京剧剧本结构化数据说明.md
-└── data/README.md                                 # 大数据获取说明
+└── opera_dataset/README.md                                 # 大数据获取说明
 ```
 
-### 建议上传（可选，便于队友直接分析）
-
-| 路径 | 说明 |
-|------|------|
-| `samples/01000000/01001001_空城计/` | **1 部**完整 r6 分层示例（仅保留 `structured.json` + `01_meta`～`06_narrative` + `README.txt`，**不要** `extracted/`、`audit/*.md`） |
-| `opera_output/all_*.csv` | 全库汇总表（当前约 **47 MB**），适合只做可视化、不重跑 MinerU 的队友 |
-
-### 不要上传 Git（用网盘 / Release 共享）
-
-| 路径 | 原因 |
-|------|------|
-| `opera_dataset/` | ~616 MB PDF，体积与版权 |
-| `opera_dataset_md/` | 中间产物，可重新生成 |
-| `opera_output/01000000/*/` 全量单剧 | ~120 MB+，含 `extracted/` 等冗余 |
-| `analysis_figures/` | 运行 `analysis_starter.py` 即可再生 |
-| `.env`、`*.log`、`mineru_manifest_*.csv` | 密钥与运行日志 |
-| `mineru_batch_convert*.py`（除 **v8**） | 历史迭代脚本，避免混淆 |
-| `__pycache__/`、`.vscode/` | 本地环境 |
-
-> 完整 `.gitignore` 已配置；克隆后按 [`data/README.md`](data/README.md) 放置 PDF 与输出即可。
 
 ---
 
