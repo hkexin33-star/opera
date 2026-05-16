@@ -1,6 +1,6 @@
-# 《戏考》合集 01000000 批处理辅助脚本
-# 完整说明见 README.md（第五～十二节：操作流程、中断重启、命令速查）
-# 用法：在 PowerShell 中先激活环境并设置密钥，再取消下面对应步骤的注释并执行。
+# 【阶段一 · 试点】仅处理 opera_dataset\01000000（《戏考》448 部）
+# 全库为 opera_dataset\ 下全部合集；试点满意后再用 run_opera_full.ps1 做阶段二。
+# 说明见 README.md「数据处理两阶段策略」。
 
 $ErrorActionPreference = "Stop"
 $Root = Split-Path -Parent $MyInvocation.MyCommand.Path
@@ -31,8 +31,12 @@ if (-not $env:DEEPSEEK_API_KEY) {
     Write-Host "LLM 需要 DEEPSEEK_API_KEY（可在 .env 中配置）" -ForegroundColor Yellow
 }
 
-$InputDir  = Join-Path $Root "opera_dataset\01000000"
-$OutputDir = Join-Path $Root "opera_output"
+$Collection = "01000000"
+$InputDir   = Join-Path $Root "opera_dataset\$Collection"
+$OutputDir  = Join-Path $Root "opera_output"
+$CombineDir = Join-Path $OutputDir "combined\$Collection"
+$ManifestDir = Join-Path $OutputDir "manifests"
+New-Item -ItemType Directory -Force -Path $ManifestDir | Out-Null
 
 # ---------- 1. 查看进度（不耗 API）----------
 Write-Host "`n=== 1. 处理进度 ===" -ForegroundColor Cyan
@@ -40,7 +44,7 @@ python mineru_batch_convert_structured_llm_final_v8.py `
     --status-only `
     --input-dir $InputDir `
     --output-dir $OutputDir `
-    --collection-prefix 01000000
+    --collection-prefix $Collection
 
 # 取消下面各步注释以执行对应阶段
 
@@ -58,17 +62,20 @@ python mineru_batch_convert_structured_llm_final_v8.py `
 #     --output-dir $OutputDir `
 #     --llm-enabled `
 #     --chunk-size 50 `
-#     --collection-prefix 01000000 `
-#     --manifest (Join-Path $OutputDir "mineru_manifest_01000000.csv")
+#     --collection-prefix $Collection `
+#     --manifest (Join-Path $ManifestDir "mineru_manifest_01000000.csv") `
+#     2>&1 | Tee-Object -FilePath (Join-Path $OutputDir "logs\batch_01000000_run.log") -Append
 
 # ---------- 4. 仅刷新全库汇总表（中断后可单独跑）----------
 # python mineru_batch_convert_structured_llm_final_v8.py `
 #     --combine-only `
 #     --output-dir $OutputDir `
-#     --collection-prefix 01000000
+#     --collection-prefix $Collection
 
 # ---------- 5. 质量检验 + 示例图 ----------
-# python analysis_starter.py --verify --collection 01000000 --data-dir opera_output --out-dir analysis_figures
-# python analysis_starter.py --title 空城计 --play-dir (Join-Path $OutputDir "01000000\01001001_空城计")
+# python analysis_starter.py --verify --collection $Collection --data-dir $OutputDir
+# python analysis_starter.py --title 空城计 --collection $Collection --data-dir $OutputDir `
+#     --play-dir (Join-Path $OutputDir "$Collection\01001001_空城计")
 
-Write-Host "`n完成。修改本脚本取消注释以执行对应步骤。" -ForegroundColor Green
+Write-Host "`n试点汇总表目录: $CombineDir\all_docs.csv" -ForegroundColor Cyan
+Write-Host "完成。满意后请使用 run_opera_full.ps1 处理整个 opera_dataset。" -ForegroundColor Green

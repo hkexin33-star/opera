@@ -53,13 +53,22 @@ def parse_bool_series(series: pd.Series) -> pd.Series:
     return series.astype(str).str.lower().isin({"true", "1", "yes"})
 
 
-def resolve_data_root(path: Path) -> Path:
+def resolve_data_root(path: Path, collection: str = "") -> Path:
+    """Resolve folder containing all_docs.csv (full corpus or pilot combined/<合集>/)."""
     path = path.resolve()
     if (path / "all_docs.csv").exists():
         return path
     if (path.parent / "all_docs.csv").exists():
         return path.parent
-    raise FileNotFoundError(f"未找到 all_docs.csv，请指定含汇总表的目录（如 opera_output）：{path}")
+    if collection:
+        coll = collection.replace("\\", "/").strip("/")
+        pilot_dir = path / "combined" / coll
+        if (pilot_dir / "all_docs.csv").exists():
+            return pilot_dir
+    raise FileNotFoundError(
+        f"未找到 all_docs.csv。试点请用 opera_output/combined/<合集>/ 或 "
+        f"--data-dir opera_output --collection <合集>；全库请用 opera_output：{path}"
+    )
 
 
 def pick_doc_row(docs: pd.DataFrame, *, title: str = "", doc_id: str = "") -> pd.Series:
@@ -365,7 +374,7 @@ def build_argparser() -> argparse.ArgumentParser:
         "--data-dir",
         type=Path,
         default=Path("opera_output"),
-        help="含 all_*.csv 的目录（默认 opera_output）",
+        help="含 all_*.csv 的目录（默认 opera_output；试点可配合 --collection 自动找 combined/<合集>/）",
     )
     p.add_argument(
         "--out-dir",
@@ -398,7 +407,7 @@ def main() -> int:
     setup_chinese_font()
 
     try:
-        data_root = resolve_data_root(args.data_dir)
+        data_root = resolve_data_root(args.data_dir, args.collection)
     except FileNotFoundError as e:
         print(e, file=sys.stderr)
         return 1

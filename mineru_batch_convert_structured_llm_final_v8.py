@@ -3823,7 +3823,8 @@ def build_argparser() -> argparse.ArgumentParser:
         "--collection-prefix",
         type=str,
         default="",
-        help="Only combine/status paths under this relative prefix, e.g. 01000000",
+        help="Pilot scope: only this collection under opera_output (e.g. 01000000). "
+        "Combined CSVs go to opera_output/combined/<prefix>/. Omit for full opera_dataset.",
     )
     p.add_argument(
         "--auto-combine",
@@ -4302,28 +4303,43 @@ def refresh_combined_exports(args: argparse.Namespace, out_root: Path) -> int:
         1 for d in buckets["docs"]
         if d.get("analysis_ready") in (True, "True", "true", 1, "1")
     )
-    log_info(f"[AUTO-COMBINE] {len(buckets['docs'])} plays, analysis_ready={ready}")
+    scope = args.collection_prefix or "full_corpus"
+    log_info(
+        f"[AUTO-COMBINE] scope={scope} plays={len(buckets['docs'])} "
+        f"analysis_ready={ready} -> {combined_export_dir(out_root, args.collection_prefix or '')}"
+    )
     return len(buckets["docs"])
 
 
+def combined_export_dir(out_root: Path, collection_prefix: str = "") -> Path:
+    """Pilot (scoped) exports go under combined/<合集>/; full corpus uses out_root."""
+    prefix = (collection_prefix or "").strip().replace("\\", "/").strip("/")
+    if prefix:
+        return out_root / "combined" / prefix
+    return out_root
+
+
 def apply_default_combined_paths(out_root: Path, args: argparse.Namespace) -> None:
+    base = combined_export_dir(out_root, getattr(args, "collection_prefix", "") or "")
+    if base != out_root:
+        base.mkdir(parents=True, exist_ok=True)
     defaults = {
-        "combined_docs_csv": out_root / "all_docs.csv",
-        "combined_roles_csv": out_root / "all_roles.csv",
-        "combined_scenes_csv": out_root / "all_scenes.csv",
-        "combined_dialogue_csv": out_root / "all_dialogues.csv",
-        "combined_dialogue_jsonl": out_root / "all_dialogues.jsonl",
-        "combined_performances_csv": out_root / "all_performances.csv",
-        "combined_performances_jsonl": out_root / "all_performances.jsonl",
-        "combined_relations_csv": out_root / "all_relations.csv",
-        "combined_relations_aggregated_csv": out_root / "all_relations_aggregated.csv",
-        "combined_themes_csv": out_root / "all_themes.csv",
-        "combined_themes_aggregated_csv": out_root / "all_themes_aggregated.csv",
-        "combined_entity_aliases_csv": out_root / "all_entity_aliases.csv",
-        "combined_theme_pairs_csv": out_root / "all_theme_pairs.csv",
-        "combined_narrative_curve_csv": out_root / "all_narrative_curve.csv",
-        "combined_network_metrics_csv": out_root / "all_network_metrics.csv",
-        "combined_structured_jsonl": out_root / "all_structured.jsonl",
+        "combined_docs_csv": base / "all_docs.csv",
+        "combined_roles_csv": base / "all_roles.csv",
+        "combined_scenes_csv": base / "all_scenes.csv",
+        "combined_dialogue_csv": base / "all_dialogues.csv",
+        "combined_dialogue_jsonl": base / "all_dialogues.jsonl",
+        "combined_performances_csv": base / "all_performances.csv",
+        "combined_performances_jsonl": base / "all_performances.jsonl",
+        "combined_relations_csv": base / "all_relations.csv",
+        "combined_relations_aggregated_csv": base / "all_relations_aggregated.csv",
+        "combined_themes_csv": base / "all_themes.csv",
+        "combined_themes_aggregated_csv": base / "all_themes_aggregated.csv",
+        "combined_entity_aliases_csv": base / "all_entity_aliases.csv",
+        "combined_theme_pairs_csv": base / "all_theme_pairs.csv",
+        "combined_narrative_curve_csv": base / "all_narrative_curve.csv",
+        "combined_network_metrics_csv": base / "all_network_metrics.csv",
+        "combined_structured_jsonl": base / "all_structured.jsonl",
     }
     for attr, path in defaults.items():
         if getattr(args, attr, None) is None:
@@ -4393,6 +4409,26 @@ def run_status_only(args: argparse.Namespace) -> int:
     batches = (len(pending) + 49) // 50 if pending else 0
     if pending:
         print(f"[STATUS] pending MinerU batches (~50/batch): {batches}")
+
+    # 当扫描整个 opera_dataset 时，按合集子目录汇总 PDF 数量
+    if not prefix and input_root.name.lower() in {"opera_dataset", "dataset"}:
+        from collections import Counter
+
+        coll_counts: Counter[str] = Counter()
+        for pdf in pdfs:
+            rel = relative_pdf_path(pdf, input_root)
+            coll = rel.parts[0] if rel.parts else "(root)"
+            coll_counts[coll] += 1
+        if coll_counts:
+            print("[STATUS] per-collection PDF counts (full corpus):")
+            for coll, n in sorted(coll_counts.items(), key=lambda x: (-x[1], x[0]))[:12]:
+                print(f"  - {coll}: {n}")
+            if len(coll_counts) > 12:
+                print(f"  ... and {len(coll_counts) - 12} more collections")
+    elif prefix:
+        combine_dir = combined_export_dir(out_root, prefix)
+        print(f"[STATUS] pilot combine output -> {combine_dir / 'all_docs.csv'}")
+
     return 0
 
 
@@ -4883,11 +4919,24 @@ def main() -> int:
         print("No PDF files found.", file=sys.stderr)
         return 1
 
-    print(f"[PLAN] PDF count={len(files)}  chunk_size={args.chunk_size}  batches≈{(len(files)+args.chunk_size-1)//args.chunk_size}")
-    print(f"[PLAN] llm_enabled={bool(args.llm_enabled)}  parser={PARSER_VERSION}  skip_existing={not args.no_skip_existing}")
-
     input_root = args.input_dir.resolve() if args.input_dir else common_input_root(files)
     rel_paths = [relative_pdf_path(p, input_root) for p in files]
+
+    if not args.collection_prefix:
+        inferred_prefix = infer_collection_prefix_from_input(input_root)
+        if inferred_prefix:
+            args.collection_prefix = inferred_prefix
+
+    scope_label = (
+        f"pilot_collection={args.collection_prefix}"
+        if args.collection_prefix
+        else "full_corpus"
+    )
+    print(f"[PLAN] PDF count={len(files)}  chunk_size={args.chunk_size}  batches≈{(len(files)+args.chunk_size-1)//args.chunk_size}")
+    print(f"[PLAN] scope={scope_label}  input_root={input_root}")
+    print(f"[PLAN] llm_enabled={bool(args.llm_enabled)}  parser={PARSER_VERSION}  skip_existing={not args.no_skip_existing}")
+    if args.collection_prefix:
+        print(f"[PLAN] combine_dir={combined_export_dir(args.output_dir.resolve(), args.collection_prefix)}")
 
     out_root: Path = args.output_dir.resolve()
     out_root.mkdir(parents=True, exist_ok=True)
@@ -4927,12 +4976,6 @@ def main() -> int:
     )
 
     all_records: list[dict] = []
-
-    if not args.collection_prefix:
-        inferred_prefix = infer_collection_prefix_from_input(input_root)
-        if inferred_prefix:
-            args.collection_prefix = inferred_prefix
-            log_info(f"[PLAN] collection_prefix={inferred_prefix} (from input-dir)")
 
     llm_session = build_session(trust_env=False) if llm_cfg.enabled else None
     mineru_session = build_session(trust_env=cfg.trust_env)

@@ -7,33 +7,36 @@
 | 主流水线脚本 | `mineru_batch_convert_structured_llm_final_v8.py` |
 | 解析器版本 | `2026-05-16-r6`（常量 `PARSER_VERSION`） |
 | 分析脚手架 | `analysis_starter.py` |
-| 批处理辅助 | `run_opera_01000000.ps1`（《戏考》合集 `01000000`） |
-| 原始输入 | `opera_dataset/<合集>/` 下 PDF |
-| 结构化输出 | `opera_output/<合集>/<剧目>/` |
-| 全库汇总 | `opera_output/all_*.csv`、`all_structured.jsonl` |
-| LLM 说明 | 见 [§七 大语言模型使用情况与效果](#七大语言模型llm使用情况与效果) |
+| 试点脚本（阶段一） | `run_opera_01000000.ps1` → 仅 `opera_dataset/01000000` |
+| 全库脚本（阶段二） | `run_opera_full.ps1` → 整个 `opera_dataset/` |
+| 原始输入 | **全库** `opera_dataset/`（各合集子目录）；**试点** `opera_dataset/01000000/` |
+| 结构化输出 | `opera_output/<合集>/<剧目>/`（两阶段共用） |
+| 试点汇总 | `opera_output/combined/01000000/all_*.csv` |
+| 全库汇总 | `opera_output/all_*.csv`（阶段二完成后） |
+| LLM 说明 | 见 [§八 大语言模型使用情况与效果](#八大语言模型llm使用情况与效果) |
 
 ---
 
 ## 目录
 
 1. [赛题五任务 ↔ 本项目产出总览](#一赛题五任务--本项目产出总览)
-2. [当前项目完成状态（实测）](#二当前项目完成状态实测)
-3. [项目目录结构](#三项目目录结构)
-4. [环境准备](#四环境准备)
-5. [完整操作流程（分步：方式 → 结果 → 赛题用途）](#五完整操作流程分步方式--结果--赛题用途)
-6. [数据处理流水线详解](#六数据处理流水线详解)
-7. [大语言模型（LLM）使用情况与效果](#七大语言模型llm使用情况与效果)
-8. [输出目录与文件说明](#八输出目录与文件说明)
-9. [核心字段说明](#九核心字段说明)
-10. [赛题五任务数据对照（详细）](#十赛题五任务数据对照详细)
-11. [数据质量与使用规范](#十一数据质量与使用规范)
-12. [分析脚手架 analysis_starter.py](#十二分析脚手架-analysis_starterpy)
-13. [中断、重启与维护](#十三中断重启与维护)
-14. [命令速查表](#十四命令速查表)
-15. [团队协作与 GitHub](#十五团队协作与-github)
-16. [赛题满足度评估](#十六赛题满足度评估)
-17. [常见问题](#十七常见问题)
+2. [数据处理两阶段策略（试点 → 全库）](#二数据处理两阶段策略试点--全库)
+3. [当前项目完成状态（实测）](#三当前项目完成状态实测)
+4. [项目目录结构](#四项目目录结构)
+5. [环境准备](#五环境准备)
+6. [完整操作流程（分步：方式 → 结果 → 赛题用途）](#六完整操作流程分步方式--结果--赛题用途)
+7. [数据处理流水线详解](#七数据处理流水线详解)
+8. [大语言模型（LLM）使用情况与效果](#八大语言模型llm使用情况与效果)
+9. [输出目录与文件说明](#九输出目录与文件说明)
+10. [核心字段说明](#十核心字段说明)
+11. [赛题五任务数据对照（详细）](#十一赛题五任务数据对照详细)
+12. [数据质量与使用规范](#十二数据质量与使用规范)
+13. [分析脚手架 analysis_starter.py](#十三分析脚手架-analysis_starterpy)
+14. [中断、重启与维护](#十四中断重启与维护)
+15. [命令速查表](#十五命令速查表)
+16. [团队协作与 GitHub](#十六团队协作与-github)
+17. [赛题满足度评估](#十七赛题满足度评估)
+18. [常见问题](#十八常见问题)
 
 ---
 
@@ -53,11 +56,45 @@
 
 ---
 
-## 二、当前项目完成状态（实测）
+## 二、数据处理两阶段策略（试点 → 全库）
 
-以下数据来自本地 **`--status-only`** 与 **`all_*.csv`**（`--collection-prefix 01000000`），随批处理推进会变化；重启全量前可先自行执行 status 命令刷新。
+赛题 PDF **全库根目录**为 `opera_dataset/`（含 `01000000`、`01001000` 等多个合集子文件夹）。  
+**推荐流程**：先在 **`opera_dataset/01000000`**（《戏考》，448 部）上调试流水线；效果达标后，再对 **整个 `opera_dataset`** 做阶段二。
 
-### 2.1 《戏考》合集 `01000000` 批处理进度
+| 阶段 | 输入目录 | `--collection-prefix` | 单剧输出 | 汇总表 `all_*.csv` | 辅助脚本 |
+|------|----------|----------------------|----------|-------------------|----------|
+| **一、试点** | `opera_dataset\01000000` | **必须** `01000000` | `opera_output\01000000\<剧目>\` | `opera_output\combined\01000000\` | `run_opera_01000000.ps1` |
+| **二、全库** | `opera_dataset`（递归全部 PDF） | **不要加**（留空） | `opera_output\<合集>\<剧目>\` | `opera_output\` 根目录 | `run_opera_full.ps1` |
+
+**为何分开汇总路径**：试点阶段若把 `all_docs.csv` 写在 `opera_output/` 根目录，后续全库合并时容易与旧试点数据混淆。试点汇总固定在 `combined/01000000/`，全库汇总仍在根目录。
+
+**分析时如何选目录**：
+
+```powershell
+# 试点（《戏考》）— 二选一
+python analysis_starter.py --data-dir opera_output --collection 01000000
+python analysis_starter.py --data-dir opera_output/combined/01000000
+
+# 全库（阶段二完成后）
+python analysis_starter.py --data-dir opera_output
+```
+
+**从旧版迁移**：若此前试点汇总写在 `opera_output/all_*.csv` 根目录，请执行一次：
+
+```powershell
+python mineru_batch_convert_structured_llm_final_v8.py `
+  --combine-only --output-dir opera_output --collection-prefix 01000000
+```
+
+将在 `opera_output/combined/01000000/` 生成试点汇总表（与阶段二全库根目录 `all_*.csv` 分离）。
+
+---
+
+## 三、当前项目完成状态（实测）
+
+以下数据来自 **阶段一试点** `01000000` 的 `--status-only` 与 `combined/01000000/all_*.csv`（若尚未迁移，可能仍在根目录 `all_*.csv`）。随批处理推进会变化。
+
+### 3.1 《戏考》试点 `01000000` 批处理进度
 
 | 指标 | 数值（约） | 含义 |
 |------|------------|------|
@@ -67,7 +104,7 @@
 | 尚未处理 | **370** | 无有效 r6 输出 |
 | MinerU 剩余批次 | 约 **8** 批 | 按 `chunk-size 50` 估算 |
 
-### 2.2 全库汇总表 `opera_output/all_*.csv`（01000000）
+### 3.2 试点汇总表 `opera_output/combined/01000000/all_*.csv`
 
 | 文件 | 规模（约） | 说明 |
 |------|------------|------|
@@ -79,13 +116,13 @@
 | `all_relations_aggregated.csv` | 1 579 行 | 任务二主表 |
 | `all_narrative_curve.csv` | 353 行 | 任务四 |
 
-**结论**：数据**已可用于赛题分析与可视化原型**；全库 448 部尚未跑完时，应用 `analysis_ready` 过滤，并在论文/报告中注明当前样本量。全量完成后执行 `--combine-only` 刷新汇总表。
+**结论**：试点数据**已可用于赛题分析与可视化原型**；《戏考》448 部尚未跑完时，应用 `analysis_ready` 过滤。阶段二全库跑完后，对 `opera_dataset` 执行**不带** `--collection-prefix` 的 `--combine-only`，生成根目录 `all_*.csv`。
 
 ---
 
-## 三、项目目录结构
+## 四、项目目录结构
 
-### 3.1 仓库内应提交的内容（精简）
+### 4.1 仓库内应提交的内容（精简）
 
 ```
 项目根目录/
@@ -95,27 +132,33 @@
 ├── .env.example                       # 密钥模板（勿提交 .env）
 ├── mineru_batch_convert_structured_llm_final_v8.py
 ├── analysis_starter.py
-├── run_opera_01000000.ps1
+├── run_opera_01000000.ps1             # 阶段一：试点 01000000
+├── run_opera_full.ps1                 # 阶段二：全库 opera_dataset
 └── data/README.md                     # 大数据网盘说明
 ```
 
-### 3.2 本地运行时的数据目录（勿提交 Git）
+### 4.2 本地运行时的数据目录（勿提交 Git）
 
 ```
-opera_dataset/                         # 输入 PDF（约 616 MB）
-└── 01000000/                          # 《戏考》448 部
-    └── *.pdf
+opera_dataset/                         # 【全库】所有合集 PDF 根目录
+├── 01000000/                          # 【试点】《戏考》448 部
+│   └── *.pdf
+├── 01001000/                          # 其他合集（阶段二再处理）
+│   └── *.pdf
+└── …
 
 opera_output/                          # 输出（本地生成或网盘同步）
-├── all_docs.csv                       # 全库索引 ★ 分析主入口
-├── all_roles.csv … all_structured.jsonl
-├── batch_01000000_run.log             # 批处理日志
-├── mineru_manifest_01000000.csv       # 处理清单（可选）
-└── 01000000/
-    └── 01001001_空城计/               # 单剧分层目录（见下文）
+├── combined/                          # 试点阶段汇总（按合集隔离）
+│   └── 01000000/
+│       └── all_docs.csv …             # ★ 试点分析入口
+├── all_docs.csv …                     # 【阶段二】全库汇总（根目录）
+├── manifests/                         # 批处理清单
+├── logs/                              # 运行日志
+└── 01000000/                          # 单剧结构化（与输入合集对应）
+    └── 01001001_空城计/
 ```
 
-### 3.3 单剧 r6 分层目录（标准形态）
+### 4.3 单剧 r6 分层目录（标准形态）
 
 ```
 opera_output/01000000/01001001_空城计/
@@ -148,9 +191,9 @@ opera_output/01000000/01001001_空城计/
 
 ---
 
-## 四、环境准备
+## 五、环境准备
 
-### 4.1 Python 依赖
+### 5.1 Python 依赖
 
 ```powershell
 cd D:\University_studies\Junior\data_visualization\experiment\final_self
@@ -164,7 +207,7 @@ pip install -r requirements.txt
 
 `requirements.txt`：`requests`、`pandas`、`matplotlib`、`networkx`（网络布局可选）。
 
-### 4.2 API 密钥
+### 5.2 API 密钥
 
 | 变量 | 用途 | 获取方式 |
 |------|------|----------|
@@ -185,7 +228,7 @@ $env:DEEPSEEK_API_KEY = "你的DeepSeek密钥"
 
 脚本启动时会自动 `load_local_env()` 读取 `.env`。
 
-### 4.3 放置 PDF
+### 5.3 放置 PDF
 
 将赛题 PDF 放入：
 
@@ -197,7 +240,7 @@ opera_dataset\01000000\*.pdf
 
 ---
 
-## 五、完整操作流程（分步：方式 → 结果 → 赛题用途）
+## 六、完整操作流程（分步：方式 → 结果 → 赛题用途）
 
 以下按**推荐执行顺序**排列；每步标明**命令/方式**、**得到什么**、**可用于赛题哪一部分**。
 
@@ -208,7 +251,7 @@ opera_dataset\01000000\*.pdf
 | 项目 | 内容 |
 |------|------|
 | **方式** | `python mineru_batch_convert_structured_llm_final_v8.py --status-only ...` |
-| **命令** | 见 [§十四](#十四命令速查表) |
+| **命令** | 见 [§十五](#十五命令速查表) |
 | **结果** | 终端输出 `total / r6_ok / old_version / pending`；不修改任何文件 |
 | **赛题用途** | 项目管理：估算剩余批次、决定是否中断重启 |
 
@@ -304,7 +347,7 @@ python mineru_batch_convert_structured_llm_final_v8.py `
 | 项目 | 内容 |
 |------|------|
 | **方式** | `analysis_starter.py` |
-| **命令** | 见 [§十二](#十二分析脚手架-analysis_starterpy) |
+| **命令** | 见 [§十三](#十三分析脚手架-analysis_starterpy) |
 | **结果** | `analysis_figures/` 下 PNG + `play_summary.json` |
 | **赛题用途** | 任务二网络图、任务四曲线、任务三主题条、全库质量概览；可直接放入答辩 PPT |
 
@@ -320,7 +363,7 @@ python mineru_batch_convert_structured_llm_final_v8.py `
 
 ---
 
-## 六、数据处理流水线详解
+## 七、数据处理流水线详解
 
 ```
 PDF
@@ -353,7 +396,7 @@ PDF
 
 ### 阶段 3：大语言模型增强（`--llm-enabled`）
 
-在规则解析之后、写出 CSV 之前调用 DeepSeek 等兼容 API，对文档/角色/场次/台词/关系进行**语义补全与校正**。五类模块、落盘字段、赛题映射及实测效果见 **[§七 大语言模型使用情况与效果](#七大语言模型llm使用情况与效果)**。
+在规则解析之后、写出 CSV 之前调用 DeepSeek 等兼容 API，对文档/角色/场次/台词/关系进行**语义补全与校正**。五类模块、落盘字段、赛题映射及实测效果见 **[§八 大语言模型使用情况与效果](#八大语言模型llm使用情况与效果)**。
 
 关闭部分 LLM：`--no-llm-dialogue`、`--no-llm-relation-refine`。
 
@@ -376,12 +419,12 @@ PDF
 
 ---
 
-## 七、大语言模型（LLM）使用情况与效果
+## 八、大语言模型（LLM）使用情况与效果
 
 本节说明：**在数据处理阶段**如何用 LLM、**得到哪些字段**、**对赛题分析有何提升**，以及如何在 CSV 中区分「规则结果」与「LLM 结果」。  
 （`analysis_starter.py` 仅读取已落盘字段作图，**不再调用** LLM API。）
 
-### 7.1 定位：LLM 在流水线中的角色
+### 8.1 定位：LLM 在流水线中的角色
 
 | 维度 | 说明 |
 |------|------|
@@ -405,7 +448,7 @@ PDF
     → write_play_package → all_*.csv
 ```
 
-### 7.2 五类 LLM 模块：输入 → 输出 → 赛题效果
+### 8.2 五类 LLM 模块：输入 → 输出 → 赛题效果
 
 | 模块 | 代码函数 | 输入 | 主要落盘字段 | `derived_by` / 标记 | 赛题任务与效果 |
 |------|----------|------|--------------|---------------------|----------------|
@@ -421,7 +464,7 @@ PDF
 - **台词情绪**：`enrich_dialogue_rows` 规则先填 `emotion_tag`/`target`，LLM 仅**覆盖**候选关键句，并写入 `*_derived_by=llm` 便于审计。
 - **主题**：`THEME_KEYWORDS` 启发式 + LLM 场次 `theme_labels` 双源，写入 `themes.csv` 时保留 `derived_by`。
 
-### 7.3 启用方式与参数
+### 8.3 启用方式与参数
 
 **启用（全量批处理推荐）**：
 
@@ -449,7 +492,7 @@ python mineru_batch_convert_structured_llm_final_v8.py `
 
 **台词候选策略**（`select_dialogue_llm_candidates`）：优先 `is_key_line`、唱词、较长句及含「启禀/参见/如何」等戏剧功能词的行，在 `--llm-max-dialogue-lines` 内取得分最高者，保证 API 用在信息量大的句子上。
 
-### 7.4 如何在数据中识别 LLM 结果
+### 8.4 如何在数据中识别 LLM 结果
 
 | 检查项 | 位置 | 含义 |
 |--------|------|------|
@@ -470,7 +513,7 @@ print("LLM 标注台词数:", llm_mask.sum(), "/", len(dlg))
 print(dlg.loc[llm_mask, ["speaker", "emotion_tag", "target", "speech_act"]].head())
 ```
 
-### 7.5 实测效果示例：《空城计》（r6 + LLM）
+### 8.5 实测效果示例：《空城计》（r6 + LLM）
 
 路径：`opera_output/01000000/01001001_空城计/`（`analysis_ready=True`，`parse_quality_score≈0.96`）。
 
@@ -490,7 +533,7 @@ print(dlg.loc[llm_mask, ["speaker", "emotion_tag", "target", "speech_act"]].head
 - **任务四**：`narrative_curve` 折线图；`is_climax` 标高潮场。
 - **任务五**：`structured.json` 一次加载；点击关系边用 `evidence_line_ids` 回链 `dialogues.text`。
 
-### 7.6 LLM 使用边界与建议
+### 8.6 LLM 使用边界与建议
 
 | 边界 | 说明 |
 |------|------|
@@ -504,9 +547,9 @@ print(dlg.loc[llm_mask, ["speaker", "emotion_tag", "target", "speech_act"]].head
 
 ---
 
-## 八、输出目录与文件说明
+## 九、输出目录与文件说明
 
-### 8.1 概念 ↔ 数据表映射
+### 9.1 概念 ↔ 数据表映射
 
 | 概念 | 单剧路径 | 全库汇总 |
 |------|----------|----------|
@@ -524,23 +567,25 @@ print(dlg.loc[llm_mask, ["speaker", "emotion_tag", "target", "speech_act"]].head
 | 叙事曲线 | `06_narrative/narrative_curve.csv` | `all_narrative_curve.csv` |
 | 一站式 JSON | `structured.json` | `all_structured.jsonl` |
 
-### 8.2 全库汇总文件清单
+### 9.2 汇总文件清单
 
-| 文件 | 用途 |
+| 路径 | 用途 |
 |------|------|
-| `all_docs.csv` | 全库索引、质量筛选、任务五剧目列表 |
-| `all_relations_aggregated.csv` | **任务二跨剧主表** |
-| `all_narrative_curve.csv` | **任务四跨剧对比** |
+| `combined/01000000/all_docs.csv` | **试点**《戏考》索引与分析入口 |
+| `all_docs.csv`（根目录） | **阶段二全库**索引（所有合集） |
+| `combined/01000000/all_relations_aggregated.csv` | 试点跨剧关系（任务二） |
+| `all_relations_aggregated.csv` | 全库跨剧关系 |
+| 各目录下 `all_narrative_curve.csv` 等 | 与 `all_docs` 同目录成套使用 |
 | `all_dialogues.csv` / `.jsonl` | 大规模语料（体积大） |
 | `all_structured.jsonl` | 每剧一行 JSON，快速原型 |
 
 ---
 
-## 九、核心字段说明
+## 十、核心字段说明
 
 路径以 **r6 分层**为准。
 
-### 9.1 `01_meta/documents.csv`
+### 10.1 `01_meta/documents.csv`
 
 | 字段 | 含义 |
 |------|------|
@@ -553,7 +598,7 @@ print(dlg.loc[llm_mask, ["speaker", "emotion_tag", "target", "speech_act"]].head
 | `scene_count` … `dialogue_count` | 规模指标 |
 | `structured_json` | 完整 JSON 路径 |
 
-### 9.2 `02_cast/roles.csv`（任务一）
+### 10.2 `02_cast/roles.csv`（任务一）
 
 | 字段 | 含义 |
 |------|------|
@@ -562,7 +607,7 @@ print(dlg.loc[llm_mask, ["speaker", "emotion_tag", "target", "speech_act"]].head
 | `narrative_function` | 主角/配角/功能性（r6） |
 | `line_count`、`centrality_hint` | 戏份与网络提示 |
 
-### 9.3 `03_script/dialogues.csv`（全任务基础）
+### 10.3 `03_script/dialogues.csv`（全任务基础）
 
 | 字段 | 含义 |
 |------|------|
@@ -572,7 +617,7 @@ print(dlg.loc[llm_mask, ["speaker", "emotion_tag", "target", "speech_act"]].head
 | `emotion_derived_by` | `rule` 或 `llm` |
 | `is_key_line` | 是否关键台词 |
 
-### 9.4 `04_graph/relations_aggregated.csv`（任务二主表）
+### 10.4 `04_graph/relations_aggregated.csv`（任务二主表）
 
 | 字段 | 含义 |
 |------|------|
@@ -582,17 +627,17 @@ print(dlg.loc[llm_mask, ["speaker", "emotion_tag", "target", "speech_act"]].head
 | `derived_by` | `llm_refined` / 启发式等 |
 | `evidence` | 文本证据摘要 |
 
-### 9.5 `06_narrative/narrative_curve.csv`（任务四）
+### 10.5 `06_narrative/narrative_curve.csv`（任务四）
 
 `tension_level`、`tension_norm`、`is_climax`、`speech_density` 等，可直接绘图。
 
-### 9.6 `structured.json`
+### 10.6 `structured.json`
 
 含 `metadata` 与全部子表数组；**任务五**前端一次加载即可实现多视图联动。
 
 ---
 
-## 十、赛题五任务数据对照（详细）
+## 十一、赛题五任务数据对照（详细）
 
 ### 任务一：行当与年代变化
 
@@ -640,9 +685,9 @@ print(dlg.loc[llm_mask, ["speaker", "emotion_tag", "target", "speech_act"]].head
 
 ---
 
-## 十一、数据质量与使用规范
+## 十二、数据质量与使用规范
 
-### 11.1 质量过滤（必做）
+### 12.1 质量过滤（必做）
 
 ```python
 import pandas as pd
@@ -661,7 +706,7 @@ good_ids = set(good["doc_id"])
 
 **low 质量剧（约 20 部）**：多为 PDF 解析失败（场次极少、关系为空），**勿纳入全库结论**。
 
-### 11.2 关系表选用
+### 12.2 关系表选用
 
 | 场景 | 表 |
 |------|-----|
@@ -669,7 +714,7 @@ good_ids = set(good["doc_id"])
 | 论文证据 | `relations` + `evidence` / `evidence_line_ids` |
 | 中心性 | `network_metrics`（或自算介数） |
 
-### 11.3 `derived_by` 含义
+### 12.3 `derived_by` 含义
 
 | 值 | 来源 |
 |----|------|
@@ -677,16 +722,16 @@ good_ids = set(good["doc_id"])
 | `adjacency` / `mention` / `cooccurrence` | 启发式 |
 | `keyword` | 主题关键词 |
 
-### 11.4 目录与版本
+### 12.4 目录与版本
 
 - 分析统一使用 **`opera_output`**，勿与 `opera_dataset_md` 混用。
 - 仅当 `parser_version` 含 `2026-05-16-r6` 且存在 `01_meta/documents.csv` 时视为 r6 标准输出。
 
 ---
 
-## 十二、分析脚手架 analysis_starter.py
+## 十三、分析脚手架 analysis_starter.py
 
-### 12.1 安装与全库检验
+### 13.1 安装与全库检验
 
 ```powershell
 python analysis_starter.py --verify --collection 01000000 --data-dir opera_output --out-dir analysis_figures
@@ -694,7 +739,7 @@ python analysis_starter.py --verify --collection 01000000 --data-dir opera_outpu
 
 **结果**：`analysis_figures/batch_verify_01000000.csv`
 
-### 12.2 全库质量概览 + 单剧示例图
+### 13.2 全库质量概览 + 单剧示例图
 
 ```powershell
 python analysis_starter.py `
@@ -718,14 +763,14 @@ python analysis_starter.py `
 
 ---
 
-## 十三、中断、重启与维护
+## 十四、中断、重启与维护
 
-### 13.1 安全中断
+### 14.1 安全中断
 
 1. 在运行 `python mineru_batch_convert...` 的终端按 **`Ctrl+C`**。
 2. 已写完的 `structured.json` 与分层 CSV **保留**；当前批中未完成的一部可能需下次重跑。
 
-### 13.2 重新启动全量（推荐命令）
+### 14.2 重新启动试点批处理（阶段一）
 
 ```powershell
 cd D:\University_studies\Junior\data_visualization\experiment\final_self
@@ -738,20 +783,41 @@ python mineru_batch_convert_structured_llm_final_v8.py `
   --chunk-size 50 `
   --collection-prefix 01000000 `
   --manifest opera_output\mineru_manifest_01000000.csv `
-  2>&1 | Tee-Object -FilePath opera_output\batch_01000000_run.log -Append
+  2>&1 | Tee-Object -FilePath opera_output\logs\batch_01000000_run.log -Append
 ```
 
+- **必须**带 `--collection-prefix 01000000`（或使用 `run_opera_01000000.ps1`），汇总写入 `combined/01000000/`。
 - **不要**加 `--no-skip-existing`（除非故意全库重跑）。
 - 每批结束会打印 `[AUTO-COMBINE] N plays, analysis_ready=M`。
 
-### 13.3 中断后同步汇总
+### 14.3 中断后同步汇总
 
 ```powershell
 python mineru_batch_convert_structured_llm_final_v8.py `
   --combine-only --output-dir opera_output --collection-prefix 01000000
 ```
 
-### 13.4 仅重组旧目录（不耗 API）
+### 14.4 阶段二：全库批处理（试点满意后）
+
+```powershell
+.\run_opera_full.ps1
+# 或手动：
+python mineru_batch_convert_structured_llm_final_v8.py `
+  --input-dir opera_dataset `
+  --output-dir opera_output `
+  --llm-enabled --chunk-size 50
+# 注意：不要加 --collection-prefix
+```
+
+完成后汇总：
+
+```powershell
+python mineru_batch_convert_structured_llm_final_v8.py --combine-only --output-dir opera_output
+```
+
+汇总写入 **`opera_output/all_*.csv`**（根目录，含所有合集）。
+
+### 14.5 仅重组旧目录（不耗 API）
 
 ```powershell
 python mineru_batch_convert_structured_llm_final_v8.py --repack-only --output-dir opera_output
@@ -760,7 +826,7 @@ python mineru_batch_convert_structured_llm_final_v8.py --combine-only --output-d
 
 ---
 
-## 十四、命令速查表
+## 十五、命令速查表
 
 | 命令 / 参数 | 作用 |
 |-------------|------|
@@ -771,7 +837,8 @@ python mineru_batch_convert_structured_llm_final_v8.py --combine-only --output-d
 | `--limit N` | 仅处理前 N 个 PDF |
 | `--no-skip-existing` | 强制重跑（慎用） |
 | `--no-auto-combine` | 关闭每批自动汇总 |
-| `--collection-prefix 01000000` | 限定汇总范围 |
+| `--collection-prefix 01000000` | **试点**：仅处理/汇总该合集；汇总→`combined/01000000/` |
+| （省略 collection-prefix） | **全库**：处理/汇总整个 `opera_dataset`；汇总→`opera_output/` 根目录 |
 | `--llm-enabled` | 开启 LLM 全链路增强 |
 | `--no-llm-dialogue` | 关闭台词 LLM |
 | `--no-llm-relation-refine` | 关闭关系 LLM 校正 |
@@ -779,9 +846,9 @@ python mineru_batch_convert_structured_llm_final_v8.py --combine-only --output-d
 
 ---
 
-## 十五、团队协作与 GitHub
+## 十六、团队协作与 GitHub
 
-### 15.1 仓库提交范围
+### 16.1 仓库提交范围
 
 | 提交 | 不提交（网盘共享） |
 |------|-------------------|
@@ -791,7 +858,7 @@ python mineru_batch_convert_structured_llm_final_v8.py --combine-only --output-d
 
 详见 `data/README.md`。
 
-### 15.2 分工建议
+### 16.2 分工建议
 
 | 角色 | 工作 |
 |------|------|
@@ -800,19 +867,19 @@ python mineru_batch_convert_structured_llm_final_v8.py --combine-only --output-d
 | 可视化 | `structured.json` + 五视图联动 |
 | 文档 | 赛题答卷、样本量说明 |
 
-### 15.3 初始化 Git
+### 16.3 初始化 Git
 
 ```powershell
 git init
 git add README.md .gitignore requirements.txt .env.example `
   mineru_batch_convert_structured_llm_final_v8.py analysis_starter.py `
-  run_opera_01000000.ps1 京剧剧本结构化数据说明.md data/
+  run_opera_01000000.ps1 run_opera_full.ps1 京剧剧本结构化数据说明.md data/
 git commit -m "docs: 合并京剧结构化流水线完整说明"
 ```
 
 ---
 
-## 十六、赛题满足度评估
+## 十七、赛题满足度评估
 
 | 维度 | 满足度 | 说明 |
 |------|--------|------|
@@ -829,7 +896,7 @@ git commit -m "docs: 合并京剧结构化流水线完整说明"
 
 ---
 
-## 十七、常见问题
+## 十八、常见问题
 
 **Q：PowerShell 里 `python : [MinerU]...` 红色报错？**  
 A：多为 stderr 进度信息被 PowerShell 当成警告；若随后有 `[OK]`、`[AUTO-COMBINE]` 即正常。可用 `*>&1 | Tee-Object` 或减少 `2>&1`。
